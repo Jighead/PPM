@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 186 186" style="enable-background:new 0 0 186 186;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#00AF66;stroke:#FFFFFF;stroke-width:2;}
+	.st2{display:inline;fill:#00778B;stroke:#FFFFFF;stroke-width:2;}
+	.st3{display:inline;fill:#754C90;stroke:#FFFFFF;stroke-width:2;}
+	.st4{display:inline;fill:#F89B49;stroke:#FFFFFF;stroke-width:2;}
+	.st5{display:inline;fill:#F3DE4C;stroke:#FFFFFF;stroke-width:2;}
+	.st6{fill:#ED509D;stroke:#FFFFFF;stroke-width:2;}
+	.st7{fill:#2AADE4;stroke:#FFFFFF;stroke-width:2;}
+	.st8{fill:#ED509D;}
+	.st9{fill:#F9F9F9;}
+	.st10{font-family:'ArialMT';}
+	.st11{font-size:12.7095px;}
+	.st12{fill:#2AADE4;}
+	.st13{fill:#00AF66;}
+	.st14{fill:#FFFFFF;}
+	.st15{font-size:14px;}
+	.st16{fill:#00778B;}
+	.st17{fill:#EDEDED;}
+	.st18{fill:#754C90;}
+	.st19{fill:#F89B49;}
+	.st20{fill:#F3DE4C;}
+	.st21{fill:none;stroke:#AA9999;stroke-width:2;}
+</style>
+<g id="_x23_panel_x5F_left" class="st0">
+	<g transform="translate(93,93)">
+		<path class="st1" d="M-88.5-28.7C-76.3-66.2-41.8-92-2.3-93l1.5,92.3l0,0L-88.5-28.7z"/>
+		<path class="st2" d="M-58.2,72.6C-88.3,48.4-100.4,8.1-88.5-28.7l87.6,28l0,0L-58.2,72.6z"/>
+		<path class="st3" d="M54.7,75.2C20.8,99.9-25.4,98.8-58.2,72.6L-0.9-0.6l0,0L54.7,75.2z"/>
+		<path class="st4" d="M87.7-30.9C101.4,7.8,88,51,54.7,75.2L-0.9-0.6l0,0L87.7-30.9z"/>
+		<path class="st5" d="M-2.3-93c40.3-1,76.6,24,90,62L-0.9-0.6l0,0L-2.3-93z"/>
+	</g>
+</g>
+<g>
+	<g transform="translate(93,93)">
+		<path class="st6" d="M-1,41c-22.1-0.6-39.5-18.9-39-41c0.5-21.6,18.1-38.9,39.7-39L-1,41z"/>
+		<path class="st7" d="M-0.2-39C21.8-39.1,39.9-21.3,40,0.8C40.1,22.8,22.3,40.9,0.2,41c-0.4,0-0.8,0-1.2,0L-0.2-39z"/>
+	</g>
+	<g>
+		<circle class="st8" cx="75.8" cy="82.3" r="4.3"/>
+		<path class="st8" d="M121.7,93H70.8c-2.2,0-4-1.8-4-4v-6.9c0-2.2,1.8-4,4-4h50.9c2.2,0,4,1.8,4,4V89C125.7,91.2,123.9,93,121.7,93
+			z"/>
+		<text transform="matrix(1 0 0 1 75.7236 89.597)" class="st9 st10 st11">Female</text>
+	</g>
+	<g>
+		<circle class="st12" cx="76" cy="104.5" r="4.3"/>
+		<path class="st12" d="M120.6,111.9H69.7c-2.2,0-4-1.8-4-4V101c0-2.2,1.8-4,4-4h50.9c2.2,0,4,1.8,4,4v6.9
+			C124.6,110.1,122.8,111.9,120.6,111.9z"/>
+		<text transform="matrix(1 0 0 1 82.2671 108.5677)" class="st9 st10 st11">Male</text>
+	</g>
+	<g>
+		<circle class="st13" cx="57.1" cy="34.9" r="23"/>
+		<text transform="matrix(1 0 0 1 46.4275 38.4361)" class="st14 st10 st15">65+</text>
+	</g>
+	<g>
+		<circle class="st16" cx="26.4" cy="106.5" r="23"/>
+		<text transform="matrix(1 0 0 1 8.5689 110.8577)" class="st17 st10 st15">50-64</text>
+	</g>
+	<g>
+		<circle class="st18" cx="93.2" cy="161.1" r="23"/>
+		<text transform="matrix(1 0 0 1 75.1158 166.4896)" class="st9 st10 st15">19-49</text>
+	</g>
+	<g>
+		<circle class="st19" cx="159.9" cy="106.5" r="23"/>
+		<text transform="matrix(1 0 0 1 147.6535 110.8574)" class="st9 st10 st15">2-18</text>
+	</g>
+	<g>
+		<circle class="st20" cx="128.4" cy="34.9" r="23"/>
+		<text transform="matrix(1 0 0 1 119.746 38.4361)" class="st9 st10 st15">0-1</text>
+	</g>
+	<circle class="st21" cx="93.1" cy="93.4" r="90.8"/>
+</g>
+</svg>

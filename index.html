@@ -1,0 +1,1055 @@
+﻿ 
+<!DOCTYPE html> 
+<html xmlns:xlink="http://www.w3.org/1999/xlink" lang="en" class="minheight" ng-app="routerApp"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content=""> 
+        <meta name="author" content=""> 
+        <title>PPM Prototype</title>         
+        <!--DataTables-->         
+        <!-- Bootstrap core CSS -->         
+        <!-- Custom styles for this template -->         
+        <!-- Using Font awesome-->         
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->         
+        <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->         
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css"> 
+        <link href="ln-styles.css" rel="stylesheet" type="text/css"> 
+        <link href="tablestandards.css" rel="stylesheet" type="text/css"> 
+        <link href="interactiveElements.css" rel="stylesheet" type="text/css"> 
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+        <link href="network-leakage.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="leaflet.css" /> 
+        <link href="procedure_frequency.css" rel="stylesheet" type="text/css">
+    </head>     
+    <body> 
+        <style> 
+            .page-container {
+            min-width: 1024px;
+            }
+            .node {
+            cursor: pointer;
+            }
+            .overlay {
+            background-color: white;
+            }
+            .node circle {
+            fill: #fff;
+            stroke: crimson;
+            stroke-width: 1.6px;
+            }
+            .node text {
+            font-size: 12px;
+            font-weight: 600;
+            fill: #656565;
+            font-family: sans-seriff;
+            }
+            .link {
+            fill: lightgrey;
+            stroke: #eee;
+            stroke-width: 12px;
+            }
+            .templink {
+            fill: none;
+            stroke: red;
+            stroke-width: 3px;
+            }
+            .ghostCircle.show {
+            display: block;
+            }
+            .ghostCircle, .activeDrag .ghostCircle {
+            display: none;
+            }
+</style>         
+        <div class="page-container"> 
+            <div class="ln-RemovePadding ln-floatingviewbar" id="floatingerrormessage" style="display: none;"> 
+                <div> 
+                    <span class="fa glyph_graph_RightButtons btn-glyphs fa-fw ln-standardRedText fa-border pull-left fa-exclamation" style="display: block;"></span> 
+                    <span class="closefloatingerrormessage fa glyph_graph_RightButtons btn-glyphs pull-right fa-fw fa-border fa-remove fa-lg" id="closefloatingerrormessage"></span> 
+                    <b style="display: inline-block;">Fixed position error message that stacks if there is more then one Although stacking would be a rarity. You can also close if necessary for convenience.</b> 
+                </div>                 
+            </div>             
+            <div class="modal fade pg-show-modal" id="procedure_frequency_procedures_modal" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_proc_frequency_procedures.html" data-keyboard="true" data-backdrop="true" style="width:20px;"> 
+                <div class="modal-dialog modal-lg modal-sm"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>
+            <div class="modal fade" id="procedure_frequency_episodes_modal" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_proc_frequency_episodes.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-lg"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>
+            <div class="modal fade" id="procedure_frequency_providers_modal" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_proc_frequency_provider.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-lg"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>
+            <div class="modal fade" id="base-etg-surgical" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_cost_utilization_comparelist.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-lg"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>             
+            <div class="modal fade" id="episode-responsible-specialties-surgical" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_cost_utilization_comparelist.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-lg"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>             
+            <div class="modal fade" id="ComparisonPGModal" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_peergroup.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-lg"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>             
+            <div class="modal fade" id="exclusionModal" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_exclusions.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-lg"> 
+                    <div class="modal-content"> 
+</div>                     
+                </div>                 
+            </div>             
+            <div class="modal fade pg-show-modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_logout.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-sm"> 
+                    <div class="modal-content"> 
+</div>                     
+                </div>                 
+            </div>
+            <div class="modal fade pg-show-modal" id="procedure_frequency_benchmarks" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_benchmark.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-sm"> 
+                    <div class="modal-content"></div>                     
+                </div>                 
+            </div>             
+            <div class="modal fade" id="compare_to" tabindex="-1" role="dialog" aria-hidden="true" data-remote="_modal_cost_utilization_comparelist.html" data-keyboard="true" data-backdrop="true"> 
+                <div class="modal-dialog modal-sm modal-lg"> 
+                    <div class="modal-content"> 
+</div>                     
+                </div>                 
+            </div>             
+            <div class="container-fluid ln-RemovePadding" id="Header"> 
+                <div class="row ln-overallPadding"> 
+                    <div class="pull-left ln-RemovePadding container-fluid"> 
+                        <img src="resources/dmc/images/logo.png" class="ln-headerLogo"> 
+                        <h3 class="pull-left ln-standardRedText ln-margin-top" id="mainsectiontitle">Clinical Solutions</h3> 
+                    </div>                     
+                    <div class="container-fluid ln-RemovePadding pull-right"> 
+                        <div class="pull-left">Welcome Christopher Santangelo |&nbsp;</div>                         
+                        <a href="PPM_HTML5Tripane/Default.htm" target="_blank" class="pull-left">Help</a> 
+                        <div class="pull-left">&nbsp;|&nbsp;</div>                         
+                        <a href="" data-toggle="modal" data-target="#logoutModal" class="pull-left">Sign Out</a> 
+                        <button data-toggle="collapse" data-target="#debugMenu">Quick Page Access</button>                         
+                    </div>                     
+                </div>                 
+            </div>             
+            <!--Header-->             
+            <div class="container-fluid ln-headerredline hidden" id="redbar"></div>             
+            <div class="container-fluid"> 
+                <div class="navbar navbar-default" role="navigation" id="Topnav"> 
+                    <div class="navbar-header hidden-md hidden-lg ln-margin-left10px hidden-sm"> 
+                        <button class="navbar-toggle pull-left" data-toggle="collapse" data-target="#nav1"> 
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span> 
+                            <span class="icon-bar"></span> 
+                            <span class="icon-bar"></span> 
+                        </button>                         
+                        <h4 class="pull-left hidden-sm hidden-md hidden-lg">Navigation</h4> 
+                    </div>                     
+                    <!--/.nav-collapse -->                     
+                    <div class="collapse navbar-collapse" id=""> 
+                        <ul class="nav navbar-nav"> 
+                            <li id="home"> 
+                                <a ui-sref="home" class="ln-topmenuTab">Home</a> 
+                            </li>                             
+                            <li id="phm"> 
+                                <a class="ln-topmenuTab">Population Health</a> 
+                            </li>                             
+                            <li> 
+                                <a ui-sref="compareefficiency" class="ln-topmenuTab">Provider Performance</a> 
+                            </li>                             
+                            <li class="hidden"> 
+                                <a class="ln-topmenuTab">Clinical Integration&nbsp;</a> 
+                            </li>                             
+                            <li class="hidden"> 
+                                <a class="ln-topmenuTab">Report Automation</a> 
+                            </li>                             
+                            <li class="hidden"> 
+                                <a class="ln-topmenuTab">Messages</a> 
+                            </li>                             
+                            <li class="hidden"> 
+                                <a class="ln-topmenuTab">Admin</a> 
+                            </li>                             
+                        </ul>                         
+                    </div>                     
+                </div>                 
+                <!-- Static navbar -->                 
+                <!-- Main component for a primary marketing message or call to action -->                 
+            </div>             
+            <div class="container-fluid ln-padding-bottom4px" id="bodyMain"> 
+                <div class="row ln-minheight"> 
+                    <div class="col-xs-12"> 
+                        <div class="col-xs-12 ln-removeLeftPadding"> 
+                            <div class="ln-borderstandard ln-SideBarBG" id="SidebarBG"> 
+                                <span onclick="openviewbymenu()" class="glyphicon glyph_graphLeftButtons glyph_graph_RightButtons pull-right glyphicon-eye-open btn-glyphs hidden"></span> 
+                                <span onclick="opengroupbymenu()" class="glyphicon glyphicon-th-large glyph_graphLeftButtons btn-glyphs pull-left hidden"></span> 
+                                <h4 class="ln-sidemenuheader"><br></h4> 
+                                <!-- Side Menu Header View by triggers -->                                 
+                                <!--Side Menu Physician View By-->                                 
+                                <!--Side Menu Provider Group By-->                                 
+                                <!--Side Menu Provider Group By-->                                 
+                                <!--Side Menu Create Template -->                                 
+                                <div class="clearfix" id="sidebar_networkleakage"> 
+                                    <span class="ln-sideSubMenuHeader">View Network By:</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons"> 
+                                        <label ui-sref="networkleakage" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked="true">Network Leakage Overview
+                                        </label>                                         
+                                        <label ui-sref="networkleakagebylocation" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked="">Tree View
+                                        </label>                                         
+                                        <label ui-sref="networkleakagebyprovider" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked="">Table View
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="clearfix" id="sidebar_viewproviderby"> 
+                                    <span class="ln-sideSubMenuHeader">View Provider By:</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons"> 
+                                        <label class="btn btn-default" ui-sref="providerprofile"> 
+                                            <input type="radio" name="ppoptions" checked>Provider Overview
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_costbreakdown"> 
+                                            <input type="radio" name="ppoptions" checked>Cost Breakdown
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_population"> 
+                                            <input type="radio" name="ppoptions" checked>Patient Population
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_etglist"> 
+                                            <input type="radio" name="ppoptions" checked>ETG List
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_patientlist"> 
+                                            <input type="radio" name="ppoptions" checked>Patient List
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="provider_pharmacy_patients"> 
+                                            <input type="radio" name="ppoptions" checked>Pharmacy
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_episodelist"> 
+                                            <input type="radio" name="ppoptions" checked>Episode List
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_referralpatterns"> 
+                                            <input type="radio" name="ppoptions" checked>Referral Patterns
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_measurecompliance"> 
+                                            <input type="radio" name="ppoptions" checked>Measure Compliance
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="providerprofile_comparisonpg"> 
+                                            <input type="radio" name="ppoptions" checked>Comparison Peer Group
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="clearfix" id="sidebar_viewprofileby"> 
+                                    <span class="ln-sideSubMenuHeader">View Patient By:</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons"> 
+                                        <label onclick="gotoPatientProfile()" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Patient Overview
+                                        </label>                                         
+                                        <label onclick="gotoPatientMeasureCompliance()" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Measure Compliance
+                                        </label>                                         
+                                        <label onclick="gotoPatientEpisodes()" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Episodes
+                                        </label>                                         
+                                        <label onclick="gotoPatientEpisodeHistory()" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Timeline
+                                        </label>                                         
+                                        <label onclick="gotoPatientPharmacy()" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Pharmacy
+                                        </label>                                         
+                                        <label onclick="gotoPatientLab()" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Laboratory
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="clearfix" id="sidebar_creatingTemplate"> 
+                                    <span class="ln-sideSubMenuHeader" title="createtemplate">Create Template</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons"> 
+                                        <label ui-sref="create_general" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> General
+                                        </label>                                         
+                                        <label ui-sref="create_provider" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Provider
+                                        </label>                                         
+                                        <label ui-sref="create_condition" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Condition
+                                        </label>                                         
+                                        <label ui-sref="create_patient" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Patient
+                                        </label>                                         
+                                        <label ui-sref="create_group" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Group
+                                        </label>                                         
+                                        <label ui-sref="create_summary" class="btn btn-default"> 
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Summary
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <!--Side Menu Physician Performance -->                                 
+                                <!-- Side Menu Provider Performance -->                                 
+                                <div class="clearfix" id="sidebar_ProviderPerformanceGroup"> 
+                                    <span class="ln-sideSubMenuHeader" title="QuickLinks">Provider Performance</span> 
+                                    <div class="ln-sidebarbuttons btn-group-vertical" data-toggle="buttons"> 
+                                        <label ui-sref="compareefficiency" class="btn btn-default active" data-placement="right" data-html="false" title="testme"> 
+                                            <input type="radio" name="ppmmenu" checked>Compare Efficiency
+                                        </label>                                         
+                                        <label ui-sref="comparecost" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu">Compare Cost
+                                        </label>                                         
+                                        <label ui-sref="compareproviders" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu">Compare Provider
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="measure_compliance"> 
+                                            <input type="radio" name="ppmmenu">Measure Compliance
+                                        </label>                                         
+                                        <label ui-sref="referral_patterns" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu">Referral Patterns
+                                        </label>                                         
+                                        <label ui-sref="performance_by_episode" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu">ETG Performance
+                                        </label>                                         
+                                        <label ui-sref="cost_utilization" class="btn btn-default hidden"> 
+                                            <input type="radio" name="ppmmenu">Cost &amp; Utilization
+                                        </label>                                         
+                                        <label ui-sref="surgical_interventions" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu" checked>Surgical Interventions
+                                        </label>                                         
+                                        <label ui-sref="pharmacy" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu">Pharmacy
+                                        </label>                                         
+                                        <label ui-sref="openandoutliers" class="btn btn-default"> 
+                                            <input type="radio" name="ppmmenu" checked disabled>Open &amp; Outlier Episodes
+                                        </label>                                         
+                                        <label class="btn btn-default" ui-sref="networkleakage"> 
+                                            <input type="radio" name="ppmmenu">Network Leakage
+                                        </label>
+                                        <label class="btn btn-default" ui-sref="procedure_frequency"> 
+                                            <input type="radio" name="ppmmenu">Procedure Frequency
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="clearfix" id="sidebar_MenuGroup"> 
+                                    <span class="link ln-sideSubMenuHeader" title="QuickLinks">Quick Links</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons"> 
+                                        <label ui-sref="create_general" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Create Template
+                                        </label>                                         
+                                        <label ui-sref="create_summary" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> View/Edit Template
+                                        </label>                                         
+                                        <label ui-sref="create_summary" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Save Filters to Template
+                                        </label>                                         
+                                        <label ui-sref="create_summary" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Clear Unsaved Filters
+                                        </label>                                         
+                                        <label ui-sref="mytemplate" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> My Templates
+                                        </label>                                         
+                                        <label class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Template Library
+                                        </label>                                         
+                                        <label ui-sref="managepeergroup" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Manage Peer Groups
+                                        </label>                                         
+                                        <label class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> My Research Materials
+                                        </label>                                         
+                                        <label class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Batch Reports
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="clearfix" id="sidebar_phmquicklinks"> 
+                                    <span class="link ln-sideSubMenuHeader" title="QuickLinks">Population Health</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons" style="display: inline-block;"> 
+                                        <label class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked>Create Template
+                                        </label>                                         
+                                        <label class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> My Templates
+                                        </label>                                         
+                                        <label ui-sref="template_library" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked>My Research Materials
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="clearfix" id="sidebar_ppmquicklinks"> 
+                                    <span class="link ln-sideSubMenuHeader" title="QuickLinks">Provider Performance</span> 
+                                    <div class="btn-group-vertical ln-sidebarbuttons" data-toggle="buttons" style="display: inline-block;"> 
+                                        <label ui-sref="create_general" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> Create Template
+                                        </label>                                         
+                                        <label ui-sref="mytemplate" class="btn btn-default"> 
+                                            <input type="radio" name="quick" checked> My Templates
+                                        </label>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <!-- Side Menu Quick Links -->                                 
+                            </div>                             
+                            <div class="row ln-rightsidecontentcontainer"> 
+                                <div class="row ln-padding-bottom4px ln-paddingtop_10px" id="contentHeaderContainer"> 
+                                    <div class="col-xs-12"> 
+                                        <h3 class="ln-contentheaderText" id="headertitle">Home</h3> 
+                                        <div class="ln-contentheaderRight pull-right col-xs-6" id="contentheaderright"> 
+                                            <div class="panel-body" id="contentheaderrightplaceholder"></div>                                             
+                                            <div class="container-fluid pull-right ln-RemovePadding" id="activetemplate"> 
+                                                <div class="dropdown container-fluid ln-RemovePadding"> 
+                                                    <div class="pull-left">Template:</div>                                                     
+                                                    <div class="pull-left ln-pos-relative"> 
+                                                        Name 30 characters maximum ...
+</div>                                                     
+                                                    <i onclick="togglequickinfo()" class="btn-glyphs fa fa-navicon pull-right fa-border" id="quickinfotoggler"></i> 
+                                                </div>                                                 
+                                                <div class="container-fluid ln-RemovePadding pull-left"> 
+                                                    <div class="row pull-right"> 
+                                                        <div class="container-fluid pull-left" id="quickinfo1" style="display: none;"> 
+                                                            <div class="ln-removeLeftPadding" id="quick-dataset"> 
+                                                                <div class="dropdown"> 
+                                                                    <div class="pull-left">Data Set:</div>                                                                     
+                                                                    <div class="pull-left ln-pos-relative"> 
+                                                                        <a data-toggle="dropdown" href="">May 2013 - Apr. 2015</a> 
+                                                                        <ol class="dropdown-menu list-unstyled" role="menu"> 
+                                                                            <li> 
+                                                                                <a href="">Oct. 2013 - Sep. 2015</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Sept.2013 - Aug. 2015</a> 
+                                                                            </li>                                                                             
+                                                                        </ol>                                                                         
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                            <div class="ln-removeLeftPadding" id="quick-datarange"> 
+                                                                <div class="dropdown"> 
+                                                                    <div class="pull-left">Date Range:</div>                                                                     
+                                                                    <div class="pull-left ln-pos-relative"> 
+                                                                        <a data-toggle="dropdown" href="">May 2013 - Apr.2015</a> 
+                                                                        <ol class="dropdown-menu list-unstyled" role="menu"> 
+                                                                            <li> 
+                                                                                <a href="">All 24 months: Oct 2013 – Sep 2015</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Current Year: Oct 2014 – Sep 2015</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Previous Year: Oct 2013 – Sep 2014</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Months 1-6: Apr 2015 – Sep 2015</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Months 7-12: Oct 2014 – Mar 2015</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Months 13-18: Apr 2014 – Sep 2014</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Months 19-24: Oct 2013 – Mar 2014</a> 
+                                                                            </li>                                                                             
+                                                                        </ol>                                                                         
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                            <div class="ln-removeLeftPadding" id="quick-exclusion"> 
+                                                                <div class="dropdown"> 
+                                                                    <div class="pull-left">Exclusions:</div>                                                                     
+                                                                    <div class="pull-left"> 
+                                                                        <a data-toggle="modal" data-target="#exclusionModal" href="">Exists</a> 
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                            <div class="row"> 
+</div>                                                             
+                                                        </div>                                                         
+                                                        <div class="container-fluid pull-left" id="quickinfo2" style="display: none;"> 
+                                                            <div class="ln-RemovePadding" id="quick-subclient"> 
+                                                                <div class="dropdown"> 
+                                                                    <div class="pull-left">Sub Client:</div>                                                                     
+                                                                    <div class="pull-left ln-pos-relative"> 
+                                                                        &nbsp;
+                                                                        <a href="">Multiple</a> 
+                                                                        <ol class="dropdown-menu list-unstyled pull-right" role="menu"> 
+                                                                            <li> 
+                                                                                <a href="">LHC</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">LHD</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">LHM</a> 
+                                                                            </li>                                                                             
+                                                                        </ol>                                                                         
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                            <div class="ln-RemovePadding" id="quick-lob"> 
+                                                                <div class="dropdown"> 
+                                                                    <div class="pull-left">Line of Business:</div>                                                                     
+                                                                    <div class="pull-left ln-pos-relative"> 
+                                                                        <a href="" aria-expanded="false">Multiple</a> 
+                                                                        <ul class="dropdown-menu list-unstyled pull-right" role="menu"> 
+                                                                            <li> 
+                                                                                <a href="">Non-Commercial HMO</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Commercial Non HMO</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Medicare</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Medicaid</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Medicare Supplement</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">State Program</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Medicare Part D</a> 
+                                                                            </li>                                                                             
+                                                                            <li> 
+                                                                                <a href="">Client Defined</a> 
+                                                                            </li>                                                                             
+                                                                        </ul>                                                                         
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                            <div class="ln-RemovePadding" id="quick-benchmarks"> 
+                                                                <div class="dropdown"> 
+                                                                    <div class="pull-left">Benchmark:</div>                                                                     
+                                                                    <div class="pull-left ln-pos-relative"> 
+                                                                        <a href="" aria-expanded="false">IMS National</a> 
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                            <div class="row"></div>                                                             
+                                                        </div>                                                         
+                                                    </div>                                                     
+                                                </div>                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="col-xs-12 ln-removeRightPadding" id="FilterCriteria"> 
+                                    <div class="col-xs-12 ln-RemovePadding" id="viewingproviders"> 
+                                        <div class="col-xs-12 ln-RemovePadding ln-underlinecommon"> 
+                                            <div class="row"></div>                                             
+                                            <div class="ln-RemovePadding" id="contentheaderleft"> 
+                                                <span class="fa glyph_graph_RightButtons btn-glyphs fa-caret-down fa-lg pull-left fa-fw" title="Print"></span> 
+                                                <h6 class="pull-left" style="font-size: 1.1em; "><span href="" onclick="togglefiltercriteria()" class="">Viewing <span class="ln-standardRedText"><b># Provider(s)</b></span> out of template population of <span class="ln-standardRedText" style="display: inline-block;"><b>7,000,000</b></span></span></h6> 
+                                            </div>                                             
+                                            <div class="col-xs-12 ln-RemovePadding ln-filtercriteriawindow" id="filtercriteraresults"> 
+                                                <p><i class="fa fa-fw fa-circle hidden"></i><b>Active Filter(s): </b></p> 
+                                                <div class="col-xs-12"> 
+                                                    <div class="pull-left ln-margin-2px ln-width100"> 
+                                                        <div class="ln-underline_red ln-margin-2px"> 
+                                                            <i class="fa fa-list-alt fa-fw"></i> 
+                                                            <b>General: </b> 
+                                                        </div>                                                         
+                                                        <div class="col-xs-12"> 
+                                                            <div class="row"> 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <span class="pull-left ln-filtertextbg"><i class="fa fa-fw fa-pencil"></i><b class="ln-filtertextbg">Provider Role:&nbsp;</b></span>Episode Responsible
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <span class="pull-left ln-filtertextbg"><i class="fa fa-fw fa-pencil"></i><b class="ln-filtertextbg">Benchmark:&nbsp;</b></span>&nbsp;IMS National
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                        </div>                                                         
+                                                    </div>                                                     
+                                                    <div class="pull-left ln-margin-2px ln-width100"> 
+                                                        <div class="ln-underline_red ln-margin-2px"> 
+                                                            <i class="fa fa-list-alt fa-fw"></i> 
+                                                            <b class="">Providers: </b> 
+                                                        </div>                                                         
+                                                        <div class="col-xs-12"> 
+                                                            <div class="row"> 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <span class="pull-left ln-filtertextbg"><i class="fa fa-fw fa-pencil"></i><b class="">&nbsp;Specialties Selected:&nbsp;</b></span> 
+                                                                    <div class="col-xs-12"> 
+                                                                        <span class="pull-left"><i class="fa fa-fw fa-genderless"></i><b>Primary:&nbsp;</b></span> 
+                                                                        <div class="pull-left">&nbsp;NEUROLOGY&nbsp;</div>                                                                         
+                                                                    </div>                                                                     
+                                                                    <div class="col-xs-12"> 
+                                                                        <span class="pull-left"><i class="fa fa-fw fa-genderless"></i><b>Secondary:&nbsp;</b></span> 
+                                                                        <div class="pull-left">&nbsp;NEUROLOGY&nbsp;</div>                                                                         
+                                                                    </div>                                                                     
+                                                                    <div class="col-xs-12"> 
+                                                                        <span class="pull-left"><i class="fa fa-fw fa-genderless"></i><b>Imputed:&nbsp;</b></span> 
+                                                                        <div class="pull-left">&nbsp;CARDIOLOGY&nbsp;</div>                                                                         
+                                                                    </div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">Networks:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;COM - CA Providers-COM, MCD - CA Providers-MCD, COM - TX Providers-COM, UNASSIGNED - UNASSIGNED, MCD - TX Providers-MCD</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">States Selected:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div class="">&nbsp;AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MP, MS, MT, NC, ND, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, VT, WA, WI, WV, WY</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="ln-filtertextbg pull-left"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">Zip Codes Selected:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;32801, 32803, 32805, 32809, 32810, 32811, 32822, 32830, 32901, 32903, 32905, 32920, 32922, 32931, 32935, 32958, 32960, 32976</div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                        </div>                                                         
+                                                    </div>                                                     
+                                                    <div class="pull-left ln-margin-2px ln-width100"> 
+                                                        <div class="ln-underline_red ln-margin-2px"> 
+                                                            <i class="fa fa-list-alt fa-fw"></i> 
+                                                            <b class="">Condition: </b> 
+                                                        </div>                                                         
+                                                        <div class="col-xs-12"> 
+                                                            <div class="row"> 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <span class="pull-left ln-filtertextbg"><i class="fa fa-fw fa-pencil"></i><b class="">&nbsp;Severity:&nbsp;</b></span> 
+                                                                    <div>&nbsp;2</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">Episode Group Selected With:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;Gastroenterology, Gynecology, Hematology, Hepatology, Infectious Disease, Isolated Signs and Symptons, Late Effects Environmental Trauma and Poisoning, Neonatology, Nephrology, Neurology, Obstetrics </div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">Episode Group Selected Without:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;Otolaryngology, Preventive and Administrative, Psychiatry</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>Malignancy:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;Only include patients with malignancies</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="ln-filtertextbg pull-left"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">Episode Efficiency:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;Management Efficiency: Underutilized, Facility Efficiency: Overutilized</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="ln-filtertextbg pull-left"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b class="">Procedure Codes:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;include  ANESTHESIA FOR EYE EXAM 00148, COMP PREOP ASSESS IOL PLACEMENT 0014F, ANESTH, NOSE, SINUS SURGERY 00160, ANESTH, NOSE, SINUS SURGERY 00162, ANESTH, PROCEDURE ON MOUTH 00170, ANESTH, CLEFT PALATE REPAIR 00172, ANESTH, PHARYNGEAL SURGERY 00176, ANESTH FOR ELECTROSHOCK 00104, ANESTHESIA FOR EAR SURGERY 00120, ANESTHESIA FOR EAR EXAM 00124</div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                        </div>                                                         
+                                                    </div>                                                     
+                                                    <div class="pull-left ln-margin-2px ln-width100"> 
+                                                        <div class="ln-underline_red ln-margin-2px"> 
+                                                            <i class="fa fa-list-alt fa-fw"></i> 
+                                                            <b>Patient: </b> 
+                                                        </div>                                                         
+                                                        <div class="col-xs-12"> 
+                                                            <div class="row"> 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>Age Range(Years):&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;include 0 to 14; 20 and older</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>States:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;AR, AZ, CA, CO, CT, DC, DE, FL</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>Zip Codes:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;00084, 00085, 00758, 00766, 00875, 01001, 01002, 01005, 01007, 01008, 01011, 01013, 01020, 01026, 01027</div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                        </div>                                                         
+                                                    </div>                                                     
+                                                    <div class="pull-left ln-filtercriteriawindow ln-width100"> 
+                                                        <div class="ln-underline_red ln-margin-2px"> 
+                                                            <i class="fa fa-list-alt fa-fw"></i> 
+                                                            <b>Group: </b> 
+                                                        </div>                                                         
+                                                        <div class="col-xs-12"> 
+                                                            <div class="row"> 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>Sub-Client:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;MCD</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>Line of Business:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;Medicaid</div>                                                                     
+                                                                </div>                                                                 
+                                                                <div class="col-xs-12 ln-margin-2px"> 
+                                                                    <div class="pull-left ln-filtertextbg"> 
+                                                                        <i class="fa fa-fw fa-pencil"></i> 
+                                                                        <b>Groups:&nbsp;</b> 
+                                                                    </div>                                                                     
+                                                                    <div>&nbsp;include: APPLE FIRM, BELL MANAGEMENT, CITY CODY WATER, CUSTOM OAK ROCK, DOUGLAS MY INC., GERALD WATER, GERALD WATER, GERALD WATER, GERALD WATER, GERALD WATER, JOHN CHRISTIE FOUNDATION, JOHN MURRY CORPORATION, MISSISSIPPI BOMBARDIER DEDUCTIBLE, NEW RIVER WATER, NORTHWEST CAMBRIDGE LLC, NORTHWEST HEATHER ADMINISTRATION, NORTHWEST HEATHER ADMINISTRATION, PLEASANT ISAACS MALL, RED FRANK PLC, RED FRANK PLC, RED FRANK PLC, RED FRANK PLC, RED RAY CORPORATION, ROBERT STEELE LLC, SCHULZE WARNER FIRM, SERVICE BRIARHILL LLP, SERVICE JOY CENTER, SERVICE TIMBERBROOK METAL, SMITH TROUSER DEDUCTIBLE, SMITH'S HARPER CLUB, VAN PALLET COUNTY, WOOD HORIZON PLLC</div>                                                                     
+                                                                </div>                                                                 
+                                                            </div>                                                             
+                                                        </div>                                                         
+                                                    </div>                                                     
+                                                </div>                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="text-right ln-contentheaderRight ln-underlinecommon" id="contentheaderright"> 
+                                        <div class="container-fluid pull-right ln-RemovePadding" id="controls_pagehelp"> 
+                                            <span class="fa glyph_graph_RightButtons btn-glyphs pull-right fa-lg fa-question" title="help"></span> 
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-RemovePadding" id="controls_print_export_page"> 
+                                            <span ui-sref="preferences" class="fa glyph_graph_RightButtons btn-glyphs pull-right fa-lg fa-gear" title="preferences"></span> 
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-RemovePadding" id="controls_print_export_page"> 
+                                            <span class="fa fa-print glyph_graph_RightButtons btn-glyphs pull-right fa-lg" title="export"></span> 
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-RemovePadding hidden" id="controls_pageedit"> 
+                                            <span class="fa glyph_graph_RightButtons btn-glyphs pull-right fa-lg fa-pencil" title="pageedit"></span> 
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-RemovePadding" id="provider_viewby_icon" title="View By:"> 
+                                            <div class="btn-group"> 
+                                                <div class="dropdown-toggle" data-toggle="dropdown"> 
+                                                    <span class="fa glyph_graph_RightButtons btn-glyphs pull-right fa-lg fa-eye"></span> 
+                                                </div>                                                 
+                                                <ul class="dropdown-menu pull-right" role="menu"> 
+                                                    <li> 
+                                                        <a id="viewbyentry1" href="">Episode Responsible</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a id="viewbyentry2" href="">PCP</a> 
+                                                    </li>                                                     
+                                                </ul>                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-RemovePadding" id="providergroup_viewby_icon" title="Group by:"> 
+                                            <div class="btn-group"> 
+                                                <div class="dropdown-toggle" data-toggle="dropdown"> 
+                                                    <span class="fa glyph_graph_RightButtons btn-glyphs pull-right fa-lg fa-th-large"></span> 
+                                                </div>                                                 
+                                                <ul class="dropdown-menu pull-right" role="menu"> 
+                                                    <li> 
+                                                        <a href="">Providers</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a href="">Network</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a href="">Specialty</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a href="">Peer Group</a> 
+                                                    </li>                                                     
+                                                </ul>                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-commonlineright hidden" id="controls_template"> 
+                                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-xs" data-dismiss="modal">Cancel</button>                                             
+                                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-xs" data-dismiss="modal">Clear Filter</button>                                             
+                                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-xs" data-dismiss="modal">Save Template</button>                                             
+                                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-xs" data-dismiss="modal">Run</button>                                             
+                                        </div>                                         
+                                        <div class="container-fluid pull-right ln-removeRightPadding" id="controls_template_smallicons"> 
+                                            <i class="fa fa-ban glyph_graph_RightButtons btn-glyphs fa-lg" title="Cancel Template Edits"></i> 
+                                            <i class="fa glyph_graph_RightButtons btn-glyphs fa-lg fa-filter" title="Clear Filters"></i> 
+                                            <i class="fa fa-floppy-o glyph_graph_RightButtons btn-glyphs fa-lg" title="Save Template"></i> 
+                                            <a> 
+                                                <img src="resources/dmc/images/icons/icon_run.png" ui-sref="compareefficiency" title="Run Template" class=""> 
+                                            </a>                                             
+                                        </div>                                         
+                                        <div class="container-fluid pull-left ln-RemovePadding" id="backarrow"> 
+                                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                                                <i class="fa fa-caret-left fa-lg"></i> 
+                                                Return to ("Page that brought them here")
+                                            </button>                                             
+                                            <button type="button" class="btn btn-primary btn-sm pull-left hidden" ui-sref="compareefficiency" title="Return to Population?"> 
+                                                <i class="fa fa-long-arrow-left"></i> 
+                                                Go Back
+                                            </button>                                             
+                                        </div>                                         
+                                        <div class="pull-left ln-paddingtop_10px" id="pageinfotext"> 
+                                            <span>Pharmacy data is based on the most recent 12 months for the selected deliverable</span> 
+                                        </div>                                         
+                                        <!--Buttons (clear filter, save templates, run, cancel)-->                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="col-xs-12 ln-removeRightPadding hidden" data-pg-name="underline_standard"> 
+                                    <div class="col-xs-12 ln-underlinecommon"> 
+</div>                                     
+                                </div>                                 
+                                <div class="row" id="provider_name_text"> 
+                                    <div class="col-xs-12"> 
+                                        <div class="col-xs-12 ln-margin-top ln-removeRightPadding"> 
+                                            <div class="ln-underlineCommonDark container-fluid ln-removeLeftPadding ln-removeRightPadding"> 
+                                                <h3 class="ln-standardRedText pull-left ln-RemoveBottomMargin ln-margin-top ln-margin-top-4px">Provider Last Name, Provider First Name </h3> 
+                                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary pull-right ln-margin-2px"> 
+                                                    <i class="fa fa-lg fa-plus"></i> 
+                                                    Add Provider to Peer Group
+                                                </button>
+                                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary pull-right ln-margin-2px ln-margin-right10px"> 
+                                                    Overall Population
+</button>                                                 
+                                                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                                                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-print fa-lg fa-fw hidden"></span> 
+                                            </div>                                             
+                                        </div>                                         
+                                        <div class="col-xs-12" id="comparingwith"> 
+                                            <h6 class="ln-RemoveBottomMargin pull-left"><b>Comparing with:</b> <span>{Comparison Peer Group or Network Name}</span></h6> 
+                                        </div>                                         
+                                    </div>                                     
+                                    <ul class="list-inline ln-RemoveBottomMargin fa-ul hidden"> 
+                                        <li class="text-center"> 
+                                            <b class="pull-left">Provider Patient Risk:&nbsp;</b> 
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency pull-left"> 
+                                                <span class="fa fa-check ln-faRight"></span> 
+                                                <span>1.1</span> 
+                                            </div>                                             
+                                        </li>                                         
+                                        <li class="text-center"> 
+                                            <b class="pull-left">Efficiency Index:&nbsp;</b> 
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency pull-right"> 
+                                                <span class="fa fa-check ln-faRight"></span> 
+                                                <span>1.1</span> 
+                                            </div>                                             
+                                        </li>                                         
+                                        <li class="text-center"> 
+                                            <b class="pull-left">Case Mix:&nbsp;</b> 
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency pull-right"> 
+                                                <span class="fa fa-check ln-faRight"></span> 
+                                                <span>1.1</span> 
+                                            </div>                                             
+                                        </li>                                         
+                                    </ul>                                     
+                                </div>                                 
+                                <div id="ppmContent" class="col-xs-12"> 
+                                    <div class="row"> 
+                                        <div class="row"> 
+                                            <div class="col-xs-12" id="datainject"> 
+                                                <!-- UI-VIEW TELLS ANGULARUI WHERE TO ROUTE THE HTML PARTIALS-->                                                 
+                                                <div ui-view></div>                                                 
+                                                <!-- IF YOU WANT TO EXPERIMENT WITH HOW CONTENT WILL LOOK, COMMENT OUT THE UI VIEW AND PLACE CONTENT -->                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="ln-RemovePadding ln-margin-top hidden" id="ContainerFooter"> 
+                <div class="row"> 
+                    <div class="col-xs-12"> 
+                        <div class="panel-footer"> 
+                            <small>Copyright © 2013 LexisNexis. All rights reserved. Terms & Conditions | Privacy Policy</small> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="collapse" id="debugMenu"> 
+                <button class="btn btn-primary pull-right marginbottomsmall ln-width100 ln-margin-top-4px" data-toggle="collapse" data-target="#debugMenu"> 
+                    Close Window
+                    <i class="fa fa-times fa-fw"></i> 
+                </button>                 
+                <div class="row"> 
+                    <div class="ln-padding-bottom4px"> 
+                        <label class="control-label pull-left">Modals and helpers:</label>                         
+                        <div class="ln-width100 btn-group-vertical"> 
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exclusionModal">Exclusions</button>                             
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#logoutModal">Logout</button>                             
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#ComparisonPGModal">Comparision Peer Group</button>                             
+                            <button type="button" class=" closefloatingerrormessage btn btn-default">Error Messenger</button>                             
+                        </div>                         
+                    </div>                     
+                    <div class="ln-padding-bottom4px"> 
+                        <label class="control-label pull-left">Create Template:&nbsp;</label>                         
+                        <div class="btn-group-vertical ln-width100" data-toggle="buttons"> 
+                            <label ui-sref="create_general" class="btn btn-default"> 
+                                <input type="radio" name="options" autocomplete="off"> General
+                            </label>                             
+                            <label ui-sref="create_provider" class="btn btn-default"> 
+                                <input type="radio" name="options" autocomplete="off"> Provider
+                            </label>                             
+                            <label ui-sref="create_condition" class="btn btn-default"> 
+                                <input type="radio" name="options" autocomplete="off"> Condition
+                            </label>                             
+                            <label ui-sref="create_patient" class="btn btn-default"> 
+                                <input type="radio" name="options" autocomplete="off"> Patient
+                            </label>                             
+                            <label ui-sref="create_group" class="btn btn-default"> 
+                                <input type="radio" name="options" autocomplete="off"> Group
+                            </label>                             
+                            <label ui-sref="create_summary" class="btn btn-default"> 
+                                <input type="radio" name="options" autocomplete="off"> Summary
+                            </label>                             
+                        </div>                         
+                    </div>                     
+                    <div class="ln-padding-bottom4px"> 
+                        <label class="control-label pull-left">PPM Main Pages:&nbsp;</label>                         
+                        <div class="btn-group-vertical ln-width100" data-toggle="buttons"> 
+                            <label ui-sref="compareefficiency" class="btn btn-default" data-placement="right" data-html="false" title="testme"> 
+                                <input type="radio" name="ppmmenu">Compare Efficiency
+                            </label>                             
+                            <label ui-sref="comparecost" class="btn btn-default"> 
+                                <input type="radio" name="ppmmenu">Compare Cost
+                            </label>                             
+                            <label ui-sref="compareproviders" class="btn btn-default"> 
+                                <input type="radio" name="ppmmenu">Compare Providers
+                            </label>                             
+                            <label ui-sref="measure_compliance" class="btn btn-default"> 
+                                <input type="radio" name="ppmmenu">Measure Compliance
+                            </label>                             
+                            <label ui-sref="referral_patterns" class="btn btn-default"> 
+                                <input type="radio" name="ppmmenu">Referral Patterns
+                            </label>                             
+                            <label ui-sref="performance_by_episode" class="btn btn-default"> 
+                                <input type="radio" name="ppmmenu">ETG Performance
+                            </label>                             
+                            <label ui-sref="episodelist" class="btn btn-default"> 
+                                <input type="radio">Episode List
+                            </label>                             
+                            <label ui-sref="patientlist" class="btn btn-default"> 
+                                <input type="radio">Patient List
+                            </label>                             
+                            <label ui-sref="etglist" class="btn btn-default"> 
+                                <input type="radio">ETG List
+                            </label>                             
+                            <label ui-sref="episodedetails" class="btn btn-default"> 
+                                <input type="radio">Episode Details
+                            </label>                             
+                            <label ui-sref="patientprofile" class="btn btn-default"> 
+                                <input type="radio">Patient Profile
+                            </label>                             
+                            <label ui-sref="providerprofile" class="btn btn-default"> 
+                                <input type="radio">Provider Profile
+                            </label>                             
+                            <label ui-sref="pharmacy" class="btn btn-default"> 
+                                <input type="radio">Pharmacy
+                            </label>                             
+                            <label ui-sref="procedure_frequency_providers" class="btn btn-default"> 
+                                <input type="radio">Procedure Frequency Providers
+                            </label>
+                            <label ui-sref="procedure_frequency_episodes" class="btn btn-default"> 
+                                <input type="radio">Procedure Frequency Episodes
+                            </label>
+                            <label ui-sref="procedure_frequency_procedures" class="btn btn-default"> 
+                                <input type="radio">Procedure Frequency Procedures
+                            </label>
+                            <label ui-sref="pharmacy_patients" class="btn btn-default"> 
+                                <input type="radio">Pharmacy Patients
+                            </label>                             
+                        </div>                         
+                    </div>                     
+                    <div class="ln-padding-bottom4px"> 
+                        <label class="control-label pull-left">Peer Group Pages:&nbsp;</label>                         
+                        <div class="btn-group-vertical ln-width100" data-toggle="buttons"> 
+                            <label ui-sref="managepeergroup" class="btn btn-default" data-placement="right" data-html="false" title="testme"> 
+                                <input type="radio" name="ppmmenu"> Manage
+                            </label>                             
+                            <label ui-sref="peergroupdetails" class="btn btn-default" data-placement="right" data-html="false" title="testme"> 
+                                <input type="radio" name="ppmmenu"> View PG Details
+                            </label>                             
+                            <label ui-sref="createpeergroup" class="btn btn-default" data-placement="right" data-html="false" title="testme"> 
+                                <input type="radio" name="ppmmenu"> Create New PG
+                            </label>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+                <div class="row"> 
+</div>                 
+            </div>             
+        </div>         
+        <!-- Bootstrap core JavaScript
+    ================================================== -->         
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- Leaflet Worldmap-->
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        <script src="assets/js/worldmap.js"></script>         
+        <script src="http://d3js.org/d3.v3.min.js"></script>         
+        <script src="assets/js/jquery.min.js"></script>         
+        <script src="bootstrap/js/bootstrap.min.js"></script>         
+        <script src="bootstrap/js/tooltip.js"></script>         
+        <script src="bootstrap/js/popover.js"></script>         
+        <!-- Data tables Java Start-->         
+        <script type="text/javascript" language="javascript" src="datatables/media/js/jquery.dataTables.js"></script>         
+        <script type="text/javascript" language="javascript" src="datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>         
+        <script type="text/javascript" language="javascript" src="datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js"></script>         
+        <script src="bootstrap/js/dataTables.bootstrap.js"></script>         
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->         
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>         
+        <!-- Custom JS -->         
+        <script src="assets/js/treeviewwithpan.js"></script>         
+        <script src="assets/js/navigation_methods.js"></script>         
+        <script src="assets/js/sample_dataset.js"></script>         
+        <script src="assets/js/ProcedureFrequencyFunctions.js"></script>         
+        <script src="angular.js"></script>         
+        <script src="angular-ui-router.js"></script>         
+        <script src="assets/js/app.js"></script>         
+        <script src="assets/js/chart_providerpopulation2.js"></script>         
+        <script src="assets/js/modernizr-custom.min.js"></script>         
+        <!-- Datatables data sets -->         
+        <script src="assets/js/datasets/providerdataset_network.js"></script>         
+        <script src="assets/js/datasets/availablePeerGroupdataSet.js"></script>         
+        <script src="assets/js/datasets/episodedataSet.js"></script>         
+        <script src="assets/js/datasets/providerdataSet_network.js"></script>         
+        <script src="assets/js/datasets/providerdataSet.js"></script>         
+        <script src="assets/js/datasets/PharmacyProviderListColumnsDataset.js"></script>         
+        <script src="assets/js/datasets/PharmacyPatientListColumnsDataset.js"></script>         
+        <script src="assets/js/datasets/patientexcludedataSet.js"></script>         
+        <script src="assets/js/datasets/patientdataSet.js"></script>         
+        <script src="assets/js/datasets/myTemplatePPMdataSet.js"></script>         
+        <script src="assets/js/datasets/myTemplatedataSet.js"></script>         
+        <script src="assets/js/datasets/measurecompliancepatientsdataSet.js"></script>         
+        <script src="assets/js/datasets/measurecompliancedetailsdataSet.js"></script>         
+        <script src="assets/js/datasets/measurecompliancedataSet.js"></script>         
+        <script src="assets/js/datasets/ETGOutlierDataSet.js"></script>         
+        <script src="assets/js/datasets/etgdataSet_Surgical.js"></script>         
+        <script src="assets/js/datasets/etgdataSet.js"></script>         
+        <script src="assets/js/datasets/episodeOutlierDataSet.js"></script>         
+        <script src="assets/js/datasets/servicedataset_network.js"></script>         
+        <script src="assets/js/datasets/patientdataset_network.js"></script>         
+        <script src="assets/js/datasets/ProcedureFrequencyEpisodeDataSet.js"></script>         
+        <script src="assets/js/datasets/ProcedureFrequencyProceduresDataSet.js"></script>         
+        <script src="assets/js/datasets/ProcedureFrequencyProvidersDataSet.js"></script>
+        <script src="assets/js/datasets/ProcedureFrequencyProviderViewDataSet.js"></script>
+        <script src="assets/js/datasets/ProcedureFrequencyEpisodeViewDataSet.js"></script>
+        <script src="assets/js/datasets/ProcedureFrequencyProcedureViewDataSet.js"></script>         
+    </body>     
+</html>

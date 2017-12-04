@@ -1,0 +1,107 @@
+﻿/*--- IMPORTANT GUIDELINES --- 
+1. Use CSS styling
+2. Use class or id specific to style elements related the visualization only
+3. Avoid using styling that alters this webapp (Example: html, body, h1, a, etc.). 
+   Documents may get flagged if doing so ---*/
+    
+      #prov_population_svg {
+      }
+
+      cls-1, .cls-12, .cls-13, .cls-19 {
+        fill: #58595b;
+      }
+
+      .cls-12, .cls-13, .cls-19, .cls-2, .cls-21, .cls-23 {
+        isolation: isolate;
+        font-family: Arial;
+      }
+
+      .cls-2 {
+        font-size: 10.12px;
+        fill: #e6e7e8;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #e6e7e8;
+      }
+
+      .cls-20, .cls-22, .cls-3, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        fill: #ed000c;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #666;
+      }
+
+      .cls-5 {
+        stroke: #a7a9ac;
+      }
+
+      .cls-7 {
+        fill: #cf4d45;
+      }
+
+      .cls-8 {
+        fill: #f19c65;
+      }
+
+      .cls-9 {
+        fill: #ffd266;
+      }
+
+      .cls-10 {
+        fill: #28a876;
+      }
+
+      .cls-11 {
+        fill: #0d7b83;
+      }
+
+      .cls-12 {
+        font-size: 11.44px;
+      }
+
+      .cls-13 {
+        font-size: 15.26px;
+      }
+
+      .cls-14 {
+        fill: #a7a9ac;
+      }
+
+      .cls-15 {
+        fill: #ababab;
+      }
+
+      .cls-16, .cls-20, .cls-21 {
+        fill: #2aade4;
+      }
+
+      .cls-17, .cls-22, .cls-23 {
+        fill: #ed509d;
+      }
+
+      .cls-18 {
+        fill: #f1f2f2;
+      }
+
+      .cls-19 {
+        font-size: 38px;
+      }
+
+      .cls-20 {
+        stroke: #87bfe2;
+      }
+
+      .cls-21, .cls-23 {
+        font-size: 15.18px;
+      }
+
+      .cls-22 {
+        stroke: #e76da9;
+      }

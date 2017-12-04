@@ -1,0 +1,115 @@
+﻿<div class="col-xs-12" id="datainject_peergroupsmanage">
+    <div class="col-xs-12 ln-removeRightPadding">
+        <div class="row text-center ln-borderRadiusTop ln-chartheader">
+            <div class="col-xs-12 ln-RemovePadding">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                <h5>Available Peer Groups</h5>
+            </div>
+        </div>
+        <div class="row ln-borderstandard">
+            <div class="row action ln-padding-bottom4px"></div>
+            <div class="col-xs-12 ln-actionTopOffset">
+                <div class="row">
+                    <div class="container-fluid pull-left" id="actions">
+                        <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm" ui-sref="createpeergroup">Create New Peer Group</button>
+                    </div>
+                    <div class="container-fluid pull-left ln-RemovePadding ln-GroupViewByOffset">
+                        <div class="col-xs-12">
+                            <div class="ln-RemovePadding">
+                                <div class="pull-left">
+                                    <b>Created by:</b>
+                                </div>
+                                <div class="pull-left ln-pos-relative">
+                                    <a data-toggle="dropdown" href="">User 123456789</a>
+                                    <ol class="dropdown-menu list-unstyled pull-left" role="menu">
+                                        <li>
+                                            <a>User 123456789</a>
+                                        </li>
+                                        <li>
+                                            <a>User 56789</a>
+                                        </li>
+                                        <li>
+                                            <a>User 987654132</a>
+                                        </li>
+                                        <li>
+                                            <a>User 56215465451</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 ln-padding-bottom4px">
+                            <div class="dropdown">
+                                <div class="pull-left">
+                                    <b>View by</b>:&nbsp;
+                                </div>
+                                <div class="pull-left ln-pos-relative">
+                                    <a data-toggle="dropdown" href="">All Specialties</a>
+                                    <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                        <li>
+                                            <a onclick="setOverallScoresProviderListSummary()">Specialty 1</a>
+                                        </li>
+                                        <li>
+                                            <a onclick="setOverallScoresProviderListDetails()">Specialty 2</a>
+                                        </li>
+                                        <li>
+                                            <a>Specialty 3</a>
+                                        </li>
+                                        <li>
+                                            <a>Specialty 4</a>
+                                        </li>
+                                        <li>
+                                            <a>Specialty 5</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink">
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>
+                </div>
+                <div class="col-xs-12">
+                    <div class="table-responsive">
+                        <table class="table ln-tabletextsize table-striped table-hover table-condensed table-bordered" id="availablepgtable">
+                            <thead class="shadow ln-nowrap ln-tableHeader">
+                                <tr>
+                                    <th class="Provide">
+                                        Name
+                                    </th>
+                                    <th class="Specialty">
+                                        Specialty
+                                    </th>
+                                    <th class="NumberofProviders">
+                                        # Providers
+                                    </th>
+                                    <th class="DateCreated">
+                                        Date Created
+                                    </th>
+                                    <th class="CreatedBy">
+                                        Created by
+                                    </th>
+                                    <th class="Copy">
+                                        Copy
+                                    </th>
+                                    <th class="Edit">
+                                        Edit
+                                    </th>
+                                    <th class="Delete">
+                                        Delete
+                                    </th>
+                                </tr>
+                            </thead>
+                            <!--Entry that has been selected !Highlighted blue selected -->
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     

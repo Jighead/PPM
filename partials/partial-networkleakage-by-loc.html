@@ -1,0 +1,226 @@
+<div class="col-xs-12" id="networkleakage"> 
+    <div class="row"> 
+        <div class="col-xs-12"> 
+            <div class="automargin-left-right ln-underlinecommon"> 
+                <div class="pull-left"> 
+                    <div class="pull-left container-fluid ln-toptext-by-5"> 
+                        <div ui-sref="networkleakageservicelist" class="text-center innetworktextcolor"> 
+                            <a class="text-center innetworktextcolor">500,000</a> 
+                        </div>                         
+                        <div class="text-center topbartextsize">In Network Claims</div>                         
+                    </div>                     
+                    <div class="pull-left container-fluid ln-toptext-by-5"> 
+                        <div class="text-center innetworktextcolor"> 
+                            <a ui-sref="networkleakagebyprovider" class="text-center innetworktextcolor" href="">$1,000,000</a> 
+                        </div>                         
+                        <div class="text-center topbartextsize">In Network Costs</div>                         
+                    </div>                     
+                    <div class="pull-left container-fluid ln-toptext-by-5"> 
+                        <div ui-sref="networkleakageservicelist" class="text-center outofnetworktextcolor"> 
+                            <a class="text-center outofnetworktextcolor">4,000</a> 
+                        </div>                         
+                        <div class="text-center topbartextsize">Out of Network Claims</div>                         
+                    </div>                     
+                    <div class="pull-left container-fluid ln-toptext-by-5"> 
+                        <div class="text-center"> 
+                            <a ui-sref="networkleakagebyprovider" class="outofnetworktextcolor" href="*">$1,000,000</a> 
+                        </div>                         
+                        <div class="text-center topbartextsize">Out of Network Costs</div>                         
+                    </div>                     
+                    <div class="pull-left container-fluid ln-toptext-by-5"> 
+                        <div class="text-center outofnetworktextcolor">45.05%</div>                         
+                        <div class="text-center topbartextsize">% Out of Network</div>                         
+                    </div>                     
+                </div>                 
+                <div class="pull-right treeviewicon"> 
+                    <i ui-sref="networkleakage" class="fa btn-glyphs pull-right fa-bar-chart fa-fw fa-4x" id="nl-chartstoggle"></i> 
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+    <div class="row" id="networktree"> 
+        <div class="ln-removeRightPadding col-xs-12 ln-margin-top show" id="networkleakage_treechart"> 
+            <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1"> 
+                <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons invisible"></span> 
+                <span class="fa glyph_graph_RightButtons btn-glyphs pull-right fa-lg fa-key" id="legendkey"></span> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <div class="ln-borderRadiusTop panel-heading"> 
+                    <h5 class="text-center">Network Tree View</h5> 
+                </div>                 
+                <div class="ln-borderstandard"> 
+                    <div class="col-xs-12 hidden" data-pg-collapsed> 
+                        <div class="pull-left"> 
+                            <div id="legendContent" class="ln-margin-bottom pull-left" data-pg-collapsed> 
+                                <div class="col-md-12 col-sm-12 col-xs-12  col-lg-12 PHM_bottomMargin_5px"> 
+                                    <span class="ln-text-bold-grey ln-helpTrendTitle"> 
+                                                                                    Legend:<span><!-- <a id="hlpAllPatientList" href="#" class="fa fa-question"></a> --></span> </span> 
+                                    <div class="label ln-expected_color whitetext ln-insetShadowGreen ln-shadowEfficiency text-center PHM-MarginLeftRight_4px">Normal</div>                                     
+                                    <div class="label ln-underutilization_color whitetext ln-shadowEfficiency background_orange text-center PHM-MarginLeftRight_4px">Caution</div>                                     
+                                    <div class="label ln-overutilized_color whitetext ln-insetShadowRed ln-shadowEfficiency text-center">Warning</div>                                     
+                                    <div class="label ln-underutilization_color background_gray whitetext ln-insetShadowYellow ln-shadowEfficiency text-center">No Judgment</div>                                     
+                                </div>                                 
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  PHM_bottom_padding4px"> 
+                                    <!-- DE949 - The trending arrows in legend section are displayed as hyperlink starts -->                                     
+                                    <span class="ln-text-bold-grey ln-trendinglegend">Trending: </span> 
+                                    (
+                                    <span class="glyphicon glyphicon-arrow-down"></span> 
+                                    <span> 
+                                                                                    -<small>Favorable</small> </span> 
+                                    ) (
+                                    <span class="glyphicon glyphicon-arrow-up"></span> 
+                                    <span>-<small>Unfavorable</small>) (<b><small>None</small></b>-<small>No Change</small>)</span> 
+                                    <!-- DE949 - The trending arrows in legend section are displayed as hyperlink ends -->                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>
+                    <div class="col-xs-12 margin_bottom_0px ln-underlinecommon">
+                        <div class="pull-right ln-removeRightPadding container-fluid">
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-primary btn-sm">
+                                Expand All
+</button>
+                        </div>
+                        <form role="form" class="form-inline pull-left">
+                            <div class="form-group pull-left" style="margin-bottom: 4px; margin-top: 4px;"> 
+                                <label class="control-label hidden" for="formInput26">Field label</label>
+                                <div class="">
+                                    <div class="pull-left">
+                                        <select id="formInput26" class="form-control input-sm"> 
+                                            <option>Reason</option>                                             
+                                            <option>Group</option>                                             
+                                            <option>Network</option>
+                                            <option>Specialty</option>                                             
+                                        </select>
+                                    </div>
+                                </div>                                 
+                            </div>                             
+                        </form>                         
+                    </div>                     
+                    <div data-pg-collapsed> 
+                        <div class="panel-body ln-noPaddingTopBottom"> 
+                            <div class="row"> 
+                                <div class="col-xs-12 ln-removeLeftPadding ln-removeRightPadding"> 
+                                    <div id="tree-container" style="height:240px; overflow: hidden;"></div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+    <div class="row" id="networktree"> 
+        <div class="ln-removeRightPadding col-xs-12 ln-margin-top show" id="networkleakage_treechart"> 
+            <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1" data-pg-collapsed> 
+                <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons invisible"></span> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <div class="ln-borderRadiusTop panel-heading"> 
+                    <h5 class="text-center">Map View</h5> 
+                </div>                 
+                <div class="ln-borderstandard"> 
+                    <div> 
+                        <div class="panel-body ln-noPaddingTopBottom"> 
+                            <div class="row"> 
+                                <div class="mapviewtable top_bottom_margin_10px col-xs-4">
+                                    <table class="table table-condensed table-hover table-striped table-bordered" data-pg-collapsed> 
+                                        <thead> 
+                                            <tr> 
+                                                <th>Provider</th> 
+                                                <th>OON Costs</th> 
+                                            </tr>                                             
+                                        </thead>                                         
+                                        <tbody> 
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>
+                                            <tr> 
+                                                <td>Dr. Steve Martin</td> 
+                                                <td>$100,555,000</td> 
+                                            </tr>                                             
+                                            <tr> 
+                                                <td>Lenny Kravitz</td> 
+                                                <td>$10,100</td> 
+                                            </tr>                                             
+                                            <tr> 
+                                                <td>James Earl Jones</td> 
+                                                <td>$10,000,000</td> 
+                                            </tr>                                             
+                                        </tbody>
+                                    </table>                                     
+                                </div>
+                                <div class="ln-removeLeftPadding ln-removeRightPadding col-xs-8 top_bottom_margin_10px"> 
+                                    <div id="mapid" style="height:394px; margin-left: 10px;" class="right_margin_10px"></div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+    <div class="row hidden"> 
+        <div class="ln-removeRightPadding col-xs-3" id="providertable"> 
+            <div class="pull-left col-xs-12"> 
+                <i class="fa fa-circle-o pull-left fa-lg legendcolor1"></i> 
+                <span class="pull-left">Network</span> 
+            </div>             
+            <div class="pull-left col-xs-12"> 
+                <i class="fa fa-circle-o pull-left fa-lg legendcolor2"></i> 
+                <span class="pull-left">Specialty</span> 
+            </div>             
+            <div class="pull-left col-xs-12"> 
+                <i class="fa fa-circle-o pull-left fa-lg legendcolor3"></i> 
+                <span class="pull-left">Condition</span> 
+            </div>             
+            <div class="pull-left col-xs-12"> 
+                <i class="fa fa-circle-o pull-left fa-lg legendcolor4"></i> 
+                <span class="pull-left">Provider</span> 
+            </div>             
+        </div>         
+    </div>     
+</div>

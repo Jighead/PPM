@@ -1,0 +1,379 @@
+﻿<div class="col-xs-12" id="ContainerReportType">
+    <div class="col-xs-12 ln-removeRightPadding ln-margin-top ln-removeLeftPadding" id="measures_container">
+        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1">
+            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+            <div class="ln-borderRadiusTop panel-heading">
+                <h5>
+                    <b>
+                        Measures:
+                    </b>
+                </h5>
+            </div>
+            <div class="panel ln-RemoveBottomMargin">
+                <div class="panel-body ln-borderstandard ln-noPaddingTopBottom">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4">
+                            <div id="ContainerProvRole" class="row">
+                                <div class="col-xs-12">
+                                    <h6><b style="display: inline-block;">Provider Role:</b></h6>
+                                    <div class="radio paddingLeft6 ln-paddingLeft15">
+                                        <label class="control-label ln-overallPadding">
+                                            <input type="radio" name="ProviderRole" value="option1" checked="">
+                                            <span>Member PCP</span>
+                                        </label>
+                                        <label class="control-label">
+                                            <input type="radio" name="ProviderRole" value="option1" checked="">
+                                            <span>Episode Responsible</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6">
+                            <div class="row" id="ContainerMinEpisodes">
+                                <div class="col-xs-12">
+                                    <h6><b style="display: inline-block;">Minimum Episodes:</b></h6>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        Include physicians with at least
+                                        <input type="text" class="form-control input-sm" id="physicianepisodes">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        Include ETG®s with at least
+                                        <input type="text" class="form-control input-sm" id="etgepisodes">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 ln-margin-top ln-removeLeftPadding ln-removeRightPadding" id="benchmarks_container">
+        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1">
+            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+            <div class="ln-borderRadiusTop panel-heading">
+                <h5><b>Benchmarks:</b></h5>
+            </div>
+            <div class="panel ln-RemoveBottomMargin">
+                <div class="panel-body ln-borderstandard ln-padding-bottom4px">
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-4" id="ContainerBenchmark">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <b>Benchmark:</b>
+                                        <select class="form-control input-sm">
+                                            <option>IMS National</option>
+                                            <option>IMS East</option>
+                                            <option>IMS Midwest</option>
+                                            <option>IMS West</option>
+                                            <option>IMS South</option>
+                                            <option>Client Total Population</option>
+                                            <option>Client East</option>
+                                            <option>Client Midwest</option>
+                                            <option>Client West</option>
+                                            <option>Client South</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xs-4" id="ContainerProduct">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <b>Client Product:</b>
+                                        <select class="form-control input-sm" style="display: block;">
+                                            <option>ALL</option>
+                                            <option>Medicare</option>
+                                            <option>Medicaid</option>
+                                            <option>Commercial</option>
+                                            <option>Non-Commercial</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-lg-3" id="ContainerSpecialty">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <b>Client Specialty:</b>
+                                        <select class="form-control input-sm">
+                                            <option>All</option>
+                                            <option>A Specialty</option>
+                                            <option>B Specialty</option>
+                                            <option>C_Specialty</option>
+                                            <option>D_Specialty</option>
+                                            <option>E_Specialty</option>
+                                            <option>F_Specialty</option>
+                                            <option>G_Specialty</option>
+                                            <option>H_Specialty</option>
+                                            <option>I_Specialty</option>
+                                            <option>J_Specialty</option>
+                                            <option>K_Specialty</option>
+                                            <option>L_Specialty</option>
+                                            <option>M_Specialty</option>
+                                            <option>N_Specialty</option>
+                                            <option>O_Specialty</option>
+                                            <option>P_Specialty</option>
+                                            <option>Q_Specialty</option>
+                                            <option>R_Specialty</option>
+                                            <option>S_Specialty</option>
+                                            <option>T_Specialty</option>
+                                            <option>U_Specialty</option>
+                                            <option>V_Specialty</option>
+                                            <option>W_Specialty</option>
+                                            <option>X_Specialty</option>
+                                            <option>Y_Specialty</option>
+                                            <option>Z_Specialty</option>
+                                            <option>1_Specialty</option>
+                                            <option>2_Specialty</option>
+                                            <option>3_Specialty</option>
+                                            <option>4_Specialty</option>
+                                            <option>5_Specialty</option>
+                                            <option>6_Specialty</option>
+                                            <option>7_Specialty</option>
+                                            <option>8_Specialty</option>
+                                            <option>9_Specialty</option>
+                                            <option>10_Specialty</option>
+                                            <option>11_Specialty</option>
+                                            <option>12_Specialty</option>
+                                            <option>13_Specialty</option>
+                                            <option>14_Specialty</option>
+                                            <option>15_Specialty</option>
+                                            <option>16_Specialty</option>
+                                            <option>17_Specialty</option>
+                                            <option>18_Specialty</option>
+                                            <option>A Specialty</option>
+                                            <option>B Specialty</option>
+                                            <option>C_Specialty</option>
+                                            <option>D_Specialty</option>
+                                            <option>E_Specialty</option>
+                                            <option>F_Specialty</option>
+                                            <option>G_Specialty</option>
+                                            <option>H_Specialty</option>
+                                            <option>I_Specialty</option>
+                                            <option>J_Specialty</option>
+                                            <option>K_Specialty</option>
+                                            <option>L_Specialty</option>
+                                            <option>M_Specialty</option>
+                                            <option>N_Specialty</option>
+                                            <option>O_Specialty</option>
+                                            <option>P_Specialty</option>
+                                            <option>Q_Specialty</option>
+                                            <option>R_Specialty</option>
+                                            <option>S_Specialty</option>
+                                            <option>T_Specialty</option>
+                                            <option>U_Specialty</option>
+                                            <option>V_Specialty</option>
+                                            <option>W_Specialty</option>
+                                            <option>X_Specialty</option>
+                                            <option>Y_Specialty</option>
+                                            <option>Z_Specialty</option>
+                                            <option>1_Specialty</option>
+                                            <option>2_Specialty</option>
+                                            <option>3_Specialty</option>
+                                            <option>4_Specialty</option>
+                                            <option>5_Specialty</option>
+                                            <option>6_Specialty</option>
+                                            <option>7_Specialty</option>
+                                            <option>8_Specialty</option>
+                                            <option>9_Specialty</option>
+                                            <option>10_Specialty</option>
+                                            <option>11_Specialty</option>
+                                            <option>12_Specialty</option>
+                                            <option>13_Specialty</option>
+                                            <option>14_Specialty</option>
+                                            <option>15_Specialty</option>
+                                            <option>16_Specialty</option>
+                                            <option>17_Specialty</option>
+                                            <option>18_Specialty</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 ln-removeRightPadding ln-margin-top ln-removeLeftPadding" id="ComparisonPG_container">
+        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1">
+            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+            <div class="ln-borderRadiusTop panel-heading">
+                <h5><b>Comparison Peer Group:</b></h5>
+            </div>
+            <div class="panel ln-RemoveBottomMargin">
+                <div class="col-xs-12 ln-actionTopOffset">
+                    <div class="row">
+                        <div class="container-fluid ln-RemovePadding pull-left">
+                            <div class="col-xs-12 ln-padding-bottom4px">
+                                <div class="dropdown">
+                                    <h6 class="pull-left">
+                                        <b class="pull-left">View by:</b><div class="ln-pos-relative pull-left">
+                                            <a data-toggle="dropdown" href="">All Specialities</a>
+                                            <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                                <li>
+                                                    <a>All Specialities</a>
+                                                </li>
+                                                <li>
+                                                    <a>No Specialty</a>
+                                                </li>
+                                                <li>
+                                                    <a>Specialty 1</a>
+                                                </li>
+                                                <li>
+                                                    <a>Specialty 2</a>
+                                                </li>
+                                                <li>
+                                                    <a>Specialty 3</a>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group pull-right marginbottomsmall ln-margin-top">
+                                <input type="search" class="form-control" id="formInput84" placeholder="Find Your Peer Group...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                </div>
+                <div class="panel-body ln-borderstandard">
+                    <div class="row">
+                        <table class="table shadow table-condensed table-bordered">
+                            <thead class="ln-tableHeader">
+                                <tr class="">
+                                    <th class="ln-tableselect_check">
+                                        <br>
+                                    </th>
+                                    <th class="ln-tableHeader">
+                                        <i class="fa fa-sort pull-right fa-fw fa-border"></i>Peer Group Name
+                                    </th>
+                                    <th class="ln-tableHeader">
+                                        <i class="fa fa-sort pull-right fa-fw fa-border"></i>Description
+                                    </th>
+                                    <th class="ln-tableHeader">
+                                        <i class="fa fa-sort pull-right fa-fw fa-border"></i>Specialty
+                                    </th>
+                                    <th class="text-center ln-tableHeader">
+                                        <i class="fa fa-sort pull-right fa-fw fa-border"></i># of Physicians
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>First Care East&nbsp;</td>
+                                    <td>First Care Urgent - East</td>
+                                    <td>No Specialty</td>
+                                    <td class="text-center">12</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>First Care East&nbsp;</td>
+                                    <td>First Care Urgent - East</td>
+                                    <td>No Specialty</td>
+                                    <td class="text-center">12</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>First Care East&nbsp;</td>
+                                    <td>First Care Urgent - East</td>
+                                    <td>No Specialty</td>
+                                    <td class="text-center">12</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>First Care West&nbsp;</td>
+                                    <td>First Care Urgent – West</td>
+                                    <td>No Specialty</td>
+                                    <td class="text-center">15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>Memorial Hospital</td>
+                                    <td>Employed physicians at Memorial</td>
+                                    <td>Cardiology</td>
+                                    <td class="text-center">114</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>North Avenue Clinic</td>
+                                    <td>North side clinic physicians</td>
+                                    <td>Pediatrics</td>
+                                    <td class="text-center">21</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>South Side Clinic</td>
+                                    <td>South side clinic physicians</td>
+                                    <td>Pediatrics</td>
+                                    <td class="text-center">18</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="control-label" type="checkbox" value="" name="peergroup">
+                                    </td>
+                                    <td>Smith Jones IPA</td>
+                                    <td>Smith Jones IPA City Center</td>
+                                    <td>Internal Medicine</td>
+                                    <td class="text-center">7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row" id="ppmReportTable">
+                        <div class="col-xs-12">
+                            <ul class="pagination pull-right pagination-sm">
+                                <li>
+                                    <a href="">&laquo;</a>
+                                </li>
+                                <li class="active">
+                                    <a href="">1 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li>
+                                    <a href="">2</a>
+                                </li>
+                                <li>
+                                    <a href="">3</a>
+                                </li>
+                                <li>
+                                    <a href="">&raquo;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   

@@ -1,0 +1,686 @@
+<!-- UI-VIEW TELLS ANGULARUI WHERE TO ROUTE THE HTML PARTIALS
+                                            <div ui-view></div>-->     
+    <div class="col-xs-12" id="container_compareefficiency">
+        <div class="row"> 
+            <div class="col-xs-12 ln-removeRightPadding" id="physiciancharts"> 
+                <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark"> 
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                    <h5>Efficiency</h5> 
+                </div>                 
+                <div class="col-xs-12 text-center ln-borderstandard ln-chartbg" id="overallefficiencygauge_container"> 
+                    <div class="col-xs-12 ln-paddingtop_10px"> 
+                        <div class="progress ln-RemoveBottomMargin ln-roundededges ln-shadow"> 
+                            <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%" title="Under Utilized"></a> 
+                            <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%" title="Expected"></a> 
+                            <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%" title="Over Utilized"></a> 
+                        </div>                         
+                        <div style="width:50%"> 
+                            <i class="fa ln-overallgauge_arrow pull-right fa-play fa-rotate-270 fa-lg"></i> 
+                        </div>                         
+                    </div>                     
+                    <div class="col-xs-12"> 
+</div>                     
+                    <div class="col-xs-12"> 
+                        <div class="progress marginbottomsmall ln-border-top-line-dark"> 
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:4%">0</div>                             
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:28%"></div>                             
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:4%">.8</div>                             
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:28%"></div>                             
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:4%">1.2</div>                             
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:28%"></div>                             
+                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:4%">>1.2</div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="col-xs-12"> 
+                        <ul class="list-inline"> 
+                            <li> 
+                                <span class="glyphicon glyphicon-stop glyph_graph_RightButtons under_textcolor"></span>0 - 0.8 Under-Utilized
+                            </li>                             
+                            <li> 
+                                <span class="glyphicon glyphicon-stop glyph_graph_RightButtons expected_textcolor"></span>>0.8 - 1.2 Expected
+                            </li>                             
+                            <li> 
+                                <span class="glyphicon glyphicon-stop glyph_graph_RightButtons over_textcolor"></span>                                                             >1.2 Over-Utilized
+                            </li>                             
+                        </ul>                         
+                    </div>                     
+                </div>                 
+                <div class="col-sm-12 col-lg-6 col-xs-12 ln-removepadding_query ln-RemovePadding" id="efficiencybySpecialtyContainer"> 
+                    <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader fix ln-underlineCommonDark">
+                        <div class="btn-group ln-margin-top-4px ln-side-Icons"> 
+                            <button type="button" class="btn dropdown-toggle btn-primary" data-toggle="dropdown" title="Sort by:">
+                                <i class=" fa ln-darkGreyText fa-lg fa-sort"></i> 
+                            </button>                             
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li>
+                                    <a href="">Name</a>
+                                </li>                                 
+                                <li class="">
+                                    <a role="menuitem" tabindex="-1" href="#">Over-Utilized</a>
+                                </li>                                 
+                                <li>
+                                    <a href="">Under-Utilized</a>
+                                </li>                                 
+                                <li>
+                                    <a href="">Expected</a>
+                                </li>
+                            </ul>                             
+                        </div>                         
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                        <h5 class="">Efficiency By Specialty</h5> 
+                    </div>                     
+                    <div class="col-xs-12 text-center ln-borderstandard ln-chartcontainer ln-RemovePadding efficiencybarcharts"> 
+                        <div class="col-xs-12 text-nowrap ln-efficency-barchartscontainer ln-RemovePadding pull-left ln-paddingtop_10px"> 
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Adolescent</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:50%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-commonlineright ln-RemovePadding col-lg-3 col-xs-2"> 
+                                    <a href="">Behavioral Health</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:50%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <span class="ln-nowrap"><a href="">Internal Medicine</a>-</span> 
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Colorectal Surgery</a>                                                                     -
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:60%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Disease MGMT</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:10%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:15%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:75%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Ear/Nose/throat</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:50%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="ln-commonlineright ln-RemovePadding col-lg-3 col-xs-2 text-right"> 
+                                    <a href="">Endocrinology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Gastroentorology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:70%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:10%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:20%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">General Practice</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:10%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:23%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:67%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Cardiology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Infectious Diseases</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Orthopedics</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-xs-12 ln-RemovePadding pull-left"> 
+                            <div class="container-fluid"> 
+                                <div class="text-right ln-RemovePadding col-xs-2 col-lg-3"> 
+</div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="ln-removeLeftPadding col-lg-9 col-xs-12 col-xs-10"> 
+                                        <div class="progress ln-underlineCommonDark ln-RemoveBottomMargin"> 
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:6%"> 
+                                                0%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:34%"> 
+                                                25%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:10%"> 
+                                                50%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%"> 
+                                                75%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:7%"> 
+                                                100%
+</div>                                             
+                                        </div>                                         
+                                        <h5 class="" style="font-weight: normal; color:black;">Provider Percentage</h5> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+                <div class="col-sm-12 col-lg-6 col-xs-12 ln-removeRightPadding ln-removepadding_query" id="efficiencybympc_container"> 
+                    <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader fix ln-underlineCommonDark">
+                        <div class="btn-group ln-margin-top-4px ln-side-Icons"> 
+                            <button type="button" class="btn dropdown-toggle btn-primary" data-toggle="dropdown" title="Sort by:">
+                                <i class=" fa ln-darkGreyText fa-lg fa-sort"></i> 
+                            </button>                             
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li>
+                                    <a href="">Name</a>
+                                </li>                                 
+                                <li class="">
+                                    <a role="menuitem" tabindex="-1" href="#">Over-Utilized</a>
+                                </li>                                 
+                                <li>
+                                    <a href="">Under-Utilized</a>
+                                </li>                                 
+                                <li>
+                                    <a href="">Expected</a>
+                                </li>
+                            </ul>                             
+                        </div>                         
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                        <h5>Efficiency By MPC</h5> 
+                    </div>                     
+                    <div class="col-xs-12 text-center ln-borderstandard ln-chartcontainer ln-RemovePadding efficiencybarcharts"> 
+                        <div class="col-xs-12 ln-efficency-barchartscontainer ln-RemovePadding pull-left ln-paddingtop_10px"> 
+                            <div class="Asthma_Bar measurebars chronicmeasures container-fluid"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-xs-2 col-lg-3"> 
+                                    <a href="">Cardiology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:30%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-commonlineright ln-RemovePadding col-lg-3 ln-nowrap col-xs-2"> 
+                                    <a href="">Chem. Dependancy</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:10%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:60%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <span class="ln-nowrap"><a href="">Dermatology</a>-</span> 
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Endocrinology</a>             -
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:60%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:10%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Gastroenterolgy</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:10%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Gynecology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"><span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons"></span></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-commonlineright ln-RemovePadding col-lg-3 col-xs-2"> 
+                                    <a href="">Hematology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:35%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:35%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Hepatology</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Infectious Diseases</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:30%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:20%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:50%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Isolated Signs</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Infectious Diseases</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid Asthma_Bar measurebars chronicmeasures ln-commonlineright"> 
+                                <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2"> 
+                                    <a href="">Late Effects</a>-
+                                </div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="progress"> 
+                                        <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33.3%"></a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:33.3%"></a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-xs-12 ln-RemovePadding pull-left"> 
+                            <div class="container-fluid"> 
+                                <div class="text-right ln-RemovePadding col-xs-2 col-lg-3"> 
+</div>                                 
+                                <div class="container-fluid"> 
+                                    <div class="ln-removeLeftPadding col-lg-9 col-xs-12 col-xs-10"> 
+                                        <div class="progress ln-RemoveBottomMargin ln-underlineCommonDark"> 
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:6%"> 
+                                                0%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:34%"> 
+                                                25%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:10%"> 
+                                                50%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%"> 
+                                                75%
+</div>                                             
+                                            <div class="progress-bar progress-bar-info" role="progressbar" style="width:7%"> 
+                                                100%
+</div>                                             
+                                        </div>                                         
+                                        <h5 style="font-weight: normal; color:black;">Provider Percentage</h5> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <div class="row"> 
+            <div class="col-xs-12 ln-removeRightPadding" id="datainject_providerlist"> 
+                <div class="col-xs-12"> 
+                    <div class="row"> 
+                        <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark"> 
+                            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                            <span class="fa glyph_graph_RightButtons btn-glyphs fa-question fa-lg pull-left invisible"></span>
+                            <span class="fa glyph_graph_RightButtons btn-glyphs fa-question fa-lg invisible pull-left"></span> 
+                            <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span> 
+                            <h5>Summary (Totals)</h5> 
+                        </div>                         
+                        <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered"> 
+                            <thead class="ln-tableHeader" ""> 
+                                <tr> 
+                                    <th class="text-center">#Providers</th> 
+                                    <th class="text-center">#Specialties</th> 
+                                    <th class="text-center">#Patients</th> 
+                                    <th class="text-center">#Epis.</th> 
+                                    <th class="text-center">Avg. Patient Risk</th> 
+                                    <th class="text-center">Efficiency index</th> 
+                                    <th class="text-center">Case Mix</th> 
+                                    <th class="text-center">Potential $$ Avoidance</th> 
+                                </tr>                                 
+                            </thead>                             
+                            <tbody class="text-center"> 
+                                <tr> 
+                                    <td> <span>1600</span> </td> 
+                                    <td>2000</td> 
+                                    <td> 
+                                        <a href="" ui-sref="patientlist" "">320</a> 
+                                    </td>                                     
+                                    <td> 
+                                        <a href="" ui-sref="episodelist">1500</a> 
+                                    </td>                                     
+                                    <td> 
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                            <span class="fa fa-check ln-faRight"></span> 
+                                            <span>1.1</span> 
+                                        </div>                                         
+                                    </td>                                     
+                                    <td> 
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>                                         
+                                    </td>                                     
+                                    <td> 
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>                                         
+                                    </td>                                     
+                                    <td>$3456</td> 
+                                </tr>                                 
+                            </tbody>                             
+                        </table>                         
+                    </div>                     
+                    <div class="row text-center ln-borderRadiusTop ln-chartheader"> 
+                        <div class="col-xs-12 ln-RemovePadding"> 
+                            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                            <span class="fa fa-plus-circle btn-glyphs fa-lg pull-left invisible" title="Column Options"></span> 
+                            <h5>Provider List </h5> 
+                        </div>                         
+                    </div>                     
+                    <div class="row ln-borderstandard"> 
+                        <div class="col-xs-12 ln-actionTopOffset"> 
+                            <div class="row ln-margin-top-4px"> 
+                                <div class="container-fluid pull-left" id="actions"> 
+                                    <div class="btn-group pull-left"> 
+                                        <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown"> 
+                                            Actions
+</button>                                         
+                                        <ul class="dropdown-menu" role="menu"> 
+                                            <li> 
+                                                <a href="">Apply Selections to current page</a> 
+                                            </li>                                             
+                                            <li> 
+                                                <a href="">Exclude</a> 
+                                            </li>                                             
+                                            <li> 
+                                                <a href="">Add to Peer Group</a> 
+                                            </li>                                             
+                                            <li> 
+                                                <a href="">Create new Peer Group</a> 
+                                            </li>                                             
+                                            <li class="divider"></li>                                             
+                                            <li> 
+                                                <a href="">Clear Selection</a> 
+                                            </li>                                             
+                                        </ul>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="btn-group pull-left"> 
+                                    <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown"> 
+                                        Apply and Navigate to:
+</button>                                     
+                                    <ul class="dropdown-menu" role="menu"> 
+                                        <li> 
+                                            <a href="">Overall Efficiency</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a href="">Overall Performance</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a href="">Overall Scores</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a href="">Measure Compliance</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a href="">Referral Patterns</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a href="">Performance by Episode</a> 
+                                        </li>                                         
+                                    </ul>                                     
+                                </div>                                 
+                                <div class="container-fluid pull-left ln-RemovePadding ln-GroupViewByOffset"> 
+                                    <div class="col-xs-12"> 
+                                        <div class="ln-RemovePadding"> 
+                                            <div class="pull-left"> 
+                                                <b>Group By:</b> 
+                                            </div>                                             
+                                            <div class="pull-left ln-pos-relative"> 
+                                                <a data-toggle="dropdown" href="">Providers</a> 
+                                                <ol class="dropdown-menu list-unstyled pull-left" role="menu"> 
+                                                    <li> 
+                                                        <a>Providers</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a>Network</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a>Specialty</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a>Peer Group</a> 
+                                                    </li>                                                     
+                                                </ol>                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="col-xs-12 ln-padding-bottom4px"> 
+                                        <div class="dropdown"> 
+                                            <div class="pull-left"> 
+                                                <b>View by</b>:&nbsp;
+                                            </div>                                             
+                                            <div class="pull-left ln-pos-relative"> 
+                                                <a data-toggle="dropdown" href="">Episode Responsible</a> 
+                                                <ol class="dropdown-menu pull-left list-unstyled" role="menu"> 
+                                                    <li> 
+                                                        <a onclick="setOverallScoresProviderListSummary()">Summary View</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a onclick="setOverallScoresProviderListDetails()">Detail View</a> 
+                                                    </li>                                                     
+                                                    <li class="divider"></li>                                                     
+                                                    <li> 
+                                                        <a>My Named Custom View</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a>Save Custom View</a> 
+                                                    </li>                                                     
+                                                    <li> 
+                                                        <a>Remove Custom View</a> 
+                                                    </li>                                                     
+                                                </ol>                                                 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="row"> 
+                            <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink"> 
+                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>                                 
+                            </div>                             
+                            <div class="col-xs-12"> 
+                                <div class="table-responsive"> 
+                                    <table class="table ln-tabletextsize table-striped table-hover table-condensed table-bordered" id="providerlisttable"> 
+                                        <thead class="ln-nowrap"> 
+                                            <tr style="display: table-row;"> 
+                                                <th class="no-sort"> 
+                                                    <input class="control-label" type="checkbox" value=""> 
+                                                </th>                                                 
+                                                <th class="Provide"> 
+                                                                                                Provider</th> 
+                                                <th class="Risk"> 
+                                                                                                Patient Risk</th> 
+                                                <th class="Efficiency"> 
+                                                                                                Efficiency</th> 
+                                                <th class="CaseMix"> 
+                                                                                                CaseMix</th> 
+                                                <th class="Patients"> 
+                                                                                                # Patients</th> 
+                                                <th class="Episodes"> 
+                                                                                                # Episodes</th> 
+                                                <th class="TotalCost"> 
+                                                                                                Total Cost</th> 
+                                                <th class="AvgCostPerEpisode"> 
+                                                                                                Avg Episode Cost</th> 
+                                                <th class="BMAvgCostPerEpisode"> 
+                                                                                                Bmk Avg Episode Cost</th> 
+                                                <th class="CostVariance">Avg Cost Var</th> 
+                                                <th class="PotCostAvoidance"> 
+                                                                                                Pntl Cost Avoid</th> 
+                                                <th class="ID"> 
+                                                                                                Provider ID</th> 
+                                                <th class="Specialty"> 
+                                                                                                Specialty</th> 
+                                            </tr>                                             
+                                        </thead>                                         
+                                        <!--Entry that has been selected !Highlighted blue selected -->                                         
+                                    </table>                                     
+                                </div>                                 
+                                <div class="col-xs-12"> 
+</div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row"> 
+                        <div class="col-xs-12 col-sm-12 col-xs-12 col-lg-12"> 
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                                Save column order
+</button>                             
+                            <div class="container-fluid pull-left ln-removeLeftPadding"> 
+                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                                    Reset column order
+</button>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+    <!-- IF YOU WANT TO EXPERIMENT WITH HOW CONTENT WILL LOOK, COMMENT OUT THE UI VIEW AND PLACE CONTENT  -->

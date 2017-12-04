@@ -1,0 +1,116 @@
+
+
+.proctext_color
+{
+    color: #00778b;
+}
+
+.proctext_color:hover
+{
+    color: #005e68;
+}
+
+.charttabborder
+{
+    border: lightgray solid thin;
+    border-top: 0px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.summary_line
+{
+    color: #6d6e71;
+}
+
+.proc_charts
+{
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.proc_bars
+{
+    height: 31px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .1);
+}
+
+.provicount
+{
+    background-color: #00778b;
+    background-image: url('none');
+}
+
+.procbmkhigh
+{
+    background-color: #890000;
+    background-image: url('none');
+}
+
+.procbmklow
+{
+    background-color: #00890a;
+    background-image: url('none');
+}
+
+.procbmkavg
+{
+    background-color: #5a0089;
+    background-image: url('none');
+}
+
+.proc_arrow_text
+{
+    background-color: #e9e9e9;
+    padding: 7px 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.proc_arrow
+{
+    background-color: e9e9e9;
+}
+
+.square_one
+{
+    width: 90px;
+}
+
+.square_two
+{
+    width: 100px;
+}
+
+.square_three
+{
+    width: 110px;
+}
+
+.arrow-margin
+{
+    margin-bottom: 7px;
+}
+
+.top_bottom_outline
+{
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.ellipsis_text
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 6px;
+}
+

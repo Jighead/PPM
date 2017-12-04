@@ -1,0 +1,188 @@
+<div class="col-xs-12 ln-removeRightPadding" id="datainject_providerlist"> 
+    <div class="col-xs-12"> 
+        <div class="row">
+            <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span> 
+                <h5>Summary (Totals)</h5> 
+            </div>
+            <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered">
+                <thead class="ln-tableHeader" "">
+                    <tr>
+                        <th class="text-center">Total Cost</th>
+                        <th class="text-center">Total Claims</th>
+                        <th class="text-center">Out of Network Cost</th>
+                        <th class="text-center">Out of Network %</th>
+                        <th class="text-center">Out of Network Claims</th>
+                        <th class="text-center">Out of Network Claims %</th>
+                        <th class="text-center">In Network Cost</th>
+                        <th class="text-center">In Network %</th>
+                        <th class="text-center">In Network Claims</th>
+                        <th class="text-center">In Network Claims %</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td> <span>$900,000</span> </td>
+                        <td> <span>5,000,000</span> </td>
+                        <td>$100,000</td>
+                        <td>30%</td>
+                        <td>
+                            <a href="" ui-sref="networkleakageservicelist">1500</a> 
+                        </td>
+                        <td>25%</td>
+                        <td> <span>$100,000,000</span> </td>
+                        <td> <span>70%</span> </td>
+                        <td>
+                            <a href="" ui-sref="networkleakageservicelist">1500</a> 
+                        </td>
+                        <td>30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>         
+        <div class="row text-center ln-borderRadiusTop ln-chartheader"> 
+            <div class="col-xs-12 ln-RemovePadding ln-underlineCommonDark"> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <h5>Service List </h5> 
+            </div>             
+        </div>         
+        <div class="row ln-borderstandard"> 
+            <div class="row action ln-padding-bottom4px"></div>             
+            <div class="col-xs-12 ln-actionTopOffset"> 
+                <div class="row"> 
+                    <div class="container-fluid pull-left ln-removeRightPadding hidden" id="actions"> 
+                        <div class="btn-group pull-left"> 
+                            <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown"> 
+                                Actions
+</button>                             
+                            <ul class="dropdown-menu" role="menu"> 
+                                <li> 
+                                    <a href="">Apply Selections to current page</a> 
+                                </li>                                 
+                                <li> 
+                                    <a href="">Exclude</a> 
+                                </li>                                 
+                                <li class="divider"></li>                                 
+                                <li> 
+                                    <a href="">Clear Selection</a> 
+                                </li>                                 
+                            </ul>                             
+                        </div>                         
+                    </div>                     
+                    <div class="container-fluid pull-left ln-removeRightPadding hidden"> 
+                        <div class="btn-group pull-left"> 
+                            <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown"> 
+                                Peer Group
+</button>                             
+                            <ul class="dropdown-menu" role="menu"> 
+                                <li> 
+                                    <a href="" data-toggle="modal" data-target="#ComparisonPGModal">Add to Peer Group</a> 
+                                </li>                                 
+                                <li> 
+                                    <a href="" data-toggle="modal" data-target="#ComparisonPGModal">Select New Peer Group</a> 
+                                </li>                                 
+                                <li> 
+                                    <a href="" ui-sref="providerscomparedtopeers">Compare to {Current Peer Group}</a> 
+                                </li>                                 
+                                <li class="divider"></li>                                 
+                                <li> 
+                                    <a href="" onclick="gotoCreateNewPeerGroup()">Create new Peer Group</a> 
+                                </li>                                 
+                            </ul>                             
+                        </div>                         
+                    </div>                     
+                    <div class="container-fluid pull-left ln-RemovePadding ln-GroupViewByOffset">
+                        <div class="col-xs-12">
+                            <div class="ln-RemovePadding">
+                                <div class="pull-left">
+                                    <b>View By:</b> 
+                                </div>
+                                <div class="pull-left ln-pos-relative">
+                                    <a data-toggle="dropdown" href="">&nbsp;Out of Network</a> 
+                                    <ol class="dropdown-menu list-unstyled pull-left" role="menu">
+                                        <li>
+                                            <a>Out of Network</a> 
+                                        </li>
+                                        <li>
+                                            <a>In Network</a> 
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 ln-padding-bottom4px invisible">
+                            <div class="dropdown">
+                                <div class="pull-left">
+                                    <b>Group by:</b>
+                                </div>
+                                <div class="pull-left ln-pos-relative">
+                                    <a data-toggle="dropdown" href="">&nbsp;Provider</a> 
+                                    <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                        <li>
+                                            <a>Specialty</a> 
+                                        </li>
+                                        <li>
+                                            <a>Network</a> 
+                                        </li>
+                                        <li>
+                                            <a>Diagnosis Code</a> 
+                                        </li>
+                                        <li>
+                                            <a>Provider</a> 
+                                        </li>
+                                        <li>
+                                            <a>Reason</a> 
+                                        </li>
+                                        <li>
+                                            <a>Procedure Code</a> 
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="row"> 
+                <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink"> 
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>                     
+                </div>                 
+                <div class="col-xs-12"> 
+                    <div class="table-responsive"> 
+                        <table class="display table ln-tabletextsize table-striped table-hover table-condensed table-bordered" id="servicestable"> 
+                            <thead class="ln-nowrap"> 
+                                <tr class="ln-chartheader"> 
+                                    <th> Provider Name</th> 
+                                    <th> Patient</th> 
+                                    <th> Date of Service</th> 
+                                    <th> Diagnosis</th> 
+                                    <th> Procedure</th> 
+                                    <th>National Drug</th> 
+                                    <th>Revenue</th> 
+                                    <th> Paid Amount</th> 
+                                    <th>Reason</th> 
+                                </tr>                                 
+                            </thead>                             
+                            <!--Entry that has been selected !Highlighted blue selected -->                             
+                        </table>                         
+                    </div>                     
+                    <div class="col-xs-12"> 
+</div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <div class="row"> 
+            <div class="col-xs-12 col-sm-12 col-xs-12 col-lg-12 hidden"> 
+                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                    Save column order
+</button>                 
+                <div class="container-fluid pull-left ln-removeLeftPadding"> 
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                        Reset column order
+</button>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+</div>

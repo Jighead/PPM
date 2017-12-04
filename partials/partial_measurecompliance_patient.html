@@ -1,0 +1,569 @@
+<div class="col-md-12 ln-removeRightPadding" id="datainject_measurecompliance_patientlist"> 
+    <div class="col-md-12 ln-removeRightPadding ln-margin-top ln-removeLeftPadding" > 
+        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1"> 
+            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span> 
+            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+            <div class="ln-borderRadiusTop panel-heading"> 
+                <h5 class="text-center"> 
+                                                            Measures:</h5> 
+            </div>             
+            <div class="panel ln-RemoveBottomMargin"> 
+                <div class="panel-body ln-borderstandard ln-RemoveTopPadding"> 
+                    <form class="form-inline" role="form"> 
+                        <div class="form-group hidden ln-margin-top"> 
+                            <label>Measure Group: </label>                             
+                            <select class="form-control input-sm" id="measuregroupdropdown"> 
+                                <option value="allmeasures"> 
+                                    All Measures
+</option>                                 
+                                <option value="chronicmeasures">Chronic Measures</option>                                 
+                                <option value="preventativemeasures">Preventative Measures</option>                                 
+                                <option value="othermeasures">Other Measures</option>                                 
+                            </select>                             
+                        </div>                         
+                        <div class="form-group ln-margin-top"> 
+                            <label>Measure Group: </label>                             
+                            <select class="form-control input-sm" id="measuregroupdropdown"> 
+                                <option value="allmeasures"> 
+                                    All Measures
+</option>                                 
+                                <option value="chronicmeasures">Chronic Measures</option>                                 
+                                <option value="preventativemeasures">Preventative Measures</option>                                 
+                                <option value="othermeasures">Other Measures</option>                                 
+                            </select>                             
+                        </div>                         
+                        <div class="form-group ln-margin-top"> 
+                            <label>Category:</label>                             
+                            <select class="form-control input-sm" id="measuredropdown_patientcompliance"> 
+                                <option value="allcategories">All</option>                                 
+                                <option value="asthma">Asthma</option>                                 
+                                <option value="cad">CAD</option>                                 
+                                <option value="copd">COPD</option>                                 
+                                <option>CVA</option>                                 
+                                <option>Depression</option>                                 
+                                <option>Diabetes</option>                                 
+                                <option>Drug Management</option>                                 
+                                <option>HIV</option>                                 
+                                <option>Heart Failure</option>                                 
+                                <option>Hemophilia</option>                                 
+                                <option>Hepatitis C</option>                                 
+                                <option>Hyperlipidemia</option>                                 
+                                <option>Hypertension</option>                                 
+                                <option>Immunizations-Child</option>                                 
+                                <option>Low Back Pain</option>                                 
+                                <option>Migraines</option>                                 
+                                <option>Multiple Sclerosis</option>                                 
+                                <option>Osteoporosis</option>                                 
+                                <option>Pregnancy Care</option>                                 
+                                <option>Prev. Care</option>                                 
+                                <option>Prev.-Care Women</option>                                 
+                                <option>Renal Failure</option>                                 
+                                <option>Rheumatoid Arthritis</option>                                 
+                                <option>Schizophrenia</option>                                 
+                                <option>Well Child Care</option>                                 
+                            </select>                             
+                        </div>                         
+                        <div class="form-group ln-margin-top" id="compliancedetails"> 
+                            <label>Details: </label>                             
+                            <select class="form-control input-sm" id="measuredropdown_patientcompliancedetails">
+                                <option value="all" class="measuredetails measuredetailsall">All</option>
+                                <option value="asthma_detail1" class="measuredetails asthmadetails">Appropriate medication for persistent asthma</option>                                 
+                                <option value="asthma_detail2" class="measuredetails asthmadetails">Inhaled corticosteroid</option>                                 
+                            </select>                             
+                        </div>                         
+                    </form>                     
+                    <div class="row ln-paddingtop_10px"> 
+                        <div class="col-md-12"> 
+                            <h4 class="panel-title pull-left"><b>Measures:</b> <b class="ln-standardGreentext">99,175 Compliant</b> <b>/</b> <b class="ln-standardRedText">175,315 Non-compliant</b> <b>/</b> <b>274,545 Total</b></h4> 
+                            <a href="#" class="ln-text-align-bottom">View Measures Definitions</a> 
+                        </div>                         
+                    </div>                     
+                    <div class="row ln-measurecompliance-height hidden" id="measurecompliance-bars"> 
+                        <div> 
+</div>                         
+                        <div class="col-lg-11 col-md-12"> 
+                            <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Asthma</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:40%" title="40% Compliant">400</a> 
+                                        <a href="" class="progress-bar progress-bar-danger" role="progressbar" style="width:60%" title="60% Compliant">600</a> 
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding CAD_Bar measurebars preventativemeasures chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">CAD</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <a href="" class="progress-bar progress-bar-success" role="progressbar" style="width:33%" title="33%">333</a> 
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:67%"> 
+                                            677
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding COPD_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">COPD</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:30%">300</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:70%">700</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding CVA_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">CVA</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:90%">900</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:10%"> 
+                                            100
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Depression_Bar measurebars othermeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Depression</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Diabetes_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Diabetes</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">700</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%"> 
+                                            300
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding DrugManagement_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Drug Management-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:65%">650</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:35%"> 
+                                            350
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding HIV_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">HIV</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:75%">750</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:25%"> 
+                                            250
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding HeartFailureBar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Heart Failure-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Hemophilia_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Hemophilia</a>-</p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Hepatitis_C_Bar measurebars othermeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Hepatitis C-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Hyperlipidemia_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Hyperlipidemia-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Hypertension_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Hypertension-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Immunizations_Child_Bar measurebars preventativemeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Immunizations-Child</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding LowBackPain_Bar measurebars othermeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Low Back Pain-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Migraines_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Migraines-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding MultipleSclerosis_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Multiple Sclerosis-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Osteoporosis_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Osteoporosis-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding PregnancyCare_Bar measurebars othermeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Pregnancy Care-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:10%">400</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:90%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding PreventativeCare_Bar measurebars preventativemeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Preventative Care-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding PrevCareWomen_Bar measurebars preventativemeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Prev.-Care Women-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding RenalFailure_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Renal Failure-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding RheumatoidArthritis_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Rheumatoid Arthritis-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding Schizophrenia_Bar measurebars chronicmeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Schizophrenia-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding WellChildCare_Bar measurebars preventativemeasures"> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+                                    <p style="display: block;"><a href="#">Well Child Care-</a></p> 
+                                </div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding ln-underlinecommon"> 
+                                    <div class="progress ln-RemoveBottomMargin"> 
+                                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">9</div>                                         
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%"> 
+                                            4,010
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-lg-1"> 
+</div>                         
+                    </div>                     
+                    <div class="row hidden"> 
+                        <div> 
+</div>                         
+                        <div class="col-lg-11 col-md-12"> 
+                            <div class="container-fluid ln-RemovePadding" ""=""> 
+                                <div class="col-md-2 text-right ln-RemovePadding ln-commonlineright"> 
+</div>                                 
+                                <div class="col-md-10 ln-removeLeftPadding"> 
+                                    <div class="progress ln-RemoveBottomMargin ln-percentagebarline ln-underlineCommonDark"> 
+                                        <div class="progress-bar progress-bar-info" role="progressbar" style="width:3%"> 
+                                            0%
+</div>                                         
+                                        <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%"> 
+                                            25%
+</div>                                         
+                                        <div class="progress-bar progress-bar-info" role="progressbar" style="width:10%"> 
+                                            50%
+</div>                                         
+                                        <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%"> 
+                                            75%
+</div>                                         
+                                        <div class="progress-bar progress-bar-info" role="progressbar" style="width:7%"> 
+                                            100%
+</div>                                         
+                                    </div>                                     
+                                </div>                                 
+                                <div class="col-md-12"> 
+</div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row hidden"> 
+                        <div class="col-md-12"> 
+                            <h6 class="text-center hidden">Click on any bar to drill further</h6> 
+                            <h5 class="text-center ln-RemoveBottomMargin">Percentage of Compliance/Non-Compliance</h5> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+    <div class="col-md-12" id="ppmpc1"> 
+        <div class="row"> 
+            <div class="col-md-12 text-center ln-borderRadiusTop ln-RemovePadding ln-underlineCommonDark ln-chartheader"> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span> 
+                <h5>Summary (Totals)</h5> 
+            </div>             
+            <table class="table table-striped ln-borderstandard ln-RemoveBottomMargin table-bordered"> 
+                <thead class="ln-tableHeader" ""=""> 
+                    <tr> 
+                        <th class="text-center">Providers</th> 
+                        <th class="text-center">Measure Categories</th> 
+                        <th class="text-center"># Compliant</th> 
+                        <th class="text-center">% Compliant</th> 
+                        <th class="text-center"># Non-Compliant</th> 
+                        <th class="text-center">% Non-Compliant</th> 
+                    </tr>                     
+                </thead>                 
+                <tbody class="text-center"> 
+                    <tr> 
+                        <td>                                                                         ####                                                                         </td> 
+                        <td>2000</td> 
+                        <td> 
+                                                                        ####</td> 
+                        <td> 
+                                                                        ##%</td> 
+                        <td> 
+                                                                        ####</td> 
+                        <td>##%</td> 
+                    </tr>                     
+                </tbody>                 
+            </table>             
+        </div>         
+        <div class="row text-center ln-borderRadiusTop ln-chartheader"> 
+            <div class="col-md-12 ln-RemovePadding"> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <span class="fa fa-plus-circle btn-glyphs pull-right fa-lg hidden" title="Column Options"></span> 
+                <h5>Patient List </h5> 
+            </div>             
+        </div>         
+        <div class="row ln-borderstandard"> 
+            <div class="row action ln-padding-bottom4px"></div>             
+            <div class="col-md-12 ln-actionTopOffset"> 
+                <div class="row"> 
+                    <div class="container-fluid pull-left hidden" id="actions"> 
+                        <div class="btn-group pull-left"> 
+                            <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm" data-toggle="dropdown">Exclude Selection</button>                             
+                        </div>                         
+                    </div>                     
+                    <div class="container-fluid pull-left ln-RemovePadding ln-GroupViewByOffset"> 
+                        <div class="col-md-12 ln-padding-bottom4px"> 
+                            <div class="dropdown"> 
+                                <div class="pull-left"> 
+                                    <b style="display: inline-block;">View by</b>:&nbsp;
+                                </div>                                 
+                                <div class="pull-left ln-pos-relative"> 
+                                    <a data-toggle="dropdown" href="">All</a> 
+                                    <ol class="dropdown-menu pull-left list-unstyled" role="menu"> 
+                                        <li> 
+                                            <a>All</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a>Compliant</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a>Non-Compliant</a> 
+                                        </li>                                         
+                                    </ol>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="btn-group pull-left invisible"> 
+                        <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm" data-toggle="dropdown">Clear Selection</button>                         
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="row"> 
+                <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink"> 
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>                     
+                </div>                 
+                <div class="col-md-12">
+                    <div class="table-responsive"> 
+                        <table class="ln-tableHeader table ln-tabletextsize table-striped table-hover table-condensed table-bordered" id="measurecomliance_patientlisttable"> 
+                            <thead class="ln-nowrap"> 
+                                <tr> 
+                                    <th class="PatientName" title="Patient Name">Patient Name</th> 
+                                    <th class="primarycondition" title="Primary Condition">Primary Diagnosis</th>
+                                    <th class="PatientPCP" title="Primary Care Provider" style="display: table-cell;">Measure Category</th> 
+                                    <th class="age" title="Age">Measure Detail</th> 
+                                    <th class="gender" title="Gender">ID</th>
+                                    <th class="compliant" title="Compliant">Age</th>
+                                    <th class="caremanagementprogram" title="Care Management Program">Gender</th>
+                                    <th class="patientid" title="Patient Identity">PCP</th>
+                                    <th class="pcpid" title="PCP ID">Compliant</th>
+                                </tr>                                 
+                            </thead>                             
+                            <!--Entry that has been selected !Highlighted blue selected -->
+                        </table>                         
+                    </div>                     
+                    <div class="col-md-12"> 
+</div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <div class="row"> 
+            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"> 
+                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                    Save column order
+</button>                 
+                <div class="container-fluid pull-left ln-removeLeftPadding"> 
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                        Reset column order
+</button>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+</div>

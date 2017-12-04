@@ -1,0 +1,75 @@
+ 
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>PPM Provide Pop Chart</title>         
+        <meta charset="utf-8" /> 
+        <link href="population_chart.css" rel="stylesheet" type="text/css"> 
+        <script src="http://d3js.org/d3.v3.min.js"></script>         
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content=""> 
+        <meta name="author" content=""> 
+        <!--DataTables-->         
+        <!-- Bootstrap core CSS -->         
+        <!-- Custom styles for this template -->         
+        <!-- Using Font awesome-->         
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->         
+        <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+     <![endif]-->         
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css"> 
+        <link href="ln-styles.css" rel="stylesheet" type="text/css"> 
+        <link href="tablestandards.css" rel="stylesheet" type="text/css"> 
+        <link href="interactiveElements.css" rel="stylesheet" type="text/css"> 
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+    </head>     
+    <body class="">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div id="patient_population_svg" align="center"></div>                 
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div id="overall_population_svg" align="center"></div>                 
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div id="chronic_population_svg" align="center"></div>                 
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div id="acute_population_svg" align="center"></div>                 
+            </div>
+        </div>         
+        <!--SCRIPTS-->         
+        <script src="http://d3js.org/d3.v3.min.js"></script>         
+        <script src="assets/js/jquery.min.js"></script>         
+        <script src="bootstrap/js/bootstrap.min.js"></script>         
+        <script src="bootstrap/js/tooltip.js"></script>         
+        <script src="bootstrap/js/popover.js"></script>         
+        <!-- Data tables Java Start-->         
+        <script type="text/javascript" language="javascript" src="datatables/media/js/jquery.dataTables.js"></script>         
+        <script type="text/javascript" language="javascript" src="datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>         
+        <script type="text/javascript" language="javascript" src="datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js"></script>         
+        <script src="bootstrap/js/dataTables.bootstrap.js"></script>         
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->         
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>         
+        <!-- Custom JS -->         
+        <script src="assets/js/navigation_methods.js"></script>         
+        <script src="assets/js/sample_dataset.js"></script>         
+        <script src="angular.js"></script>         
+        <script src="angular-ui-router.js"></script>         
+        <script src="assets/js/app.js"></script>         
+        <script src="assets/js/chart_providerpopulation2.js"></script>         
+        <script type="text/javascript" language="javascript" class="init">
+        $(document).ready(function() {
+            SetChart("Patient Population", "#patient_population_svg");
+            SetChart("Overall Population", "#overall_population_svg");
+            SetChart("Chronic Episodes", "#chronic_population_svg");
+            SetChart("Acute Episodes", "#acute_population_svg");
+        });
+    </script>         
+    </body>     
+</html>

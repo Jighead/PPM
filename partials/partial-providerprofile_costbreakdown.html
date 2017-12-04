@@ -1,0 +1,883 @@
+<div class="col-xs-12" id="container_provprof_costbreakdown">
+    <div class="row" id="pp_summary"> 
+        <div class="col-xs-12 ln-removeRightPadding"> 
+            <div class="col-xs-12"> 
+                <div class="row"> 
+                    <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark"> 
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                        <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right hidden"></span> 
+                        <h5>Summary</h5>
+                    </div>                     
+                    <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered"> 
+                        <thead class="ln-tableHeader" ""=""> 
+                            <tr style="display: table-row;"> 
+                                <th class="text-center">Patient Risk</th>
+                                <th class="text-center">Efficiency</th>
+                                <th class="text-center">Case Mix</th>
+                                <th class="text-center">Total Cost.</th>
+                                <th class="text-center">Avg.Episode Cost</th>
+                                <th class="text-center">Bmk Avg Episode Cost</th>
+                                <th class="text-center">Avg Cost Variance</th>
+                                <th class="text-center">Pntl Cost Avoid</th>
+                            </tr>                             
+                        </thead>                         
+                        <tbody class="text-center"> 
+                            <tr style="display: table-row;"> 
+                                <td style="display: table-cell;">
+                                    <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                        <span class="fa fa-check ln-faRight"></span> 
+                                        <span>1.1</span> 
+                                    </div>
+                                </td>
+                                <td style="display: table-cell;">
+                                    <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                        <span class="fa fa-check ln-faRight"></span> 
+                                        <span>1.1</span> 
+                                    </div>
+                                </td>
+                                <td style="display: table-cell;">
+                                    <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                        <span class="fa fa-check ln-faRight"></span> 
+                                        <span>1.1</span> 
+                                    </div>
+                                </td>
+                                <td>$##,###</td>
+                                <td>$##,###</td>
+                                <td>$##,###</td>
+                                <td>$#,###</td>
+                                <td>$#,###</td>
+                            </tr>                             
+                        </tbody>
+                    </table>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>
+    <div class="row" id="pp_totalcostbreakdown">
+        <div class="ln-removeRightPadding col-xs-12 ln-margin-top hidden" id="totalcostbreakdownproposed">
+            <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1"> 
+                <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons invisible"></span> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <div class="ln-borderRadiusTop panel-heading"> 
+                    <h5 class="text-center">Total Cost Breakdown (Proposal for 2.0)</h5> 
+                </div>                 
+                <div class="ln-borderstandard"> 
+                    <div class=""> 
+                        <div class="panel-body"> 
+                            <div class="row"> 
+                                <div class="col-md-12 col-lg-3"> 
+                                    <div class="row ln-border-top-line-grey hidden"> 
+                                        <div class="col-md-12"> 
+                                            <h5>Per Episode Cost</h5> 
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="text-left ln-removeLeftPadding col-lg-12 col-xs-3 hidden"> 
+                                        <div class="text-left marginbottomsmall"> 
+                                            # Episodes:
+                                            <a href="">#######</a> 
+                                            <br># Patients:
+                                            <a href="">#######</a> 
+                                            <br>Total Variance:
+                                            #######
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="col-lg-12 col-xs-3"> 
+                                        <div class="well well-sm text-center marginbottomsmall wellExpected">
+                                            <b> 
+                                                                                            Actual Cost:</b>
+                                            <br>$1,000,000
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="col-md-3 col-lg-12"> 
+                                        <div class="well well-sm text-center marginbottomsmall wellyourcost">
+                                            <b> 
+                                                                                            Benchmark Cost:</b>
+                                            <br>$930,000
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="col-lg-12 col-xs-3"> 
+                                        <div class="well well-sm text-center marginbottomsmall wellSavings">
+                                            <b> 
+                                                                                            Potential Avoidance:</b>
+                                            <br>$70,000
+                                        </div>                                         
+                                    </div>
+                                    <div class="col-lg-12 col-xs-3"> 
+                                        <div class="well text-center marginbottomsmall wellEpisodesPatients well-sm">
+                                            <b> 
+                                                                                            Episodes</b>: 1,000,000
+                                            <br>
+                                            <b>Patients</b>:1,000,000
+                                        </div>                                         
+                                    </div>                                     
+                                </div>
+                                <div class="col-xs-12 hidden-lg ln-border-top-line-grey"></div>                                 
+                                <div class="col-lg-9 col-xs-12 ln-removeLeftPadding">
+                                    <div class="row hidden-lg"> 
+                                        <div class="col-xs-6 hidden"> 
+                                            <h5>Total Cost Breakdown</h5> 
+                                        </div>                                         
+                                        <div class="container-fluid pull-right"> 
+                                            <span class="hidden">Total Cost Variance: $1,000,000,000</span>&nbsp;
+                                        </div>                                         
+                                        <div class="container-fluid pull-right"> 
+                                            <span class="hidden">Total % Variance: 40%</span> 
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="percentagechartsmall pull-left"> 
+                                        <div class="container-fluid pull-left"> 
+                                            <div class="text-center"> 
+                                                <b>Management</b> 
+                                            </div>                                             
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134px" height="134px" viewbox="133 83 134 134" enable-background="new 133 83 134 134" xml:space="preserve"> 
+                                                <g id="chart"> 
+                                                    <circle id="BGCircle" opacity="0.4" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" enable-background="new    " cx="200" cy="150" r="66" /> 
+                                                    <path fill="#008ED4" d="M200.298,149.926l0.149-64.438c35.566,0.074,64.363,29.019,64.287,64.586
+		c-0.074,21.356-9.374,39.585-26.711,52.085L200.298,149.926z" /> 
+                                                    <circle id="BGCircle_1_" fill="#414042" cx="200.224" cy="149.777" r="49.63" /> 
+                                                    <circle id="Text_x5F_BG" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" cx="200.224" cy="149.777" r="40.924" /> 
+                                                </g>                                                 
+                                                <text transform="matrix(1 0 0 1 183.2109 154)" fill="#F1F2F2" font-size="18">40% </text>                                                 
+                                                <text transform="matrix(1 0 0 1 186 167)" fill="#F1F2F2" font-size="12">under</text>                                                 
+                                            </svg>                                             
+                                            <div class="text-center"> 
+                                                A: $200,000
+                                                <br>B: $220,000
+                                                <br>V:
+                                                <span class="ln-standardRedText">-$20,000</span>
+                                                <br>Episodes:
+                                                <a>100</a> 
+                                                <br>Patients:
+                                                <a>30</a>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmall"> 
+                                        <div class="pull-left container-fluid"> 
+                                            <div class="text-center"> 
+                                                <b>Pharmacy</b> 
+                                            </div>                                             
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134px" height="134px" viewbox="133 83 134 134" enable-background="new 133 83 134 134" xml:space="preserve"> 
+                                                <g id="chart"> 
+                                                    <circle id="BGCircle" opacity="0.4" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" enable-background="new    " cx="200" cy="150" r="66" /> 
+                                                    <path fill="#7F3F98" d="M200.298,149.926l0.149-64.438c35.566,0.074,64.363,29.019,64.287,64.586
+		c-0.074,21.356-9.374,39.585-26.711,52.085L200.298,149.926z" /> 
+                                                    <circle id="BGCircle_1_" fill="#414042" cx="200.224" cy="149.777" r="49.63" /> 
+                                                    <circle id="Text_x5F_BG" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" cx="200.224" cy="149.777" r="40.924" /> 
+                                                </g>                                                 
+                                                <text transform="matrix(1 0 0 1 183.2109 154)" fill="#F1F2F2" font-size="18">40% </text>                                                 
+                                                <text transform="matrix(1 0 0 1 188 167)" fill="#F1F2F2" font-size="12">over</text>                                                 
+                                            </svg>
+                                            <div class="text-center"> 
+                                                A: $200,000
+                                                <br>B: $220,000
+                                                <br>V:
+                                                <span class="ln-standardRedText">-$20,000</span>
+                                                <br>Episodes:
+                                                <a>100</a> 
+                                                <br>Patients:
+                                                <a>30</a>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmall"> 
+                                        <div class="container-fluid pull-left"> 
+                                            <div class="text-center"> 
+                                                <b>Facility</b> 
+                                            </div>                                             
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134px" height="134px" viewbox="133 83 134 134" enable-background="new 133 83 134 134" xml:space="preserve"> 
+                                                <g id="chart"> 
+                                                    <circle id="BGCircle" opacity="0.4" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" enable-background="new    " cx="200" cy="150" r="66" /> 
+                                                    <path fill="#BE1E2D" d="M200.298,149.926l0.149-64.438c35.566,0.074,64.363,29.019,64.287,64.586
+		c-0.074,21.356-9.374,39.585-26.711,52.085L200.298,149.926z" /> 
+                                                    <circle id="BGCircle_1_" fill="#414042" cx="200.224" cy="149.777" r="49.63" /> 
+                                                    <circle id="Text_x5F_BG" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" cx="200.224" cy="149.777" r="40.924" /> 
+                                                </g>                                                 
+                                                <text transform="matrix(1 0 0 1 183.2109 154)" fill="#F1F2F2" font-size="18">40%</text>                                                 
+                                                <text transform="matrix(1 0 0 1 188 167)" fill="#F1F2F2" font-size="12">over</text>                                                 
+                                            </svg>
+                                            <div class="text-center"> 
+                                                A: $200,000
+                                                <br>B: $220,000
+                                                <br>V:
+                                                <span class="ln-standardRedText">-$20,000</span>
+                                                <br>Episodes:
+                                                <a>100</a> 
+                                                <br>Patients:
+                                                <a>30</a>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmall"> 
+                                        <div class="container-fluid pull-left"> 
+                                            <div class="text-center"> 
+                                                <b>Surgical</b> 
+                                            </div>                                             
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134px" height="134px" viewbox="133 83 134 134" enable-background="new 133 83 134 134" xml:space="preserve"> 
+                                                <g id="chart"> 
+                                                    <circle id="BGCircle" opacity="0.4" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" enable-background="new    " cx="200" cy="150" r="66" /> 
+                                                    <path fill="#F7941E" d="M200.298,149.926l0.149-64.438c35.566,0.074,64.363,29.019,64.287,64.586
+		c-0.074,21.356-9.374,39.585-26.711,52.085L200.298,149.926z" /> 
+                                                    <circle id="BGCircle_1_" fill="#414042" cx="200.224" cy="149.777" r="49.63" /> 
+                                                    <circle id="Text_x5F_BG" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" cx="200.224" cy="149.777" r="40.924" /> 
+                                                </g>                                                 
+                                                <text transform="matrix(1 0 0 1 183.2109 154)" fill="#F1F2F2" font-size="18">40% </text>                                                 
+                                                <text transform="matrix(1 0 0 1 188 167)" fill="#F1F2F2" font-size="12">over</text>                                                 
+                                            </svg>
+                                            <div class="text-center"> 
+                                                A: $200,000
+                                                <br>B: $220,000
+                                                <br>V:
+                                                <span class="ln-standardRedText">-$20,000</span>
+                                                <br>Episodes:
+                                                <a>100</a> 
+                                                <br>Patients:
+                                                <a>30</a>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>
+                                    <div class="pull-left percentagechartsmall"> 
+                                        <div class="container-fluid pull-left"> 
+                                            <div class="text-center"> 
+                                                <b>Ancillary</b> 
+                                            </div>                                             
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="134px" height="134px" viewbox="133 83 134 134" enable-background="new 133 83 134 134" xml:space="preserve"> 
+                                                <g id="chart"> 
+                                                    <circle id="BGCircle" opacity="0.4" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" enable-background="new    " cx="200" cy="150" r="66" /> 
+                                                    <path fill="#009E52" d="M200.298,149.926l0.149-64.438c35.566,0.074,64.363,29.019,64.287,64.586
+		c-0.074,21.356-9.374,39.585-26.711,52.085L200.298,149.926z" /> 
+                                                    <circle id="BGCircle_1_" fill="#414042" cx="200.224" cy="149.777" r="49.63" /> 
+                                                    <circle id="Text_x5F_BG" fill="#414042" stroke="#F1F2F2" stroke-miterlimit="10" cx="200.224" cy="149.777" r="40.924" /> 
+                                                </g>                                                 
+                                                <text transform="matrix(1 0 0 1 183.2109 154)" fill="#F1F2F2" font-size="18">40% </text>                                                 
+                                                <text transform="matrix(1 0 0 1 186 167)" fill="#F1F2F2" font-size="12">under</text>                                                 
+                                            </svg>
+                                            <div class="text-center"> 
+                                                A: $200,000
+                                                <br>B: $220,000
+                                                <br>V:
+                                                <span class="ln-standardRedText">-$20,000</span>
+                                                <br>Episodes:
+                                                <a>100</a> 
+                                                <br>Patients:
+                                                <a>30</a>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
+        <div class="col-xs-12 ln-removeRightPadding hidden">
+            <div class="panel-default ln-RemoveBottomMargin ln-paddingtop_10px" data-pg-name="Panel1"> 
+                <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                <div class="ln-borderRadiusTop panel-heading"> 
+                    <h5 class="text-center">Total Cost Breakdown</h5> 
+                </div>                 
+                <div class="ln-borderstandard"> 
+                    <div> 
+                        <div class="panel-body"> 
+                            <div class="row"> 
+                                <div class="col-xs-12 col-lg-12"> 
+                                    <style type="text/css"> 
+                                                                                        .st0 {
+                                                                                        opacity: 0.4;
+                                                                                        fill: #919191;
+                                                                                        stroke: #F1F2F2;
+                                                                                        stroke-miterlimit: 10;
+                                                                                        enable-background: new;
+                                                                                        }
+                                                                                        .st1 {
+                                                                                        fill: #D1D1D1;
+                                                                                        }
+                                                                                        .st3 {
+                                                                                        fill: #414042;
+                                                                                        }
+                                                                                        .st4 {
+                                                                                        fill: #414042;
+                                                                                        stroke: #F1F2F2;
+                                                                                        stroke-miterlimit: 10;
+                                                                                        }
+                                                                                        .st5 {
+                                                                                        fill: #F1F2F2;
+                                                                                        }
+                                                                                        .st7 {
+                                                                                        font-size: 18px;
+                                                                                        }
+                                                                                        .st8 {
+                                                                                        font-size: 12px;
+                                                                                        }
+</style>                                     
+                                    <div class="pull-left percentagechartsmallx6 ln-commonlineright eg_over"> 
+                                        <div class="text-center"> 
+                                            <b>Total</b> 
+                                        </div>                                         
+                                        <svg version="1.1" class="gaugecostbreakdown" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 178 83" style="enable-background:new 0 0 178 83;" xml:space="preserve"> 
+                                            <style type="text/css"></style>                                             
+                                            <g id="graph"> 
+                                                <path id="bg" class="eg_bg" d="M177.6,81.6C173.5,36.4,135.5,1,89.3,1S5.1,36.4,1,81.6H177.6z" /> 
+                                                <path id="under" class="eg_under" d="M175.8,81.6c-2.3-23.8-14.4-46.5-35.2-61.7L95.7,81.6H175.8z" /> 
+                                                <path id="over" class="eg_over" d="M83.6,81.6L38.8,19.8C17.8,35,5.6,56.4,3.4,81.6H83.6z" /> 
+                                                <path id="expected" class="eg_expected" d="M95.7,81.6l44.9-61.7C109.7-2.6,69.7-2.7,38.8,19.8l44.8,61.8H95.7z" /> 
+                                            </g>                                             
+                                            <path id="arrowbg" class="eg_arrowbg" d="M168,81.3c-4.4-39.4-37.7-70.1-78.3-70.1s-74,30.7-78.4,70.1H168z" /> 
+                                            <g id="ArrowGroup"> 
+                                                <path id="ArrowCenter" class="eg_gaugewhite" d="M135.1,150" /> 
+                                                <rect id="arrow" x="42.8" y="31.5" transform="matrix(0.1028 -0.9947 0.9947 0.1028 6.1404 87.6411)" class="eg_gaugewhite " width="17" height="17" /> 
+                                            </g>                                             
+                                            <path id="arrowfg" class="eg_arrowfgcircle st2-total" d="M153,81.6c-4.4-31-31-55-63.2-55s-58.9,23.9-63.4,55H153z" /> 
+                                            <text transform="matrix(1 0 0 1 68.6839 69)" class="eg_gaugewhite fontsize18">30%</text>                                             
+                                        </svg>                                         
+                                        <div class="text-center"> 
+                                            <div> 
+                                                A: $120,100,000
+</div>                                             
+                                            <div> 
+                                                B: $120,100,000
+</div>                                             
+                                            <div> 
+                                                Episodes:
+                                                <a href="">120,100</a> 
+                                            </div>                                             
+                                            <div> 
+                                                Patients:
+                                                <a>100,100</a> 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="percentagechartsmallx6 pull-left ln-commonlineright"> 
+                                        <div class="text-center"> 
+                                            <b>Management</b> 
+                                        </div>                                         
+                                        <svg version="1.1" class="gaugecostbreakdown" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 178 83" style="enable-background:new 0 0 178 83;" xml:space="preserve"> 
+                                            <style type="text/css"></style>                                             
+                                            <g id="chart"> 
+                                                <path id="bg" class="eg_bg" d="M177.6,81.6C173.5,36.4,135.5,1,89.3,1S5.1,36.4,1,81.6H177.6z" /> 
+                                                <path id="under" class="eg_under" d="M175.8,81.6c-2.3-23.8-14.4-46.5-35.2-61.7L95.7,81.6H175.8z" /> 
+                                                <path id="over" class="eg_over" d="M83.6,81.6L38.8,19.8C17.8,35,5.6,56.4,3.4,81.6H83.6z" /> 
+                                                <path id="expected" class="eg_expected" d="M95.7,81.6l44.9-61.7C109.7-2.6,69.7-2.7,38.8,19.8l44.8,61.8H95.7z" /> 
+                                            </g>                                             
+                                            <path id="arrowbg" class="eg_arrowbg" d="M168,81.3c-4.4-39.4-37.7-70.1-78.3-70.1s-74,30.7-78.4,70.1H168z" /> 
+                                            <g id="ArrowGroup"> 
+                                                <path id="ArrowCenter" class="eg_gaugewhite" d="M135.1,150" /> 
+                                                <rect id="arrow" x="42.8" y="31.5" transform="matrix(0.1028 -0.9947 0.9947 0.1028 6.1404 87.6411)" class="eg_gaugewhite " width="17" height="17" /> 
+                                            </g>                                             
+                                            <path id="arrowfg" class="eg_arrowfgcircle st2-management" d="M153,81.6c-4.4-31-31-55-63.2-55s-58.9,23.9-63.4,55H153z" /> 
+                                            <text transform="matrix(1 0 0 1 68.6839 69)" class="eg_gaugewhite fontsize18">30%</text>                                             
+                                        </svg>                                         
+                                        <div class="text-center"> 
+                                            <div> 
+                                                A: $120,100,000
+</div>                                             
+                                            <div> 
+                                                B: $120,100,000
+</div>                                             
+                                            <div> 
+                                                Episodes:
+                                                <a href="">120,100</a> 
+                                            </div>                                             
+                                            <div> 
+                                                Patients:
+                                                <a>100,100</a> 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmallx6 ln-commonlineright"> 
+                                        <div class="text-center"> 
+                                            <b>Pharmacy</b> 
+                                        </div>                                         
+                                        <svg version="1.1" class="gaugecostbreakdown" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 178 83" style="enable-background:new 0 0 178 83;" xml:space="preserve"> 
+                                            <style type="text/css"></style>                                             
+                                            <g id="graph"> 
+                                                <path id="bg" class="eg_bg" d="M177.6,81.6C173.5,36.4,135.5,1,89.3,1S5.1,36.4,1,81.6H177.6z" /> 
+                                                <path id="under" class="eg_under" d="M175.8,81.6c-2.3-23.8-14.4-46.5-35.2-61.7L95.7,81.6H175.8z" /> 
+                                                <path id="over" class="eg_over" d="M83.6,81.6L38.8,19.8C17.8,35,5.6,56.4,3.4,81.6H83.6z" /> 
+                                                <path id="expected" class="eg_expected" d="M95.7,81.6l44.9-61.7C109.7-2.6,69.7-2.7,38.8,19.8l44.8,61.8H95.7z" /> 
+                                            </g>                                             
+                                            <path id="arrowbg" class="eg_arrowbg" d="M168,81.3c-4.4-39.4-37.7-70.1-78.3-70.1s-74,30.7-78.4,70.1H168z" /> 
+                                            <g id="ArrowGroup"> 
+                                                <path id="ArrowCenter" class="eg_gaugewhite" d="M135.1,150" /> 
+                                                <rect id="arrow" x="42.8" y="31.5" transform="matrix(0.1028 -0.9947 0.9947 0.1028 6.1404 87.6411)" class="eg_gaugewhite " width="17" height="17" /> 
+                                            </g>                                             
+                                            <path id="arrowfg" class="eg_arrowfgcircle st2-pharmacy" d="M153,81.6c-4.4-31-31-55-63.2-55s-58.9,23.9-63.4,55H153z" /> 
+                                            <text transform="matrix(1 0 0 1 68.6839 69)" class="eg_gaugewhite fontsize18">30%</text>                                             
+                                        </svg>                                         
+                                        <div class="text-center"> 
+                                            <div> 
+                                                A: $120,100,000
+</div>                                             
+                                            <div> 
+                                                B: $120,100,000
+</div>                                             
+                                            <div> 
+                                                Episodes:
+                                                <a href="">120,100</a> 
+                                            </div>                                             
+                                            <div> 
+                                                Patients:
+                                                <a>100,100</a> 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmallx6 ln-commonlineright"> 
+                                        <div class="text-center"> 
+                                            <b>Facility</b> 
+                                        </div>                                         
+                                        <svg version="1.1" class="gaugecostbreakdown" id="chart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 178 83" style="enable-background:new 0 0 178 83;" xml:space="preserve"> 
+                                            <style type="text/css"></style>                                             
+                                            <g id="graph"> 
+                                                <path id="bg" class="eg_bg" d="M177.6,81.6C173.5,36.4,135.5,1,89.3,1S5.1,36.4,1,81.6H177.6z" /> 
+                                                <path id="under" class="eg_under" d="M175.8,81.6c-2.3-23.8-14.4-46.5-35.2-61.7L95.7,81.6H175.8z" /> 
+                                                <path id="over" class="eg_over" d="M83.6,81.6L38.8,19.8C17.8,35,5.6,56.4,3.4,81.6H83.6z" /> 
+                                                <path id="expected" class="eg_expected" d="M95.7,81.6l44.9-61.7C109.7-2.6,69.7-2.7,38.8,19.8l44.8,61.8H95.7z" /> 
+                                            </g>                                             
+                                            <path id="arrowbg" class="eg_arrowbg" d="M168,81.3c-4.4-39.4-37.7-70.1-78.3-70.1s-74,30.7-78.4,70.1H168z" /> 
+                                            <g id="ArrowGroup"> 
+                                                <path id="ArrowCenter" class="eg_gaugewhite" d="M135.1,150" /> 
+                                                <rect id="arrow" x="42.8" y="31.5" transform="matrix(0.1028 -0.9947 0.9947 0.1028 6.1404 87.6411)" class="eg_gaugewhite " width="17" height="17" /> 
+                                            </g>                                             
+                                            <path id="arrowfg" class="eg_arrowfgcircle st2-facility" d="M153,81.6c-4.4-31-31-55-63.2-55s-58.9,23.9-63.4,55H153z" /> 
+                                            <text transform="matrix(1 0 0 1 68.6839 69)" class="eg_gaugewhite fontsize18">30%</text>                                             
+                                        </svg>                                         
+                                        <div class="text-center"> 
+                                            <div> 
+                                                A: $120,100,000
+</div>                                             
+                                            <div> 
+                                                B: $120,100,000
+</div>                                             
+                                            <div> 
+                                                Episodes:
+                                                <a href="">120,100</a> 
+                                            </div>                                             
+                                            <div> 
+                                                Patients:
+                                                <a>100,100</a> 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmallx6 ln-commonlineright"> 
+                                        <div class="text-center"> 
+                                            <b>Surgical</b> 
+                                        </div>                                         
+                                        <svg version="1.1" class="gaugecostbreakdown" id="chart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 178 83" style="enable-background:new 0 0 178 83;" xml:space="preserve"> 
+                                            <style type="text/css"></style>                                             
+                                            <g id="graph"> 
+                                                <path id="bg" class="eg_bg" d="M177.6,81.6C173.5,36.4,135.5,1,89.3,1S5.1,36.4,1,81.6H177.6z" /> 
+                                                <path id="under" class="eg_under" d="M175.8,81.6c-2.3-23.8-14.4-46.5-35.2-61.7L95.7,81.6H175.8z" /> 
+                                                <path id="over" class="eg_over" d="M83.6,81.6L38.8,19.8C17.8,35,5.6,56.4,3.4,81.6H83.6z" /> 
+                                                <path id="expected" class="eg_expected" d="M95.7,81.6l44.9-61.7C109.7-2.6,69.7-2.7,38.8,19.8l44.8,61.8H95.7z" /> 
+                                            </g>                                             
+                                            <path id="arrowbg" class="eg_arrowbg" d="M168,81.3c-4.4-39.4-37.7-70.1-78.3-70.1s-74,30.7-78.4,70.1H168z" /> 
+                                            <g id="ArrowGroup"> 
+                                                <path id="ArrowCenter" class="eg_gaugewhite" d="M135.1,150" /> 
+                                                <rect id="arrow" x="42.8" y="31.5" transform="matrix(0.1028 -0.9947 0.9947 0.1028 6.1404 87.6411)" class="eg_gaugewhite " width="17" height="17" /> 
+                                            </g>                                             
+                                            <path id="arrowfg" class="eg_arrowfgcircle st2-surgical" d="M153,81.6c-4.4-31-31-55-63.2-55s-58.9,23.9-63.4,55H153z" /> 
+                                            <text transform="matrix(1 0 0 1 68.6839 69)" class="eg_gaugewhite fontsize18">30%</text>                                             
+                                        </svg>                                         
+                                        <div class="text-center"> 
+                                            <div> 
+                                                A: $120,100,000
+</div>                                             
+                                            <div> 
+                                                B: $120,100,000
+</div>                                             
+                                            <div> 
+                                                Episodes:
+                                                <a href="">120,100</a> 
+                                            </div>                                             
+                                            <div> 
+                                                Patients:
+                                                <a>100,100</a> 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                    <div class="pull-left percentagechartsmallx6"> 
+                                        <div class="text-center"> 
+                                            <b>Ancillary</b> 
+                                        </div>                                         
+                                        <svg version="1.1" class="gaugecostbreakdown" id="chart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewbox="0 0 178 83" style="enable-background:new 0 0 178 83;" xml:space="preserve"> 
+                                            <style type="text/css"></style>                                             
+                                            <g id="graph"> 
+                                                <path id="bg" class="eg_bg" d="M177.6,81.6C173.5,36.4,135.5,1,89.3,1S5.1,36.4,1,81.6H177.6z" /> 
+                                                <path id="under" class="eg_under" d="M175.8,81.6c-2.3-23.8-14.4-46.5-35.2-61.7L95.7,81.6H175.8z" /> 
+                                                <path id="over" class="eg_over" d="M83.6,81.6L38.8,19.8C17.8,35,5.6,56.4,3.4,81.6H83.6z" /> 
+                                                <path id="expected" class="eg_expected" d="M95.7,81.6l44.9-61.7C109.7-2.6,69.7-2.7,38.8,19.8l44.8,61.8H95.7z" /> 
+                                            </g>                                             
+                                            <path id="arrowbg" class="eg_arrowbg" d="M168,81.3c-4.4-39.4-37.7-70.1-78.3-70.1s-74,30.7-78.4,70.1H168z" /> 
+                                            <g id="ArrowGroup"> 
+                                                <path id="ArrowCenter" class="eg_gaugewhite" d="M135.1,150" /> 
+                                                <rect id="arrow" x="42.8" y="31.5" transform="matrix(0.1028 -0.9947 0.9947 0.1028 6.1404 87.6411)" class="eg_gaugewhite " width="17" height="17" /> 
+                                            </g>                                             
+                                            <path id="arrowfg" class="eg_arrowfgcircle st2-surgical" d="M153,81.6c-4.4-31-31-55-63.2-55s-58.9,23.9-63.4,55H153z" /> 
+                                            <text transform="matrix(1 0 0 1 68.6839 69)" class="eg_gaugewhite fontsize18">30%</text>                                             
+                                        </svg>                                         
+                                        <div class="text-center"> 
+                                            <div> 
+                                                A: $120,100,000
+</div>                                             
+                                            <div> 
+                                                B: $120,100,000
+</div>                                             
+                                            <div> 
+                                                Episodes:
+                                                <a href="">120,100</a> 
+                                            </div>                                             
+                                            <div> 
+                                                Patients:
+                                                <a>100,100</a> 
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
+        <div class="col-xs-12 ln-removeRightPadding" id="providercharts"> 
+            <div class="panel-default ln-RemoveBottomMargin ln-paddingtop_10px" data-pg-name="Panel1"> 
+                <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span> 
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                <div class="ln-borderRadiusTop panel-heading"> 
+                    <h5 class="text-center">Total Cost Breakdown</h5> 
+                </div>                 
+                <div class="ln-borderstandard panel-body ln-RemoveBottomPadding" id="totalcostbreakdownbody">
+                    <div class=""> 
+                        <div class="">
+                            <div class="row"> 
+                                <div class="col-xs-12 col-lg-12">
+                                    <div class="row" id="ln_compareCost_ChartData_container">
+                                        <div class="col-md-12 col-lg-12" id="ln_compareCost_chartData_table" style="display: none; visibility: visible;">
+                                            <div class="col-md-3 ln-removeLeftPadding col-lg-3">
+                                                <div id="ln_compareCost_expectedCost_div" class="well-sm text-center marginbottomsmall ln_compareCost_expected">
+                                                    Expected: $507,333,552							
+</div>                                                 
+                                            </div>
+                                            <div class="col-sm-3 ln-removeLeftPadding col-lg-3">
+                                                <div id="ln_compareCost_yourCost_div" class="well-sm text-center marginbottomsmall ln_compareCost_under">
+                                                    Actual: $395,062,252
+</div>                                                 
+                                            </div>
+                                            <div class="col-sm-3 ln-removeLeftPadding col-lg-3"> 
+                                                <div id="ln_compareCost_benchmark_div" class="well-sm text-center marginbottomsmall ln_compareCost_under">Below BMK: $112,271,300</div>                                                 
+                                            </div>                                             
+                                            <div class="col-sm-3 ln-removeLeftPadding col-lg-3"> 
+                                                <div id="ln_compareCost_savingsPotential_div" class="well-sm text-center marginbottomsmall ln_compareCost_under">
+                                                    Total % Variance: 77.87%
+</div>                                                 
+                                            </div>                                             
+                                        </div>
+                                        <!-- Bar chart with needle -->
+                                        <div class="col-xs-4 ln-commonlineright col-lg-2 ln-margin-bottom-4px">
+                                            <div class="text-center">
+                                                <label>Total</label>
+                                            </div>
+                                            <div id="ln_compareCost_totalCostGauge" class="col-xs-12">
+                                                <div class="ln-costbreakdownchart center-block">
+                                                    <svg viewbox="18 17 140 68" width="100%" height="100%" data-pg-collapsed>
+                                                        <circle fill="#6d6e71" cx="87.5" cy="87.5" r="69"></circle>
+                                                        <circle fill="#FFFFFF" cx="87.5" cy="87.5" r="68.5"></circle>
+                                                        <g class="arc" transform="translate(87.5,87.5)">
+                                                            <path fill="#ffdd54" d="M-67.5,-8.266365894244634e-15A67.5,67.5 0 0,1 -20.858647120308945,-64.19631484992287L-14.678307232809999,-45.1751845240198A47.5,47.5 0 0,0 -47.5,-5.8170722959499274e-15Z"></path>
+                                                            <path fill="#59e363" d="M-19.735090068784725,-64.5505710275049A67.5,67.5 0 0,1 20.85864712030895,-64.19631484992286L14.678307232810004,-45.17518452401979A47.5,47.5 0 0,0 -13.887655974329991,-45.42447590824419Z"></path>
+                                                            <path fill="#ff5a5a" d="M21.97585042585808,-63.82250385295388A67.5,67.5 0 1,1 -67.5,8.266365894244634e-15L-47.5,5.8170722959499274e-15A47.5,47.5 0 1,0 15.464487336714946,-44.912132340967545Z"></path>
+                                                        </g>
+                                                        <g class="label" transform="translate(87.5,87.5)"></g>
+                                                        <circle fill="#414042" cx="87.5" cy="87.5" r="56"></circle>
+                                                        <g fill="#F1F2F2" class="pointer" transform="translate(87.5,87.5)">
+                                                            <path d="M10.952380952380953,0C10.877622254863638,-0.3617670884207435,2.9643056618920314,-50.95076260764855,0,-53S-15.333333333333334,0,-15.333333333333334,0S-5.111111111111112,0,0,0S12.777777777777779,0,15.333333333333334,0" transform="rotate(-19.799999237060547)scale(0.9999999999999999,0.9999999999999999)"></path>
+                                                        </g>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" r="43.75"></circle>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" stroke="#F1F2F2" stroke-miterlimit="10" r="43.75"></circle>
+                                                        <text transform="translate(73.5,78.33333333333334)" style="font-size: 14px; fill: rgb(241, 242, 242);">78%</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid text-center">
+                                                <label title="Actual Cost">A:</label>
+                                                <span id="ln_compareCost_totalGauge_cost">$395,062,252</span>&nbsp;
+                                                <br>
+                                                <label title="Benchmark Cost">B:</label>
+                                                <span id="ln_compareCost_totalGauge_benchmark">$507,333,552</span>&nbsp;
+                                                <br>
+                                                <label title="Cost Variance">V:</label>
+                                                <span id="ln_compareCost_totalGauge_variance"><span class="ln-colorRed">($112,271,301)</span></span>&nbsp;
+                                                <br>Episodes:
+                                                <a class="ln-graph-CC_EL_TOT" href="javascript:void(0);" isheader="true" id="ln_compareCost_totalGauge_episodeCount">647,628</a> 
+                                                <br>Patients:
+                                                <a class="ln-graph-CC_PL_TOT" href="javascript:void(0);" isheader="true" id="ln_compareCost_totalGauge_patientCount">137,264</a> 
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 ln-commonlineright col-lg-2 ln-margin-bottom-10px">
+                                            <div class="text-center">
+                                                <label>Management</label>
+                                            </div>
+                                            <div id="ln_compareCost_managementCostGauge" class="col-xs-12">
+                                                <div class="ln-costbreakdownchart center-block">
+                                                    <svg svg viewbox="18 17 140 68" width="100%" height="100%" data-pg-collapsed>
+                                                        <circle fill="#6d6e71" cx="87.5" cy="87.5" r="69"></circle>
+                                                        <circle fill="#FFFFFF" cx="87.5" cy="87.5" r="68.5"></circle>
+                                                        <g class="arc" transform="translate(87.5,87.5)">
+                                                            <path fill="#ffdd54" d="M-67.5,-8.266365894244634e-15A67.5,67.5 0 0,1 -20.858647120308945,-64.19631484992287L-14.678307232809999,-45.1751845240198A47.5,47.5 0 0,0 -47.5,-5.8170722959499274e-15Z"></path>
+                                                            <path fill="#59e363" d="M-19.735090068784725,-64.5505710275049A67.5,67.5 0 0,1 20.85864712030895,-64.19631484992286L14.678307232810004,-45.17518452401979A47.5,47.5 0 0,0 -13.887655974329991,-45.42447590824419Z"></path>
+                                                            <path fill="#ff5a5a" d="M21.97585042585808,-63.82250385295388A67.5,67.5 0 1,1 -67.5,8.266365894244634e-15L-47.5,5.8170722959499274e-15A47.5,47.5 0 1,0 15.464487336714946,-44.912132340967545Z"></path>
+                                                        </g>
+                                                        <g class="label" transform="translate(87.5,87.5)"></g>
+                                                        <circle fill="#414042" cx="87.5" cy="87.5" r="56"></circle>
+                                                        <g fill="#F1F2F2" class="pointer" transform="translate(87.5,87.5)">
+                                                            <path d="M10.952380952380953,0C10.877622254863638,-0.3617670884207435,2.9643056618920314,-50.95076260764855,0,-53S-15.333333333333334,0,-15.333333333333334,0S-5.111111111111112,0,0,0S12.777777777777779,0,15.333333333333334,0" transform="rotate(35.099998474121094)"></path>
+                                                        </g>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" r="43.75"></circle>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" stroke="#F1F2F2" stroke-miterlimit="10" r="43.75"></circle>
+                                                        <text transform="translate(73.5,78.33333333333334)" style="font-size: 14px; fill: rgb(241, 242, 242);">139%</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid text-center">
+                                                <label title="Actual Cost">A:</label>
+                                                <span id="ln_compareCost_managementGauge_cost">$126,419,576</span>&nbsp;
+                                                <br>
+                                                <label title="Benchmark Cost">B:</label>
+                                                <span id="ln_compareCost_managementGauge_benchmark">$91,161,646</span>&nbsp;
+                                                <br>
+                                                <label title="Cost Variance">V:</label>
+                                                <span id="ln_compareCost_managementGauge_variance">$35,257,929</span>&nbsp;
+                                                <br>Episodes:
+                                                <a class="ln-graph-CC_EL_MGT" href="javascript:void(0);" isheader="true" id="ln_compareCost_managementGauge_episodeCount">451,373</a> 
+                                                <br>Patients:
+                                                <a class="ln-graph-CC_PL_MGT" href="javascript:void(0);" isheader="true" id="ln_compareCost_managementGauge_patientCount">129,815</a> 
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 ln-commonlineright col-lg-2 ln-margin-bottom-10px">
+                                            <div class="text-center">
+                                                <label>Pharmacy</label>
+                                            </div>
+                                            <div id="ln_compareCost_pharmacyCostGauge" class="col-xs-12">
+                                                <div class="ln-costbreakdownchart center-block" data-pg-collapsed>
+                                                    <svg svg viewbox="18 17 140 68" width="100%" height="100%" data-pg-collapsed>
+                                                        <circle fill="#6d6e71" cx="87.5" cy="87.5" r="69"></circle>
+                                                        <circle fill="#FFFFFF" cx="87.5" cy="87.5" r="68.5"></circle>
+                                                        <g class="arc" transform="translate(87.5,87.5)">
+                                                            <path fill="#ffdd54" d="M-67.5,-8.266365894244634e-15A67.5,67.5 0 0,1 -20.858647120308945,-64.19631484992287L-14.678307232809999,-45.1751845240198A47.5,47.5 0 0,0 -47.5,-5.8170722959499274e-15Z"></path>
+                                                            <path fill="#59e363" d="M-19.735090068784725,-64.5505710275049A67.5,67.5 0 0,1 20.85864712030895,-64.19631484992286L14.678307232810004,-45.17518452401979A47.5,47.5 0 0,0 -13.887655974329991,-45.42447590824419Z"></path>
+                                                            <path fill="#ff5a5a" d="M21.97585042585808,-63.82250385295388A67.5,67.5 0 1,1 -67.5,8.266365894244634e-15L-47.5,5.8170722959499274e-15A47.5,47.5 0 1,0 15.464487336714946,-44.912132340967545Z"></path>
+                                                        </g>
+                                                        <g class="label" transform="translate(87.5,87.5)"></g>
+                                                        <circle fill="#414042" cx="87.5" cy="87.5" r="56"></circle>
+                                                        <g fill="#F1F2F2" class="pointer" transform="translate(87.5,87.5)">
+                                                            <path d="M10.952380952380953,0C10.877622254863638,-0.3617670884207435,2.9643056618920314,-50.95076260764855,0,-53S-15.333333333333334,0,-15.333333333333334,0S-5.111111111111112,0,0,0S12.777777777777779,0,15.333333333333334,0" transform="rotate(33.29999923706055)"></path>
+                                                        </g>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" r="43.75"></circle>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" stroke="#F1F2F2" stroke-miterlimit="10" r="43.75"></circle>
+                                                        <text transform="translate(73.5,78.33333333333334)" style="font-size: 14px; fill: rgb(241, 242, 242);">137%</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid text-center" data-pg-collapsed>
+                                                <label title="Actual Cost">A:</label>
+                                                <span id="ln_compareCost_pharmacyGauge_cost">$105,380,750</span>&nbsp;
+                                                <br>
+                                                <label title="Benchmark Cost">B:</label>
+                                                <span id="ln_compareCost_pharmacyGauge_benchmark">$77,097,242</span>&nbsp;
+                                                <br>
+                                                <label title="Cost Variance">V:</label>
+                                                <span id="ln_compareCost_pharmacyGauge_variance">$28,283,507</span>&nbsp;
+                                                <br>Episodes:
+                                                <a class="ln-graph-CC_EL_PHR" href="javascript:void(0);" isheader="true" id="ln_compareCost_pharmacyGauge_episodeCount">297,981</a> 
+                                                <br>Patients:
+                                                <a class="ln-graph-CC_PL_PHR" href="javascript:void(0);" isheader="true" id="ln_compareCost_pharmacyGauge_patientCount">98,082</a> 
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 ln-commonlineright col-lg-2" style="visibility: visible;">
+                                            <div class="text-center">
+                                                <label>Facility</label>
+                                            </div>
+                                            <div id="ln_compareCost_facilityCostGauge" class="col-xs-12">
+                                                <div class="ln-costbreakdownchart center-block">
+                                                    <svg svg viewbox="18 17 140 68" width="100%" height="100%" data-pg-collapsed>
+                                                        <circle fill="#6d6e71" cx="87.5" cy="87.5" r="69"></circle>
+                                                        <circle fill="#FFFFFF" cx="87.5" cy="87.5" r="68.5"></circle>
+                                                        <g class="arc" transform="translate(87.5,87.5)">
+                                                            <path fill="#ffdd54" d="M-67.5,-8.266365894244634e-15A67.5,67.5 0 0,1 -20.858647120308945,-64.19631484992287L-14.678307232809999,-45.1751845240198A47.5,47.5 0 0,0 -47.5,-5.8170722959499274e-15Z"></path>
+                                                            <path fill="#59e363" d="M-19.735090068784725,-64.5505710275049A67.5,67.5 0 0,1 20.85864712030895,-64.19631484992286L14.678307232810004,-45.17518452401979A47.5,47.5 0 0,0 -13.887655974329991,-45.42447590824419Z"></path>
+                                                            <path fill="#ff5a5a" d="M21.97585042585808,-63.82250385295388A67.5,67.5 0 1,1 -67.5,8.266365894244634e-15L-47.5,5.8170722959499274e-15A47.5,47.5 0 1,0 15.464487336714946,-44.912132340967545Z"></path>
+                                                        </g>
+                                                        <g class="label" transform="translate(87.5,87.5)"></g>
+                                                        <circle fill="#414042" cx="87.5" cy="87.5" r="56"></circle>
+                                                        <g fill="#F1F2F2" class="pointer" transform="translate(87.5,87.5)">
+                                                            <path d="M10.952380952380953,0C10.877622254863638,-0.3617670884207435,2.9643056618920314,-50.95076260764855,0,-53S-15.333333333333334,0,-15.333333333333334,0S-5.111111111111112,0,0,0S12.777777777777779,0,15.333333333333334,0" transform="rotate(35.099998474121094)"></path>
+                                                        </g>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" r="43.75"></circle>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" stroke="#F1F2F2" stroke-miterlimit="10" r="43.75"></circle>
+                                                        <text transform="translate(73.5,78.33333333333334)" style="font-size: 14px; fill: rgb(241, 242, 242);">139%</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid text-center">
+                                                <label title="Actual Cost">A:</label>
+                                                <span id="ln_compareCost_facilityGauge_cost">$38,879,184</span>&nbsp;
+                                                <br>
+                                                <label title="Benchmark Cost">B:</label>
+                                                <span id="ln_compareCost_facilityGauge_benchmark">$27,968,416</span>&nbsp;
+                                                <br>
+                                                <label title="Cost Variance">V:</label>
+                                                <span id="ln_compareCost_facilityGauge_variance">$10,910,767</span>&nbsp;
+                                                <br>Episodes:
+                                                <a class="ln-graph-CC_EL_FAC" href="javascript:void(0);" isheader="true" id="ln_compareCost_facilityGauge_episodeCount">5,263</a> 
+                                                <br>Patients:
+                                                <a class="ln-graph-CC_PL_FAC" href="javascript:void(0);" isheader="true" id="ln_compareCost_facilityGauge_patientCount">4,303</a> 
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 ln-commonlineright col-lg-2" style="visibility: visible;">
+                                            <div class="text-center">
+                                                <label class="">Surgical</label>
+                                            </div>
+                                            <div id="ln_compareCost_surgicalCostGauge" class="col-xs-12">
+                                                <div class="ln-costbreakdownchart center-block">
+                                                    <svg svg viewbox="18 17 140 68" width="100%" height="100%" data-pg-collapsed>
+                                                        <circle fill="#6d6e71" cx="87.5" cy="87.5" r="69"></circle>
+                                                        <circle fill="#FFFFFF" cx="87.5" cy="87.5" r="68.5"></circle>
+                                                        <g class="arc" transform="translate(87.5,87.5)">
+                                                            <path fill="#ffdd54" d="M-67.5,-8.266365894244634e-15A67.5,67.5 0 0,1 -20.858647120308945,-64.19631484992287L-14.678307232809999,-45.1751845240198A47.5,47.5 0 0,0 -47.5,-5.8170722959499274e-15Z"></path>
+                                                            <path fill="#59e363" d="M-19.735090068784725,-64.5505710275049A67.5,67.5 0 0,1 20.85864712030895,-64.19631484992286L14.678307232810004,-45.17518452401979A47.5,47.5 0 0,0 -13.887655974329991,-45.42447590824419Z"></path>
+                                                            <path fill="#ff5a5a" d="M21.97585042585808,-63.82250385295388A67.5,67.5 0 1,1 -67.5,8.266365894244634e-15L-47.5,5.8170722959499274e-15A47.5,47.5 0 1,0 15.464487336714946,-44.912132340967545Z"></path>
+                                                        </g>
+                                                        <g class="label" transform="translate(87.5,87.5)"></g>
+                                                        <circle fill="#414042" cx="87.5" cy="87.5" r="56"></circle>
+                                                        <g fill="#F1F2F2" class="pointer" transform="translate(87.5,87.5)">
+                                                            <path d="M10.952380952380953,0C10.877622254863638,-0.3617670884207435,2.9643056618920314,-50.95076260764855,0,-53S-15.333333333333334,0,-15.333333333333334,0S-5.111111111111112,0,0,0S12.777777777777779,0,15.333333333333334,0" transform="rotate(35.099998474121094)"></path>
+                                                        </g>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" r="43.75"></circle>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" stroke="#F1F2F2" stroke-miterlimit="10" r="43.75"></circle>
+                                                        <text transform="translate(73.5,78.33333333333334)" style="font-size: 14px; fill: rgb(241, 242, 242);">139%</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid" style="text-align:center;padding-right:10px;">
+                                                <label title="Actual Cost">A:</label>
+                                                <span id="ln_compareCost_surgicalGauge_cost">$28,054,809</span>&nbsp;
+                                                <br>
+                                                <label title="Benchmark Cost">B:</label>
+                                                <span id="ln_compareCost_surgicalGauge_benchmark">$26,825,146</span>&nbsp;
+                                                <br>
+                                                <label title="Cost Variance">V:</label>
+                                                <span id="ln_compareCost_surgicalGauge_variance">$1,229,662</span>&nbsp;
+                                                <br>Episodes:
+                                                <a class="ln-graph-CC_EL_SUR" href="javascript:void(0);" isheader="true" id="ln_compareCost_surgicalGauge_episodeCount">49,300</a> 
+                                                <br>Patients:
+                                                <a class="ln-graph-CC_PL_SUR" href="javascript:void(0);" isheader="true" id="ln_compareCost_surgicalGauge_patientCount">33,172</a> 
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-lg-2">
+                                            <div class="text-center">
+                                                <label>Ancillary</label>
+                                            </div>
+                                            <div id="ln_compareCost_ancillaryCostGauge" class="col-xs-12">
+                                                <div class="ln-costbreakdownchart center-block">
+                                                    <svg svg viewbox="18 17 140 68" width="100%" height="100%" data-pg-collapsed>
+                                                        <circle fill="#6d6e71" cx="87.5" cy="87.5" r="69"></circle>
+                                                        <circle fill="#FFFFFF" cx="87.5" cy="87.5" r="68.5"></circle>
+                                                        <g class="arc" transform="translate(87.5,87.5)">
+                                                            <path fill="#ffdd54" d="M-67.5,-8.266365894244634e-15A67.5,67.5 0 0,1 -20.858647120308945,-64.19631484992287L-14.678307232809999,-45.1751845240198A47.5,47.5 0 0,0 -47.5,-5.8170722959499274e-15Z"></path>
+                                                            <path fill="#59e363" d="M-19.735090068784725,-64.5505710275049A67.5,67.5 0 0,1 20.85864712030895,-64.19631484992286L14.678307232810004,-45.17518452401979A47.5,47.5 0 0,0 -13.887655974329991,-45.42447590824419Z"></path>
+                                                            <path fill="#ff5a5a" d="M21.97585042585808,-63.82250385295388A67.5,67.5 0 1,1 -67.5,8.266365894244634e-15L-47.5,5.8170722959499274e-15A47.5,47.5 0 1,0 15.464487336714946,-44.912132340967545Z"></path>
+                                                        </g>
+                                                        <g class="label" transform="translate(87.5,87.5)"></g>
+                                                        <circle fill="#414042" cx="87.5" cy="87.5" r="56"></circle>
+                                                        <g fill="#F1F2F2" class="pointer" transform="translate(87.5,87.5)">
+                                                            <path d="M10.952380952380953,0C10.877622254863638,-0.3617670884207435,2.9643056618920314,-50.95076260764855,0,-53S-15.333333333333334,0,-15.333333333333334,0S-5.111111111111112,0,0,0S12.777777777777779,0,15.333333333333334,0" transform="rotate(-16.200000762939453)skewX(-3.1805546814635168e-15)scale(0.9999999999999999,0.9999999999999999)"></path>
+                                                        </g>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" r="43.75"></circle>
+                                                        <circle fill="#8a8b8d" cx="87.5" cy="87.5" stroke="#F1F2F2" stroke-miterlimit="10" r="43.75"></circle>
+                                                        <text transform="translate(73.5,78.33333333333334)" style="font-size: 14px; fill: rgb(241, 242, 242);">82%</text>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid" style="text-align:center;padding-right:10px;">
+                                                <label title="Actual Cost">A:</label>
+                                                <span id="ln_compareCost_ancillaryGauge_cost">$96,327,933</span>&nbsp;
+                                                <br>
+                                                <label title="Benchmark Cost">B:</label>
+                                                <span id="ln_compareCost_ancillaryGauge_benchmark">$117,203,363</span>&nbsp;
+                                                <br>
+                                                <label title="Cost Variance">V:</label>
+                                                <span id="ln_compareCost_ancillaryGauge_variance"><span class="ln-colorRed">($20,875,430)</span></span>&nbsp;
+                                                <br>Episodes:
+                                                <a class="ln-graph-CC_EL_ANC" href="javascript:void(0);" isheader="true" id="ln_compareCost_ancillaryGauge_episodeCount">350,455</a> 
+                                                <br>Patients:
+                                                <a class="ln-graph-CC_PL_ANC" href="javascript:void(0);" isheader="true" id="ln_compareCost_ancillaryGauge_patientCount">110,900</a> 
+                                            </div>
+                                        </div>
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>
+    <div class="row hidden" id="pp_efficiency"> 
+        <div class="col-xs-12 ln-removeRightPadding"> 
+            <div class="col-xs-12"> 
+                <div class="row" data-pg-collapsed> 
+                    <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark"> 
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                        <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right hidden"></span> 
+                        <h5>Total Efficiency</h5>
+                    </div>                     
+                    <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered"> 
+                        <thead class="ln-tableHeader" ""=""> 
+                            <tr style="display: table-row;"> 
+                                <th class="text-center">Management</th>
+                                <th class="text-center">Pharmacy</th>
+                                <th class="text-center">Facility</th>
+                                <th class="text-center">Surgical</th>
+                                <th class="text-center">Ancillary</th> 
+                            </tr>                             
+                        </thead>                         
+                        <tbody class="text-center"> 
+                            <tr style="display: table-row;"> 
+                                <td>
+                                    <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                        <span class="fa fa-check ln-faRight"></span> 
+                                        <span>1.1</span> 
+                                    </div>                                     
+                                </td>
+                                <td>
+                                    <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                        <span class="fa fa-check ln-faRight"></span> 
+                                        <span>1.1</span> 
+                                    </div>                                     
+                                </td>
+                                <td>
+                                    <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                        <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                    </div>                                     
+                                </td>
+                                <td>
+                                    <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                        <span class="fa fa-level-up ln-faRight"></span>1.2
+                                    </div>                                     
+                                </td>
+                                <td>
+                                    <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency"> 
+                                        <span class="fa fa-check ln-faRight"></span> 
+                                        <span>1.1</span> 
+                                    </div>                                     
+                                </td>                                 
+                            </tr>                             
+                        </tbody>
+                    </table>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+</div>

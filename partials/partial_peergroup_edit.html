@@ -1,0 +1,1230 @@
+﻿<div class="col-xs-12" id="ContainerCreatePeerGroup">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 ln-RemovePadding">
+                    <div class="text-right ln-contentheaderRight col-xs-12" id="contentheaderright">
+                        <div class="container-fluid pull-right">
+                            <div class="container-fluid pull-right ln-RemovePadding" id="button_pg-save" title="Save Peer Group">
+                                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-lg fa-floppy-o"></span>
+                            </div>
+                            <div class="container-fluid pull-right ln-RemovePadding" id="button_pg-editgroup" title="Edit">
+                                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-lg fa-pencil" ui-sref="createpeergroup"></span>
+                            </div>
+                            <div class="container-fluid pull-right ln-RemovePadding" id="button_pg-deletegroup" title="Delete">
+                                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-lg fa-trash"></span>
+                            </div>
+                            <div class="container-fluid pull-right ln-RemovePadding" id="button_pg-cancel" title="Cancel">
+                                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-ban fa-lg" ui-sref="managepeergroup"></span>
+                            </div>
+                        </div>
+                        <!--Buttons (clear filter, save templates, run, cancel)-->
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="pg-general-static">
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse">
+                        <h5>
+                            <b>
+                                General
+                            </b>
+                        </h5>
+                    </div>
+                    <div class="ln-borderstandard">
+                        <form role="form" class="panel-body">
+                            <div class="row" data-pg-name="Row PG Name and Specialty">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputEmail1">Peer Group Name:</label>
+                                        <p>{PEER GROUP NAME}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="formInput79">Specialty:</label>
+                                        <p>{SPECIALTY THAT WAS SELECTED}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" data-pg-name="Row Description">
+                                <div class="col-xs-12">
+                                    <label class="control-label" for="formInput65">Peer Group Description:</label>
+                                    <div class="form-group">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="pg-general">
+                    <div class="ln-borderRadiusTop panel-heading">
+                        <h5>
+                            <b>
+                                General
+                            </b>
+                        </h5>
+                    </div>
+                    <div class="ln-borderstandard">
+                        <form role="form" class="panel-body">
+                            <div class="row" data-pg-name="Row PG Name and Specialty">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInputEmail1">Peer Group Name:</label>
+                                        <input type="text" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter Group name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="formInput79">Specialty:</label>
+                                        <select id="formInput79" class="form-control input-sm">
+                                            <option>No Specialty</option>
+                                            <option>Multiple Specialty</option>
+                                            <option>Internal Medicine</option>
+                                            <option>Oncology</option>
+                                            <option>Surgery</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" data-pg-name="Row Description">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="formInput65">Peer Group Description:</label>
+                                        <textarea class="form-control" rows="2" id="formInput65"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="pg-findprovider">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            <b>
+                                Find Provider
+                            </b>
+                        </h5>
+                    </div>
+                    <div id="collapse22" class="ln-borderstandard">
+                        <div class="row ln-overallPadding">
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3">
+                                        <h6 ""><b>Last Name:</b></h6>
+                                        <input class="form-control input-sm">
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>First Name:</b></h6>
+                                        <input type="text" class="form-control input-sm">
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>Specialty:</b></h6>
+                                        <select class="form-control input-sm">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>City:</b></h6>
+                                        <input type="text" class="form-control input-sm" id="formInput84">
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>State:</b></h6>
+                                        <select class="form-control input-sm">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>Zip Code:</b></h6>
+                                        <input type="search" class="form-control input-sm" id="formInput84">
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 "" =""><b>Identifier:</b></h6>
+                                        <select class="form-control input-sm">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 "" =""><b>Identifier Value:</b></h6>
+                                        <input type="search" class="form-control input-sm" id="formInput84">
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>Sub-client:</b></h6>
+                                        <select class="form-control input-sm">
+                                            <option>Sub-client 1</option>
+                                            <option>Sub-client 2</option>
+                                            <option>Sub-client  3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>Networks:</b></h6>
+                                        <select class="form-control input-sm">
+                                            <option>Network 1</option>
+                                            <option>Network 2</option>
+                                            <option>Network 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <h6 ""><b>Peer Groups:</b></h6>
+                                        <select class="form-control input-sm">
+                                            <option>Peer Group 1</option>
+                                            <option>Peer Group 2</option>
+                                            <option>Peer Group 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pull-left ln-RemovePadding col-md-5">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h6 ""><b>Available:</b><span class="pull-right ln-lineheight1-4em"><input type="checkbox" value="" class="pull-right">    Select All&nbsp;</span></h6>
+                                            <div class="table-responsive ln-swaptables ln-borderstandard">
+                                                <table class="table table-condensed table-striped ln-tabletextsize ln-RemoveBottomMargin table-bordered">
+                                                    <thead class="shadow ln-nowrap ln-chartheader ln-ETGHeaderMargin">
+                                                        <tr>
+                                                            <th>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                            </th>
+                                                            <th>
+                                                                <p><i class="fa fa-sort btn-icon fa-lg fa-fw ln-darkGreyText pull-right"></i><a href="">Name</a></p>
+                                                            </th>
+                                                            <th>
+                                                                <p><i class="fa fa-sort fa-lg btn-icon fa-fw ln-darkGreyText pull-right"></i><a href="">ID</a></p>
+                                                            </th>
+                                                            <th>
+                                                                <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Specialty</a></p>
+                                                            </th>
+                                                            <th>
+                                                                <i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i>
+                                                                <p><a href="">Networks</a></p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="ln-nowrap ln-borderstandard">
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="control-label pull-right">
+                                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                                </label>
+                                                                <br>
+                                                            </td>
+                                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                                            <td class="text-left">1245365124s</td>
+                                                            <td class="text-left">Family Practice</td>
+                                                            <td>{NETWORK NAME}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln-RemovePadding col-md-2">
+                                    <div class="row ln-tablecenter ln-tablecentersmall">
+                                        <div class="col-xs-12 ln-tablecenterchild text-center">
+                                            <div class="btn-group-vertical">
+                                                <button type="button" class="btn ln-borderstandard">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </button>
+                                                <button type="button" class="btn ln-borderstandard">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pull-right col-md-5 ln-RemovePadding">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <h6><b>Selected:</b><span class="pull-right ln-lineheight1-4em" ""><input type="checkbox" value="" class="pull-right">    Select All&nbsp;</span></h6>
+                                                    <div class="table-responsive ln-swaptables ln-borderstandard">
+                                                        <table class="table table-condensed table-striped ln-tabletextsize ln-RemoveBottomMargin table-bordered">
+                                                            <thead class="shadow ln-nowrap ln-chartheader ln-ETGHeaderMargin">
+                                                                <tr>
+                                                                    <th>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                    </th>
+                                                                    <th>
+                                                                        <p><i class="fa fa-sort btn-icon fa-lg fa-fw ln-darkGreyText pull-right"></i><a href="">Name</a></p>
+                                                                    </th>
+                                                                    <th>
+                                                                        <p><i class="fa fa-sort fa-lg btn-icon fa-fw ln-darkGreyText pull-right"></i><a href="">ID</a></p>
+                                                                    </th>
+                                                                    <th>
+                                                                        <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Specialty</a></p>
+                                                                    </th>
+                                                                    <th>
+                                                                        <i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i>
+                                                                        <p><a href="">Networks</a></p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="ln-nowrap ln-borderstandard">
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="control-label pull-right">
+                                                                            <input type="checkbox" name="providersfound" value="option1">
+                                                                        </label>
+                                                                        <br>
+                                                                    </td>
+                                                                    <td class="text-left">{Provider Name}&nbsp;</td>
+                                                                    <td class="text-left">1245365124s</td>
+                                                                    <td class="text-left">Family Practice</td>
+                                                                    <td>{NETWORK NAME}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ln-paddingbottom">
+                                    <div class="col-xs-12 ln-removeRightPadding ln-underlinecommon ln-margin-bottom-10px">
+                                    </div>
+                                    <div class="col-xs-12 ln-removeRightPadding">
+                                        <div class="container-fluid ln-tablebutton-action pull-right ln-removeLeftPadding">
+                                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Add Selected Providers to Peer Group</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default hidden" id="pg-search">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                        <h4 class="panel-title text-center">Search Results</h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse ln-borderstandard">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table class="table table-condensed table-striped ln-tabletextsize ln-RemoveBottomMargin">
+                                    <thead class="shadow ln-nowrap ln-chartheader ln-ETGHeaderMargin">
+                                        <tr>
+                                            <th>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort btn-icon fa-lg fa-fw ln-darkGreyText"></i><a href="">Name</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort fa-lg btn-icon fa-fw ln-darkGreyText"></i><a href="">Provider ID</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort pull-left fa-lg btn-icon ln-darkGreyText"></i><a href="">Specialty</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort pull-left fa-lg btn-icon ln-darkGreyText"></i><a href="">Imputed Specialty</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort pull-left fa-lg btn-icon ln-darkGreyText"></i><a href="">Prov. Type</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort pull-left fa-lg btn-icon ln-darkGreyText"></i><a href="">Zip Code</a></p>
+                                            </th>
+                                            <th>
+                                                <i class="fa fa-sort pull-left fa-lg btn-icon ln-darkGreyText"></i>
+                                                <p><a href="">Networks</a></p>
+                                            </th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="ln-nowrap ln-borderstandard">
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="col-xs-12">
+                                    <div class="row ln-margin-top">
+                                        <div class="container-fluid pull-left ln-RemovePadding">
+                                            <ol class="breadcrumb text-left">
+                                                Display Amount:
+                                                <li class="active">
+                                                    <a href="">10</a>
+                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"></ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">30</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">50</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">100</a>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="container-fluid pull-right">
+                                            <ul class="pagination pagination-sm">
+                                                <li>
+                                                    <a href="">&laquo;</a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="">1 <span class="sr-only">(current)</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">&raquo;</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="container-fluid pull-right col-md-3 col-lg-2 col-sm-3">
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-addon ln-highliteblue">Go to Page</span>
+                                                <input type="search" class="form-control text-center" placeholder="1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row ln-paddingbottom">
+                                        <div class="col-xs-12 ln-removeRightPadding">
+                                            <div class="container-fluid ln-tablebutton-action pull-right ln-removeLeftPadding">
+                                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Add Selected</button>
+                                            </div>
+                                            <div class="container-fluid ln-tablebutton-action pull-right ln-removeLeftPadding">
+                                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="pg-providers-static">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion">
+                        <h5>
+                            <b>
+                                Providers in this Group
+                            </b>
+                        </h5>
+                    </div>
+                    <div class="ln-borderstandard">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="table-responsive">
+                                    <table class="table table-condensed table-striped ln-tabletextsize ln-RemoveBottomMargin table-bordered">
+                                        <thead class="shadow ln-nowrap ln-chartheader ln-ETGHeaderMargin">
+                                            <tr>
+                                                <th>
+                                                </th>
+                                                <th>
+                                                    <p><i class="fa fa-sort btn-icon fa-lg fa-fw ln-darkGreyText pull-right"></i><a href="">Name</a></p>
+                                                </th>
+                                                <th>
+                                                    <p><i class="fa fa-sort fa-lg btn-icon fa-fw ln-darkGreyText pull-right"></i><a href="">ID</a></p>
+                                                </th>
+                                                <th>
+                                                    <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Specialty</a></p>
+                                                </th>
+                                                <th>
+                                                    <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Imputed Specialty</a></p>
+                                                </th>
+                                                <th class="">
+                                                    <p class=""><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="" class="">Zip Code</a></p>
+                                                </th>
+                                                <th>
+                                                    <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Networks</a></p>
+                                                </th>
+                                                <th>
+                                                    <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Sub-Client</a></p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="ln-nowrap ln-borderstandard">
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br>
+                                                </td>
+                                                <td class="text-left">{Provider Name}&nbsp;</td>
+                                                <td class="text-left">1245365124s</td>
+                                                <td class="text-left">Family Practice</td>
+                                                <td class="text-center">{IMPUTED SPECIALTY}</td>
+                                                <td class="text-center">####-####</td>
+                                                <td>{NETWORK NAME}</td>
+                                                <td>{Sub-Client}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="bottom">
+                                            <div class="dataTables_info" id="patientlisttable_info" role="status" aria-live="polite">Showing 1 to 31 of 31 entries</div>
+                                            <div class="dataTables_length" id="patientlisttable_length">
+                                                <label>
+                                                    Show
+                                                    <select name="patientlisttable_length" aria-controls="patientlisttable" class="form-control input-sm">
+                                                        <option value="10">10</option>
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 entries
+                                                </label>
+                                            </div>
+                                            <div class="dataTables_paginate paging_simple_numbers" id="patientlisttable_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button previous disabled" id="patientlisttable_previous">
+                                                        <a href="" aria-controls="patientlisttable" data-dt-idx="0" tabindex="0">Previous</a>
+                                                    </li>
+                                                    <li class="paginate_button active">
+                                                        <a href="" aria-controls="patientlisttable" data-dt-idx="1" tabindex="0">1</a>
+                                                    </li>
+                                                    <li class="paginate_button next disabled" id="patientlisttable_next">
+                                                        <a href="" aria-controls="patientlisttable" data-dt-idx="2" tabindex="0">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="pg-providers">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
+                        <h5>
+                            <b>
+                                Providers in this Group
+                            </b>
+                        </h5>
+                    </div>
+                    <div id="collapse44" class="panel-collapse ln-borderstandard">
+                        <div class="row ln-paddingbottom_10px ln-paddingtop_10px">
+                            <div class="col-xs-12 ln-removeRightPadding">
+                                <div class="container-fluid ln-tablebutton-action pull-left">
+                                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Remove Selected Providers</button>
+                                </div>
+                                <div class="col-xs-4 pull-right">
+                                    <div class="pull-right col-xs-12">
+                                        <input type="text" class="form-control input-sm pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table class="table table-condensed table-striped ln-tabletextsize ln-RemoveBottomMargin table-bordered">
+                                    <thead class="shadow ln-nowrap ln-chartheader ln-ETGHeaderMargin">
+                                        <tr>
+                                            <th>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort btn-icon fa-lg fa-fw ln-darkGreyText pull-right"></i><a href="">Name</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort fa-lg btn-icon fa-fw ln-darkGreyText pull-right"></i><a href="">Provider ID</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Specialty</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Prov. Type</a></p>
+                                            </th>
+                                            <th>
+                                                <p><i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i><a href="">Zip Code</a></p>
+                                            </th>
+                                            <th>
+                                                <i class="fa fa-sort fa-lg btn-icon ln-darkGreyText pull-right"></i>
+                                                <p><a href="">Networks</a></p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="ln-nowrap ln-borderstandard">
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="control-label pull-right">
+                                                    <input type="checkbox" name="providersfound" value="option1">
+                                                </label>
+                                                <br>
+                                            </td>
+                                            <td class="text-left">{Provider Name}&nbsp;</td>
+                                            <td class="text-left">1245365124s</td>
+                                            <td class="text-left">Family Practice</td>
+                                            <td>Professional Provider</td>
+                                            <td>32707</td>
+                                            <td>{NETWORK NAME}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="col-xs-12">
+                                    <div class="row ln-margin-top">
+                                        <div class="col-xs-12">
+                                            <div class="">
+                                                <div class="text-center">Showing 1 to 31 of 31 entries</div>
+                                                <div class="dataTables_length" id="patientlisttable_length">
+                                                    <label>
+                                                        Show
+                                                        <select name="patientlisttable_length" aria-controls="patientlisttable" class="form-control input-sm">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                        </select>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     entries
+                                                    </label>
+                                                </div>
+                                                <div class="dataTables_paginate paging_simple_numbers" id="patientlisttable_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button previous disabled" id="patientlisttable_previous">
+                                                            <a href="" aria-controls="patientlisttable" data-dt-idx="0" tabindex="0">Previous</a>
+                                                        </li>
+                                                        <li class="paginate_button active">
+                                                            <a href="" aria-controls="patientlisttable" data-dt-idx="1" tabindex="0">1</a>
+                                                        </li>
+                                                        <li class="paginate_button next disabled" id="patientlisttable_next">
+                                                            <a href="" aria-controls="patientlisttable" data-dt-idx="2" tabindex="0">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <thead>
+        <tr>
+            <td></td>
+        </tr>
+    </thead>
+</div>

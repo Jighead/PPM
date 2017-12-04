@@ -1,0 +1,900 @@
+<div class="col-xs-12" id="procedure_frequency_providers"> 
+    <div class="row" id="body">
+        <div class="col-xs-4" id="allarrows">
+            <div class="arrow-margin pull-left" id="arrow_1">
+                <h5 class="proc_arrow_text pull-left square_one top_bottom_outline" id="arrow1_text">Procedure</h5>
+                <img src="resources/dmc/images/rightarrow.png" alt="" class="proc_arrow pull-left">
+                <div class="ellipsis_text text-nowrap" id="arrow1textdetails">Specific Procedure Name</div>
+            </div>
+            <div class="arrow-margin pull-left" id="arrow_2">
+                <h5 class="proc_arrow_text pull-left square_two top_bottom_outline" id="arrow2text">Episode</h5>
+                <img src="resources/dmc/images/rightarrow.png" alt="" class="proc_arrow pull-left">
+                <div class="ellipsis_text text-nowrap" id="arrow2textdetails">Specific Episode Name</div>
+            </div>
+            <div class="arrow-margin pull-left" id="arrow_3">
+                <h5 class="proc_arrow_text pull-left square_three top_bottom_outline" id="arrow3text">Provider</h5>
+                <img src="resources/dmc/images/rightarrow.png" alt="" class="proc_arrow pull-left">
+                <div class="ellipsis_text text-nowrap" id="arrow3textdetails">
+                    <a href="*">Specific Provider Name</a>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 20px;" class="col-xs-6 col-xs-pull-1" id="summary_block">
+            <div class="automargin-left-right">
+                <div class="pull-left">
+                    <div class="pull-left container-fluid ln-toptext-by-5 show">
+                        <div ui-sref="procedure_frequency_providers" class="text-center" id="providercount">25,000
+</div>
+                        <div class="text-center topbartextsize">Providers</div>
+                    </div>
+                    <div class="pull-left container-fluid ln-toptext-by-5">
+                        <div class="text-center" id="episodecount">20</div>
+                        <div class="text-center topbartextsize">Patients</div>
+                    </div>
+                    <div class="pull-left container-fluid ln-toptext-by-5">
+                        <div class="text-center" id="episodecount">40</div>
+                        <div class="text-center topbartextsize">Episodes</div>
+                    </div>
+                    <div class="pull-left container-fluid ln-toptext-by-5">
+                        <div ui-sref="procedure_frequency_procedures" class="text-center" id="procedurecount">41</div>
+                        <div class="text-center topbartextsize">Procedures</div>
+                    </div>
+                    <div class="pull-left container-fluid ln-toptext-by-5">
+                        <div class="text-center" id="totalcosts">$4,300</div>
+                        <div class="text-center topbartextsize">Total Costs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 ln-removeRightPadding" data-pg-name="underline_standard">
+            <div class="col-xs-12 ln-underlinecommon">
+</div>
+        </div>
+        <div id="viewdropdowns">
+            <div class="ln-margin-top col-xs-5">
+                <div>
+                    <div class="ln-RemovePadding">
+                        <div class="pull-left">
+                            <b>View By:</b> 
+                        </div>
+                        <div class="pull-left ln-pos-relative">Highest Frequency                                                                             
+                            <ol class="dropdown-menu list-unstyled pull-left" role="menu">
+                                <li>
+                                    <a>Highest Frequency</a> 
+                                </li>
+                                <li>
+                                    <a>Lowest Frequency</a> 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ln-margin-top col-xs-7">
+                <div>
+                    <div class="ln-RemovePadding pull-right">
+                        <div class="pull-left">
+                            <b>Show me cases which are greater than:&nbsp;</b> 
+                        </div>
+                        <div class="pull-left">20%                                                                             
+                            <ol class="dropdown-menu list-unstyled pull-right" role="menu" style="max-height: 200px; overflow-y: scroll;">
+                                <li>
+                                    <a>10%</a> 
+                                </li>
+                                <li>
+                                    <a>20%</a> 
+                                </li>
+                                <li>
+                                    <a>30%</a> 
+                                </li>
+                                <li>
+                                    <a>40%</a> 
+                                </li>
+                                <li>
+                                    <a>50%</a> 
+                                </li>
+                                <li>
+                                    <a>60%</a> 
+                                </li>
+                                <li>
+                                    <a>70%</a> 
+                                </li>
+                                <li>
+                                    <a>80%</a> 
+                                </li>
+                                <li>
+                                    <a>90%</a> 
+                                </li>
+                                <li>
+                                    <a>100%</a> 
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="pull-left">
+                            <b>&nbsp;from the benchmark.</b> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="line1">
+            <div class="col-xs-12 ln-removeRightPadding hidden">
+                <div class="container-fluid charttabborder">
+                    <div class="ln-removeRightPadding ln-margin-top show col-xs-4" id="top5_highestcost_byprovider_container">
+                        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1">
+                            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons invisible"></span> 
+                            <span ui-sref="procedure_frequency_providers" class="fa pull-right btn-glyphs fa-lg glyph_graph_RightButtons fa-share"></span> 
+                            <div class="ln-borderRadiusTop panel-heading">
+                                <h5 class="text-center">Top 5 Highest Count by Provider</h5> 
+                            </div>
+                            <div class="panel-collapse collapse ln-borderstandard in">
+                                <div>
+                                    <div class="panel-body ln-noPaddingTopBottom">
+                                        <div class="row hidden">
+                                            <div class="col-xs-12 ln-removeLeftPadding ln-removeRightPadding">
+                                                <div class="form-group pull-right referredspecialtydropdown">
+                                                    <select id="formInput-nl-dropdown" class="form-control input-sm">
+                                                        <option>Top 10 Referred Specialties</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row automargin-left-right">
+                                            <div class="col-xs-12 nl-bubblecharttop5 ln-removeRightPadding ln-removeLeftPadding" id="top5_highestcost_bubblechart">
+                                                <div href="" ui-sref="procedure_frequency_providerview">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 290 253.29">
+                                                        <defs>
+                                                            <style>
+                                                                .\33 9d6b97d-4d05-4638-b31a-64c538d8bf09 {
+                                                                                                                isolation: isolate;
+                                                                                                                }
+                                                                                                                .\30 625ece8-1509-473c-8216-40f0ac462bb4 {
+                                                                                                                fill: #fff;
+                                                                                                                }
+                                                                                                                .\30 3e1e54b-3e85-440d-b3a6-20e30a9a23b7 {
+                                                                                                                fill: #c1aa95;
+                                                                                                                }
+                                                                                                                .\31 81c988b-e2a9-4818-ac73-2f8c29b71f5d, .\37 33b5774-a7d7-45d7-a123-3df88390bb9e {
+                                                                                                                font-size: 10px;
+                                                                                                                }
+                                                                                                                .\31 81c988b-e2a9-4818-ac73-2f8c29b71f5d, .ca6d3795-1c85-41c8-ac36-0497e414eb76 {
+                                                                                                                fill: #f2f2f2;
+                                                                                                                }
+                                                                                                                .\31 81c988b-e2a9-4818-ac73-2f8c29b71f5d, .\37 33b5774-a7d7-45d7-a123-3df88390bb9e, .ca6d3795-1c85-41c8-ac36-0497e414eb76, .e74f9434-ff0c-4f96-9ef5-4e9b0e973af1 {
+                                                                                                                font-family: Arial;
+                                                                                                                }
+                                                                                                                .\31 71b9684-f9c4-4bb2-a0f5-19ee8489c436 {
+                                                                                                                fill: #c69c6d;
+                                                                                                                stroke: #f2f2f2;
+                                                                                                                stroke-miterlimit: 10;
+                                                                                                                }
+                                                                                                                .ac94543a-9c28-4012-a07c-5b4574fbc328 {
+                                                                                                                opacity: 0.75;
+                                                                                                                }
+                                                                                                                .\34 0719c19-7642-41c6-99a3-ad446fb72442, .ac94543a-9c28-4012-a07c-5b4574fbc328 {
+                                                                                                                mix-blend-mode: multiply;
+                                                                                                                }
+                                                                                                                .ca6d3795-1c85-41c8-ac36-0497e414eb76, .e74f9434-ff0c-4f96-9ef5-4e9b0e973af1 {
+                                                                                                                font-size: 13.46px;
+                                                                                                                }
+                                                                                                                .e74f9434-ff0c-4f96-9ef5-4e9b0e973af1 {
+                                                                                                                fill: #a5a5a5;
+                                                                                                                }
+                                                                                                                .\34 0719c19-7642-41c6-99a3-ad446fb72442 {
+                                                                                                                opacity: 0.45;
+                                                                                                                }
+                                                                                                                .\37 33b5774-a7d7-45d7-a123-3df88390bb9e {
+                                                                                                                fill: #8e8e8e;
+                                                                                                                }
+                                                                                                                .\37 99b5f2a-975b-40c5-9081-488b3d0a09e0 {
+                                                                                                                text-decoration: underline;
+                                                                                                                }
+                                                                                                                .\31 1d6e20e-4295-41f3-a86b-ec45f7ec5da9 {
+                                                                                                                white-space: pre;
+                                                                                                                }
+                                                                                                                .\39 48613f4-cfe2-4f2f-a0a4-f8fec19990d7 {
+                                                                                                                letter-spacing: -1px;
+                                                                                                                }
+
+</style>
+                                                        </defs>
+                                                        <title>bubblechart PF by Provider</title>
+                                                        <g class="39d6b97d-4d05-4638-b31a-64c538d8bf09">
+                                                            <g id="d9db1e52-2e36-421a-aef2-46bd5e852e20" data-name="Layer 1">
+                                                                <g id="5e2c2d86-4861-4c04-9a75-258015b43f49" data-name="left_HorizontalChart">
+                                                                    <g id="a22086c3-63b5-4c0f-baa5-2e80d4043bba" data-name="Text">
+                                                                        <rect class="0625ece8-1509-473c-8216-40f0ac462bb4" width="290" height="253.29" />
+                                                                        <g id="3c450ebb-e730-4ebb-b967-d5117bac16af" data-name="LargeCircle">
+                                                                            <circle class="03e1e54b-3e85-440d-b3a6-20e30a9a23b7" cx="84.96" cy="67.78" r="39.75" />
+                                                                            <text class="181c988b-e2a9-4818-ac73-2f8c29b71f5d" transform="translate(59.95 62.38)">D
+                                                                                <tspan x="7.22" y="0">r</tspan>
+                                                                                <tspan x="10" y="0">. Michael</tspan>
+                                                                                <tspan x="6.67" y="12">Jackson</tspan>
+                                                                            </text>
+                                                                        </g>
+                                                                        <g id="5c3112b7-dbad-4bad-a1f3-8d80593ceaa5" data-name="LargeCircle">
+                                                                            <circle class="03e1e54b-3e85-440d-b3a6-20e30a9a23b7" cx="250.2" cy="107.53" r="28.39" />
+                                                                        </g>
+                                                                        <g id="38b723b7-a67f-4d84-8b1a-f90a12fcd336" data-name="LargeCircle">
+                                                                            <circle class="03e1e54b-3e85-440d-b3a6-20e30a9a23b7" cx="190.42" cy="50.56" r="45.42" />
+                                                                            <text class="181c988b-e2a9-4818-ac73-2f8c29b71f5d" transform="translate(168.75 45.64)">D
+                                                                                <tspan x="7.22" y="0">r</tspan>
+                                                                                <tspan x="10" y="0">. Martin</tspan>
+                                                                                <tspan x="-3.9" y="12">Luther King</tspan>
+                                                                            </text>
+                                                                        </g>
+                                                                        <g id="14b20e9b-9bd6-48dd-9960-baed866b27ee" data-name="LargeCircle">
+                                                                            <circle class="03e1e54b-3e85-440d-b3a6-20e30a9a23b7" cx="70.81" cy="195.84" r="51.1" />
+                                                                            <text class="181c988b-e2a9-4818-ac73-2f8c29b71f5d" transform="translate(37.18 192.97)">D
+                                                                                <tspan x="7.22" y="0">r</tspan>
+                                                                                <tspan x="10" y="0">. Christopher</tspan>
+                                                                                <tspan x="8.32" y="12">Santangelo</tspan>
+                                                                            </text>
+                                                                        </g>
+                                                                        <g id="2b38be1a-0874-45f2-9b7f-8a0e6b908c1b" data-name="LargeCircle">
+                                                                            <circle class="171b9684-f9c4-4bb2-a0f5-19ee8489c436" cx="151.49" cy="129.99" r="92.18" />
+                                                                            <g>
+                                                                                <g class="ac94543a-9c28-4012-a07c-5b4574fbc328">
+                                                                                    <text class="e74f9434-ff0c-4f96-9ef5-4e9b0e973af1" transform="translate(93.41 105.95)">D
+                                                                                        <tspan x="9.72" y="0">r</tspan>
+                                                                                        <tspan x="13.46" y="0">. Martin Scorsese</tspan>
+                                                                                    </text>
+                                                                                </g>
+                                                                                <text class="ca6d3795-1c85-41c8-ac36-0497e414eb76" transform="translate(92.41 104.95)">D
+                                                                                    <tspan x="9.72" y="0">r</tspan>
+                                                                                    <tspan x="13.46" y="0">. Martin Scorsese</tspan>
+                                                                                </text>
+                                                                            </g>
+                                                                            <g>
+                                                                                <g class="40719c19-7642-41c6-99a3-ad446fb72442">
+                                                                                    <text class="733b5774-a7d7-45d7-a123-3df88390bb9e" transform="translate(108.85 134.95)">Procedures:
+                                                                                        <tspan class="799b5f2a-975b-40c5-9081-488b3d0a09e0" x="56.69" y="0">10,000</tspan>
+                                                                                        <tspan class="11d6e20e-4295-41f3-a86b-ec45f7ec5da9" x="-6.12" y="12">Episodes:</tspan>
+                                                                                        <tspan class="799b5f2a-975b-40c5-9081-488b3d0a09e0" x="43.35" y="12">24,000,000</tspan>
+                                                                                        <tspan class="948613f4-cfe2-4f2f-a0a4-f8fec19990d7" x="-14.46" y="24">T</tspan>
+                                                                                        <tspan x="-9.46" y="24">otal Costs:</tspan>
+                                                                                        <tspan class="799b5f2a-975b-40c5-9081-488b3d0a09e0" x="40.56" y="24">$500,000,000</tspan>
+                                                                                    </text>
+                                                                                </g>
+                                                                                <text class="181c988b-e2a9-4818-ac73-2f8c29b71f5d" transform="translate(107.85 133.95)">Procedures:
+                                                                                    <tspan class="799b5f2a-975b-40c5-9081-488b3d0a09e0" x="56.69" y="0">10,000</tspan>
+                                                                                    <tspan class="11d6e20e-4295-41f3-a86b-ec45f7ec5da9" x="-6.12" y="12">Episodes:</tspan>
+                                                                                    <tspan class="799b5f2a-975b-40c5-9081-488b3d0a09e0" x="43.35" y="12">24,000,000</tspan>
+                                                                                    <tspan class="948613f4-cfe2-4f2f-a0a4-f8fec19990d7" x="-14.46" y="24">T</tspan>
+                                                                                    <tspan x="-9.46" y="24">otal Costs:</tspan>
+                                                                                    <tspan class="799b5f2a-975b-40c5-9081-488b3d0a09e0" x="40.56" y="24">$500,000,000</tspan>
+                                                                                </text>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ln-removeRightPadding ln-margin-top show col-xs-4" id="top5_highestcost_byepisode_container">
+                        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1">
+                            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons invisible"></span> 
+                            <span ui-sref="procedure_frequency_episodes" class="fa pull-right btn-glyphs fa-lg glyph_graph_RightButtons fa-share"></span> 
+                            <div class="ln-borderRadiusTop panel-heading">
+                                <h5 class="text-center">Top 5 Highest Count by Episode</h5> 
+                            </div>
+                            <div class="panel-collapse collapse ln-borderstandard in">
+                                <div>
+                                    <div class="panel-body ln-noPaddingTopBottom">
+                                        <div class="row hidden">
+                                            <div class="col-xs-12 ln-removeLeftPadding ln-removeRightPadding">
+                                                <div class="form-group pull-right referredspecialtydropdown">
+                                                    <select id="formInput-nl-dropdown" class="form-control input-sm">
+                                                        <option>Top 10 Referred Specialties</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row automargin-left-right">
+                                            <div class="col-xs-12 nl-bubblecharttop5 ln-removeRightPadding ln-removeLeftPadding" id="top5lowestcost_bubblechart">
+                                                <div href="" ui-sref="procedure_frequency_episodeview">
+                                                    <svg id="27af74f7-819c-46d3-910e-de88b696262b" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 290 253.29">
+                                                        <defs>
+                                                            <style>
+                                                                .\37 553c6b6-b4ea-4da2-93a9-df1f164b972d, .a13b85aa-2475-463a-9319-f67d80ee89c1 {
+                                                                                                                fill: #fff;
+                                                                                                                }
+                                                                                                                .\38 53ae2c5-2730-4409-88a9-7550f9bfd3bf, .e8e3a909-2547-414b-bb31-1465cb0a494f {
+                                                                                                                fill: #c69c6d;
+                                                                                                                }
+                                                                                                                .\37 553c6b6-b4ea-4da2-93a9-df1f164b972d {
+                                                                                                                font-size: 9px;
+                                                                                                                font-family: Arial;
+                                                                                                                }
+                                                                                                                .\38 53ae2c5-2730-4409-88a9-7550f9bfd3bf {
+                                                                                                                stroke: #f2f2f2;
+                                                                                                                stroke-miterlimit: 10;
+                                                                                                                }
+
+</style>
+                                                        </defs>
+                                                        <title>bubblechart PF by Episode</title>
+                                                        <g id="6cc2c1c7-0f2d-4f26-b162-3b6e3563de03" data-name="left_HorizontalChart">
+                                                            <g id="1d53f8e5-dcbc-41a6-ac1d-e75f16171455" data-name="Text">
+                                                                <rect class="a13b85aa-2475-463a-9319-f67d80ee89c1" width="290" height="253.29" />
+                                                                <g id="8f30611c-eb38-44a8-b06b-e1eece6e67d0" data-name="LargeCircle">
+                                                                    <circle class="e8e3a909-2547-414b-bb31-1465cb0a494f" cx="241.46" cy="207.25" r="39.75" />
+                                                                    <text class="7553c6b6-b4ea-4da2-93a9-df1f164b972d" transform="translate(206.19 198.84)">Multiple myeloma,
+                                                                        <tspan x="2.83" y="10.8">w/o surger</tspan>
+                                                                        <tspan x="44.85" y="10.8">y</tspan>
+                                                                        <tspan x="48.68" y="10.8">, with</tspan>
+                                                                        <tspan x="12.01" y="21.6">active mgmt</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g id="889b901f-e45b-48d2-901f-9aa85056d4c7" data-name="LargeCircle">
+                                                                    <circle class="e8e3a909-2547-414b-bb31-1465cb0a494f" cx="230.1" cy="87.03" r="28.39" />
+                                                                </g>
+                                                                <g id="05961bf4-3d27-4b87-9dcf-45a10bbf3af8" data-name="LargeCircle">
+                                                                    <circle class="e8e3a909-2547-414b-bb31-1465cb0a494f" cx="99.58" cy="55.56" r="45.42" />
+                                                                    <text class="7553c6b6-b4ea-4da2-93a9-df1f164b972d" transform="translate(81.06 45.64)">Malignant
+                                                                        <tspan x="0" y="10.8">neoplasm</tspan>
+                                                                        <tspan x="-0.5" y="21.6">of breast..</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g id="5eeda952-987a-403b-843d-acdb47bde42e" data-name="LargeCircle">
+                                                                    <circle class="e8e3a909-2547-414b-bb31-1465cb0a494f" cx="59.31" cy="189.05" r="51.1" />
+                                                                    <text class="7553c6b6-b4ea-4da2-93a9-df1f164b972d" transform="translate(30.29 179.19)">Leukemia, w/o
+                                                                        <tspan x="3.51" y="10.8">surgery with</tspan>
+                                                                        <tspan x="4.76" y="21.6">active mgmt</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g id="b0075925-43c1-4698-98b2-84d877492aec" data-name="LargeCircle">
+                                                                    <circle class="853ae2c5-2730-4409-88a9-7550f9bfd3bf" cx="161.63" cy="143.99" r="60.18" />
+                                                                    <text class="7553c6b6-b4ea-4da2-93a9-df1f164b972d" transform="translate(114.36 144.08)">Hemophilia, w/o surgery</text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ln-removeRightPadding ln-margin-top show col-xs-4" id="top5_highestcost_byprocedure_container">
+                        <div class="panel panel-default ln-RemoveBottomMargin" data-pg-name="Panel1">
+                            <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons invisible"></span> 
+                            <span ui-sref="procedure_frequency_procedures" class="fa pull-right btn-glyphs fa-lg glyph_graph_RightButtons fa-share"></span> 
+                            <div class="ln-borderRadiusTop panel-heading">
+                                <h5 class="text-center">Top 5 Highest Count by Procedure</h5> 
+                            </div>
+                            <div class="panel-collapse collapse ln-borderstandard in">
+                                <div>
+                                    <div class="panel-body ln-noPaddingTopBottom">
+                                        <div class="row hidden">
+                                            <div class="col-xs-12 ln-removeLeftPadding ln-removeRightPadding">
+                                                <div class="form-group pull-right referredspecialtydropdown">
+                                                    <select id="formInput-nl-dropdown" class="form-control input-sm">
+                                                        <option>Top 10 Referred Specialties</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row automargin-left-right">
+                                            <div class="col-xs-12 nl-bubblecharttop5 ln-removeRightPadding ln-removeLeftPadding" id="top5lowestcost_bubblechart">
+                                                <div href="" ui-sref="procedure_frequency_procedureview">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 290 253.29">
+                                                        <defs>
+                                                            <style>
+                                                                .\36 673fc63-ea50-4c3a-baa1-2b92babe2c0a {
+                                                                                                                isolation: isolate;
+                                                                                                                }
+                                                                                                                .cd2e764d-f60c-4544-ba5e-f0e46587a564 {
+                                                                                                                fill: #fff;
+                                                                                                                }
+                                                                                                                .cfe1dfa7-d1b3-4f50-8ca4-ef9fed975602 {
+                                                                                                                fill: #c1aa95;
+                                                                                                                }
+                                                                                                                .\35 803a50d-844e-4cc2-8cbe-f0f6b674b5e1 {
+                                                                                                                font-size: 9px;
+                                                                                                                }
+                                                                                                                .\32 f9e8668-69d1-4b8d-a3ae-873d62e840f3, .\35 803a50d-844e-4cc2-8cbe-f0f6b674b5e1, .c667cc52-63d9-4dc6-b572-5ae59f9f3772 {
+                                                                                                                fill: #f2f2f2;
+                                                                                                                }
+                                                                                                                .\32 f9e8668-69d1-4b8d-a3ae-873d62e840f3, .\35 67c1806-b690-4a4c-8666-b91ac2390918, .\35 803a50d-844e-4cc2-8cbe-f0f6b674b5e1, .\38 a803810-53ca-48d1-9244-fd91bc9bb7f6, .c667cc52-63d9-4dc6-b572-5ae59f9f3772 {
+                                                                                                                font-family: Arial;
+                                                                                                                }
+                                                                                                                .fbe89b8a-88cc-4e05-b23a-23a85959242b {
+                                                                                                                fill: #c69c6d;
+                                                                                                                stroke: #f2f2f2;
+                                                                                                                stroke-miterlimit: 10;
+                                                                                                                }
+                                                                                                                .\36 396bb82-768c-43a6-a562-d112a31eefec {
+                                                                                                                opacity: 0.75;
+                                                                                                                }
+                                                                                                                .\35 5f8dd9e-181d-467d-8728-aecebd452b9a, .\36 396bb82-768c-43a6-a562-d112a31eefec {
+                                                                                                                mix-blend-mode: multiply;
+                                                                                                                }
+                                                                                                                .\32 f9e8668-69d1-4b8d-a3ae-873d62e840f3, .\38 a803810-53ca-48d1-9244-fd91bc9bb7f6 {
+                                                                                                                font-size: 13.46px;
+                                                                                                                }
+                                                                                                                .\38 a803810-53ca-48d1-9244-fd91bc9bb7f6 {
+                                                                                                                fill: #a5a5a5;
+                                                                                                                }
+                                                                                                                .\35 5f8dd9e-181d-467d-8728-aecebd452b9a {
+                                                                                                                opacity: 0.45;
+                                                                                                                }
+                                                                                                                .\35 67c1806-b690-4a4c-8666-b91ac2390918, .c667cc52-63d9-4dc6-b572-5ae59f9f3772 {
+                                                                                                                font-size: 10px;
+                                                                                                                }
+                                                                                                                .\35 67c1806-b690-4a4c-8666-b91ac2390918 {
+                                                                                                                fill: #8e8e8e;
+                                                                                                                }
+                                                                                                                .\32 bfe5fe4-ce99-4166-bf21-300a6025cb26 {
+                                                                                                                text-decoration: underline;
+                                                                                                                }
+                                                                                                                .ff272607-34d7-4352-aa5a-2ac7e737eaed {
+                                                                                                                white-space: pre;
+                                                                                                                }
+                                                                                                                .\37 41d0159-38c4-47c0-a7ca-e7a4cfdf05f7 {
+                                                                                                                letter-spacing: -1px;
+                                                                                                                }
+
+</style>
+                                                        </defs>
+                                                        <title>bubblechart PF by Procedures</title>
+                                                        <g class="6673fc63-ea50-4c3a-baa1-2b92babe2c0a">
+                                                            <g id="044b6bd6-f0c9-4f72-b482-b109fc8f9c88" data-name="Layer 1">
+                                                                <g id="65a0d9fc-f6f2-42cc-a970-1a032d5b97eb" data-name="left_HorizontalChart">
+                                                                    <g id="d9de16e4-4bdb-4822-8379-c4048868bbc9" data-name="Text">
+                                                                        <rect class="cd2e764d-f60c-4544-ba5e-f0e46587a564" width="290" height="253.29" />
+                                                                        <g id="54cf56ef-c639-4124-a66d-8fb9b71706f9" data-name="LargeCircle">
+                                                                            <circle class="cfe1dfa7-d1b3-4f50-8ca4-ef9fed975602" cx="241.46" cy="207.25" r="39.75" />
+                                                                            <text class="5803a50d-844e-4cc2-8cbe-f0f6b674b5e1" transform="translate(207.94 195.84)">Urine Pregnancy
+                                                                                <tspan x="-0.17" y="10.8">T</tspan>
+                                                                                <tspan x="4.33" y="10.8">est</tspan>
+                                                                                <tspan x="18.84" y="10.8">V</tspan>
+                                                                                <tspan x="24.68" y="10.8">isual Color</tspan>
+                                                                                <tspan x="14.01" y="21.6">Cmprson</tspan>
+                                                                                <tspan x="21.26" y="32.4">Meths</tspan>
+                                                                            </text>
+                                                                        </g>
+                                                                        <g id="e22b880b-e77b-42bd-807b-358fad1f7198" data-name="LargeCircle">
+                                                                            <circle class="cfe1dfa7-d1b3-4f50-8ca4-ef9fed975602" cx="250.2" cy="107.53" r="28.39" />
+                                                                        </g>
+                                                                        <g id="92709a73-90ba-404e-a47b-e0c29771066c" data-name="LargeCircle">
+                                                                            <circle class="cfe1dfa7-d1b3-4f50-8ca4-ef9fed975602" cx="190.42" cy="50.56" r="45.42" />
+                                                                            <text class="5803a50d-844e-4cc2-8cbe-f0f6b674b5e1" transform="translate(169.16 53.64)">OutPaitent</text>
+                                                                        </g>
+                                                                        <g id="4109de20-1ec6-4447-b847-71564218c3ed" data-name="LargeCircle">
+                                                                            <circle class="cfe1dfa7-d1b3-4f50-8ca4-ef9fed975602" cx="65.76" cy="56.43" r="51.1" />
+                                                                            <text class="5803a50d-844e-4cc2-8cbe-f0f6b674b5e1" transform="translate(32.24 48.56)">Emergency Dept
+                                                                                <tspan x="-2.92" y="10.8">V</tspan>
+                                                                                <tspan x="2.92" y="10.8">isit High Severity</tspan>
+                                                                                <tspan x="4.08" y="21.6">&amp;</tspan>
+                                                                                <tspan x="10.09" y="21.6"></tspan>
+                                                                                <tspan x="12.43" y="21.6">Threat Funcj</tspan>
+                                                                            </text>
+                                                                        </g>
+                                                                        <g id="1fef05c1-f452-4313-a21a-1eec7cc77018" data-name="LargeCircle">
+                                                                            <circle class="fbe89b8a-88cc-4e05-b23a-23a85959242b" cx="151.49" cy="129.99" r="92.18" />
+                                                                            <g>
+                                                                                <g class="6396bb82-768c-43a6-a562-d112a31eefec">
+                                                                                    <text class="8a803810-53ca-48d1-9244-fd91bc9bb7f6" transform="translate(91.9 98.95)">Injection Lorazepam
+                                                                                        <tspan x="47.5" y="16.15">2mg</tspan>
+                                                                                    </text>
+                                                                                </g>
+                                                                                <text class="2f9e8668-69d1-4b8d-a3ae-873d62e840f3" transform="translate(90.9 97.95)">Injection Lorazepam
+                                                                                    <tspan x="47.5" y="16.15">2mg</tspan>
+                                                                                </text>
+                                                                            </g>
+                                                                            <g>
+                                                                                <g class="55f8dd9e-181d-467d-8728-aecebd452b9a">
+                                                                                    <text class="567c1806-b690-4a4c-8666-b91ac2390918" transform="translate(124.13 138.95)">Code: J2060
+                                                                                        <tspan x="-17.79" y="12">Providers:</tspan>
+                                                                                        <tspan class="2bfe5fe4-ce99-4166-bf21-300a6025cb26" x="30.01" y="12">2,100,000</tspan>
+                                                                                        <tspan class="ff272607-34d7-4352-aa5a-2ac7e737eaed" x="-21.41" y="24">Episodes:</tspan>
+                                                                                        <tspan class="2bfe5fe4-ce99-4166-bf21-300a6025cb26" x="28.07" y="24">24,000,000</tspan>
+                                                                                        <tspan class="741d0159-38c4-47c0-a7ca-e7a4cfdf05f7" x="-29.74" y="36">T</tspan>
+                                                                                        <tspan x="-24.74" y="36">otal Costs:</tspan>
+                                                                                        <tspan class="2bfe5fe4-ce99-4166-bf21-300a6025cb26" x="25.28" y="36">$500,000,000</tspan>
+                                                                                    </text>
+                                                                                </g>
+                                                                                <text class="c667cc52-63d9-4dc6-b572-5ae59f9f3772" transform="translate(123.13 137.95)">Code: J2060
+                                                                                    <tspan x="-17.79" y="12">Providers:</tspan>
+                                                                                    <tspan class="2bfe5fe4-ce99-4166-bf21-300a6025cb26" x="30.01" y="12">2,100,000</tspan>
+                                                                                    <tspan class="ff272607-34d7-4352-aa5a-2ac7e737eaed" x="-21.41" y="24">Episodes:</tspan>
+                                                                                    <tspan class="2bfe5fe4-ce99-4166-bf21-300a6025cb26" x="28.07" y="24">24,000,000</tspan>
+                                                                                    <tspan class="741d0159-38c4-47c0-a7ca-e7a4cfdf05f7" x="-29.74" y="36">T</tspan>
+                                                                                    <tspan x="-24.74" y="36">otal Costs:</tspan>
+                                                                                    <tspan class="2bfe5fe4-ce99-4166-bf21-300a6025cb26" x="25.28" y="36">$500,000,000</tspan>
+                                                                                </text>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xs-12 ln-removepadding_query" id="countcompared">
+            <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader fix ln-underlineCommonDark">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                <h5>Procedure Count Compared to Benchmarks</h5> 
+            </div>
+            <div class="col-xs-12 text-center ln-borderstandard ln-RemovePadding">
+                <div class="col-xs-12 text-nowrap ln-RemovePadding pull-left ln-paddingtop_10px proc_charts">
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Provider Count&nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger provicount" role="progressbar" style="width:65%"></a>
+                                <div>
+                                    <h5 class="pull-left">&nbsp;41</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Bmk High Count &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger procbmkhigh" role="progressbar" style="width:68%"></a>
+                                <div class="pull-left">
+                                    <h5>&nbsp;43</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Bmk Avg Count &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger procbmkavg" role="progressbar" style="width:41%"></a>
+                                <div class="pull-left">
+                                    <h5 class="pull-left">&nbsp;27</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Bmk Low Count &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger procbmklow" role="progressbar" style="width:28%"></a>
+                                <div class="pull-left">
+                                    <h5 class="pull-left">&nbsp;17</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 ln-RemovePadding pull-left hidden">
+                    <div class="container-fluid">
+                        <div class="text-right col-xs-2 col-lg-3">
+</div>
+                        <div class="container-fluid">
+                            <div class="ln-removeLeftPadding col-lg-9 col-xs-12 col-xs-10">
+                                <div class=" ln-RemoveBottomMargin">
+                                    <div class="pull-left" style="width:6%">
+                                        <h5>
+    0</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:34%">
+                                        <h5>
+    15</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:10%">
+                                        <h5>
+    30</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:40%">
+                                        <h5>
+    45</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:7%">
+                                        <h5>
+    60</h5>
+                                    </div>
+                                </div>
+                                <h5 style="font-weight: normal; color:black;" class="invisible">Episodes Percentage</h5> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xs-12 ln-removepadding_query" id="costcompared">
+            <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader fix ln-underlineCommonDark">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span> 
+                <h5>Procedure Cost Compared to Benchmarks</h5> 
+            </div>
+            <div class="col-xs-12 text-center ln-borderstandard ln-RemovePadding">
+                <div class="col-xs-12 text-nowrap ln-RemovePadding pull-left ln-paddingtop_10px proc_charts">
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Provider Cost &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger provicount" role="progressbar" style="width:85%"><h5 style="color: white;">$4,300</h5></a>
+                                <div class="pull-left">
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Bmk High Cost &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger procbmkhigh" role="progressbar" style="width:95%"><h5 style="color: white;">$4,800</h5></a>
+                                <div class="pull-left">
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Bmk Avg Cost &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger procbmkavg" role="progressbar" style="width:45%"></a>
+                                <div class="pull-left">
+                                    <h5 class="pull-left">$2,200</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ln-commonlineright">
+                        <div class="text-right ln-RemovePadding ln-commonlineright col-lg-3 col-xs-2">
+                            <h5>Bmk Low Cost &nbsp;</h5>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="progress proc_bars">
+                                <a href="" class="progress-bar progress-bar-danger procbmklow" role="progressbar" style="width:35%"></a>
+                                <div class="pull-left">
+                                    <h5 class="pull-left">$1,650</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 ln-RemovePadding pull-left hidden">
+                    <div class="container-fluid">
+                        <div class="text-right ln-RemovePadding col-xs-2 col-lg-3">
+</div>
+                        <div class="container-fluid">
+                            <div class="ln-removeLeftPadding col-lg-9 col-xs-12 col-xs-10">
+                                <div class=" ln-RemoveBottomMargin">
+                                    <div class="pull-left" style="width:6%">
+                                        <h5>
+    $0</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:34%">
+                                        <h5>
+    $1,250</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:10%">
+                                        <h5>
+    $2,500</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:40%">
+                                        <h5>
+    $3,750</h5>
+                                    </div>
+                                    <div class="pull-left" style="width:7%">
+                                        <h5>
+    $5,000</h5>
+                                    </div>
+                                </div>
+                                <h5 style="font-weight: normal; color:black;" class="invisible">Episodes Percentage</h5> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="row hidden">
+                    <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark">
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                        <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span> 
+                        <h5>Summary (Totals)</h5> 
+                    </div>
+                    <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered">
+                        <thead class="ln-tableHeader" "">
+                            <tr>
+                                <th class="text-center">Total Cost</th>
+                                <th class="text-center">Total Claims</th>
+                                <th class="text-center">Out of Network Cost</th>
+                                <th class="text-center">Out of Network %</th>
+                                <th class="text-center">Out of Network Claims</th>
+                                <th class="text-center">Out of Network Claims %</th>
+                                <th class="text-center">In Network Cost</th>
+                                <th class="text-center">In Network %</th>
+                                <th class="text-center">In Network Claims</th>
+                                <th class="text-center">In Network Claims %</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td> <span>$900,000</span> </td>
+                                <td> <span>5,000,000</span> </td>
+                                <td>$100,000</td>
+                                <td>30%</td>
+                                <td>
+                                    <a href="" ui-sref="networkleakageservicelist">1500</a> 
+                                </td>
+                                <td>25%</td>
+                                <td> <span>$100,000,000</span> </td>
+                                <td> <span>70%</span> </td>
+                                <td>
+                                    <a href="" ui-sref="networkleakageservicelist">1500</a> 
+                                </td>
+                                <td>30%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row text-center ln-borderRadiusTop ln-chartheader"> 
+                    <div class="col-xs-12 ln-RemovePadding ln-underlineCommonDark"> 
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                        <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span> 
+                        <h5>Provider List </h5> 
+                    </div>                     
+                </div>
+                <div class="row ln-borderstandard"> 
+                    <div class="row action ln-padding-bottom4px"></div>                     
+                    <div class="col-xs-12 ln-actionTopOffset"> 
+                        <div class="row"> 
+                            <div class="container-fluid pull-left ln-removeRightPadding hidden" id="actions"> 
+                                <div class="btn-group pull-left"> 
+                                    <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown"> 
+                                        Actions
+</button>                                     
+                                    <ul class="dropdown-menu" role="menu"> 
+                                        <li> 
+                                            <a href="">Apply Selections to current page</a> 
+                                        </li>                                         
+                                        <li> 
+                                            <a href="">Exclude</a> 
+                                        </li>                                         
+                                        <li class="divider"></li>                                         
+                                        <li> 
+                                            <a href="">Clear Selection</a> 
+                                        </li>                                         
+                                    </ul>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="container-fluid ln-RemovePadding ln-GroupViewByOffset pull-right invisible">
+                                <div class="col-xs-12">
+                                    <div class="ln-RemovePadding">
+                                        <div class="pull-left">
+                                            <b>View By:</b> 
+                                        </div>
+                                        <div class="pull-left ln-pos-relative">
+                                            <a data-toggle="dropdown" href="">Highest</a> 
+                                            <ol class="dropdown-menu list-unstyled pull-left" role="menu">
+                                                <li>
+                                                    <a>Highest</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Lowest</a> 
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 ln-padding-bottom4px">
+                                    <div class="dropdown">
+                                        <div class="pull-left">
+                                            <b>Group by:</b>
+                                        </div>
+                                        <div class="pull-left ln-pos-relative">
+                                            <a data-toggle="dropdown" href="">&nbsp;Provider</a> 
+                                            <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                                <li>
+                                                    <a>Network</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Specialty</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Provider</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Procedure</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Diagnosis</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Reason</a> 
+                                                </li>
+                                                <li>
+                                                    <a>Group</a> 
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row"> 
+                        <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink"> 
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>                             
+                        </div>                         
+                        <div class="col-xs-12"> 
+                            <div class="table-responsive"> 
+                                <table class="table ln-tabletextsize table-striped table-hover table-condensed table-bordered" id="pf_providers_list"> 
+                                    <thead class="shadow ln-nowrap"> 
+                                        <tr class="ln-chartheader"> 
+                                            <th> Provider</th> 
+                                            <th class="text-center"> Provider ID</th> 
+                                            <th class="text-center"># Episodes</th>
+                                            <th class="text-center"># Patients</th> 
+                                            <th class="text-center"> # Procedures</th>
+                                            <th class="text-center">Bmk Variance %</th>
+                                            <th class="text-center">Bmk Variance Cost</th> 
+                                            <th class="text-center">Cost Total</th> 
+                                        </tr>                                         
+                                    </thead>                                     
+                                    <!--Entry that has been selected !Highlighted blue selected -->                                     
+                                </table>                                 
+                            </div>                             
+                            <div class="col-xs-12"> 
+</div>                             
+                        </div>                         
+                    </div>                     
+                </div>
+                <div class="row"> 
+                    <div class="col-xs-12 col-sm-12 col-xs-12 col-lg-12 hidden"> 
+                        <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                            Save column order
+</button>                         
+                        <div class="container-fluid pull-left ln-removeLeftPadding"> 
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary"> 
+                                Reset column order
+</button>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
+    </div>     
+</div>

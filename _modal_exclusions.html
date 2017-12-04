@@ -1,0 +1,455 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">         
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+        <meta name="description" content="">         
+        <meta name="author" content="">         
+        <title>PPM Prototype</title>         
+        <!--DataTables-->         
+        <!-- Bootstrap core CSS -->         
+        <!-- Custom styles for this template -->         
+        <!-- Using Font awesome-->         
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->         
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+         <![endif]-->         
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">         
+        <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">         
+        <link href="bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">         
+        <link href="datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css">         
+        <link href="ln-styles.css" rel="stylesheet" type="text/css">         
+        <link href="tablestandards.css" rel="stylesheet" type="text/css">         
+        <link href="interactiveElements.css" rel="stylesheet" type="text/css">         
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">         
+    </head>     
+    <body class=""> 
+        <div class="modal-header"> 
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>             
+            <h5 class="modal-title text-center">Exclusions</h5> 
+        </div>         
+        <div class="container-fluid show"> 
+            <div class="row ln-bg_white ln-underlinecommon"> 
+                <div class="pull-left ln-margin-top" role="navigation">
+                    <div class="col-md-12"> 
+                        <div class="navbar  navbar-default ln-RemoveBottomMargin" role="navigation" id="exclusionTopnav"> 
+                            <!--/.nav-collapse -->                             
+                            <div class="navbar-header"></div>                             
+                            <ul class="nav navbar-nav ln-topnavbarsectioncontainer" onclick="refresh()"> 
+                                <li class="active"> 
+                                    <a type="button" href="#PatientsExcluded" class="ln-topmenuTab" data-toggle="tab">Patients Excluded</a> 
+                                </li>                                 
+                                <li> 
+                                    <a type="button" href="#EpisodesExcluded" class="ln-topmenuTab" data-toggle="tab">Episodes Excluded</a> 
+                                </li>                                 
+                            </ul>                             
+                        </div>                         
+                    </div>                     
+                    <!--/.nav-collapse -->                     
+                </div>                 
+            </div>             
+            <div class="row text-center">
+                <div class="container-fluid ln-removeRightPadding pull-left ln-margin-top-4px">
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-primary btn-sm"> 
+                        Clear Selections 
+</button>                     
+                </div>                 
+                <div class="tab-content col-md-12 col-lg-12 ln-RemovePadding ln-underlinecommon"> 
+                    <div class="tab-pane text-center active" id="PatientsExcluded"> 
+                        <div class=""> 
+                            <table class="table table-striped table-condensed ln-tabletextsize display" id="patientsexcluded"> 
+                                <!--Entry that has been selected !Highlighted blue selected -->                                 
+                                <thead class="shadow ln-chartheader ln-ETGHeaderMargin">
+                                    <tr> 
+                                        <th> 
+</th>                                         
+                                        <th class="Provide text-left">Name
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-left" style="display: table-cell;">Primary Diagnosis
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">I.D.
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Patient Risk
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Efficiency
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Case Mix
+</th>                                         
+                                    </tr>                                     
+                                </thead>                                 
+                                <tbody> 
+</tbody>                                 
+                            </table>                             
+                        </div>                         
+                    </div>                     
+                    <div class="tab-pane text-center" id="EpisodesExcluded"> 
+                        <div class="table-responsive"> 
+                            <table class="table table-striped table-condensed ln-tabletextsize display" id="episodesexcluded"> 
+                                <thead class="shadow ln-nowrap ln-chartheader ln-ETGHeaderMargin"> 
+                                    <tr> 
+                                        <th> 
+</th>                                         
+                                        <th class="Provide">Episode Description
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Severity
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Case Weight
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Efficiency
+</th>                                         
+                                        <th class="text-center" style="display: table-cell;">Patient Name
+</th>                                         
+                                        <th class="text-center" style="display: table-cell;">Responsible Provider
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Begin Date
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">End Date
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;">Duration
+</th>                                         
+                                        <th class="PrimaryDiagnosis text-center" style="display: table-cell;"># Admits
+</th>                                         
+                                    </tr>                                     
+                                </thead>                                 
+                                <tbody> 
+                                    <tr class="ln-nowrap"> 
+                                        <td> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left"> 
+                                            <a href="" ui-sref="compareefficiency" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left" ""> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left"> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left"> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left"> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left"> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left"> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left" ""> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left" ""> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                    <tr> 
+                                        <td ""> 
+                                            <label> 
+                                                <input class="control-label" type="checkbox" value="">                                                 
+                                            </label>                                             
+                                            <br> 
+                                        </td>                                         
+                                        <td class="text-left" ""> 
+                                            <a href="" ui-sref="compareproviders" data-html="false">{Defined Patient Name}</a> 
+                                        </td>                                         
+                                        <td class="ID">3</td>                                         
+                                        <td class="Risk" "" style="display: table-cell;"> 
+                                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-up ln-faRight"></span>1.82
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="CaseMix" style="display: table-cell;" ""> 
+                                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency"> 
+                                                <span class="fa fa-level-down  ln-faRight"></span>3.45
+                                            </div>                                             
+                                        </td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">LAST NAME, FIRST NAME</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">12/12/2012</td>                                         
+                                        <td class="ID">40&nbsp;</td>                                         
+                                        <td class="ID">20&nbsp;</td>                                         
+                                    </tr>                                     
+                                </tbody>                                 
+                                <!--Entry that has been selected !Highlighted blue selected -->                                 
+                            </table>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+                <div class="col-md-12 ln-margin-top-4px">
+                    <div class="row ln-bg_white ln-cardbottom">
+                        <div class="container-fluid pull-right"> 
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-content="# Patients, # Episodes" data-html="true" data-toggle="popover" data-trigger="focus" data-placement="top" title="Removed"> 
+                                <i class="glyphs fa fa-heartbeat hidden"></i>Remove Exclusions 
+                            </button>                             
+                        </div>                         
+                        <div class="container-fluid pull-right ln-removeRightPadding"> 
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-primary btn-sm" data-dismiss="modal"> 
+                                <i class="glyphs fa fa-heartbeat hidden"></i>Close 
+                            </button>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <!-- Bootstrap core JavaScript
+    ================================================== -->         
+        <!-- Placed at the end of the document so the pages load faster -->         
+        <!--<script src="assets/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/tooltip.js"></script>
+        <script src="bootstrap/js/popover.js"></script>-->         
+        <script type="text/javascript" language="javascript" src="datatables/media/js/jquery.dataTables.js"></script>         
+        <script src="bootstrap/js/dataTables.bootstrap.js"></script>         
+        <script type="text/javascript" language="javascript" class="init">
+
+
+            $(document).ready(function () {
+                InitPatientexcludeTable();
+                InitEpisodeexcludeTable();
+            /*
+            var table = $('#patientsexcluded').dataTable({
+                dom: 'R<".ln-tabletop"f>rt<"bottom"ilp>',
+                "scrollY": "330px",
+                "scrollX": true,
+                scrollCollapse: true,
+                "pageLength": 100,
+            });
+            var table2 =  $('#episodesexcluded').dataTable({
+                dom: 'R<".ln-tabletop"f>rt<"bottom"ilp>',
+                "scrollY": 330,
+                "scrollX": true,
+                scrollCollapse: true,
+                "pageLength": 100,
+            });*/
+            //$('table.display').dataTable();
+            //$('#patientsexcluded').dataTable.draw()
+        } );
+        </script>         
+    </body>     
+</html>

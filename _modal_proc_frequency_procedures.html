@@ -1,0 +1,243 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content=""> 
+        <meta name="author" content=""> 
+        <title>PPM Prototype</title>         
+        <!--DataTables-->         
+        <!-- Bootstrap core CSS -->         
+        <!-- Custom styles for this template -->         
+        <!-- Using Font awesome-->         
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->         
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+         <![endif]-->         
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css"> 
+        <link href="ln-styles.css" rel="stylesheet" type="text/css"> 
+        <link href="tablestandards.css" rel="stylesheet" type="text/css"> 
+        <link href="interactiveElements.css" rel="stylesheet" type="text/css"> 
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+    </head>     
+    <body> 
+        <div class="container-fluid"> 
+            <div class="row text-center ln-RemoveTopMargin">
+                <div class="col-md-12 ln-RemovePadding ln-underline_red"> 
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-lg fa-remove" data-dismiss="modal"></span> 
+                    <span class="fa pull-right btn-glyphs fa-lg"><span class="glyphicon glyphicon-export"></span></span> 
+                    <h5>Procedure Name</h5> 
+                </div>                 
+            </div>             
+            <div class="row ln-underlinecommon"> 
+                <div class="col-md-12 ln-margin-top marginbottomsmall ln-removeRightPadding">
+                    <ul class="nav pull-left"> 
+</ul>                     
+                    <div class="container-fluid ln-RemovePadding pull-right">
+                        <div class="row ln-searchRightPadding"> 
+                            <input type="text" class="form-control" placeholder="Search" title="Search List"> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="row">
+                <div>
+                    <div class="table-responsive">
+                        <table class="table ln-tabletextsize ln-RemoveBottomMargin table-bordered table-condensed table-striped"> 
+                            <thead class="ln-chartheader ln-ETGHeaderMargin"> 
+                                <tr> 
+                                    <th> <p class="text-center"># Episodes</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center"># Providers</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center"># Procedures</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th> 
+                                    <th> <p class="text-center">Procedures Per<br>Episode Avg.</p><i class="fa fa-sort ln-darkGreyText pull-right fa-lg btn-icon"></i> </th> 
+                                    <th> <p class="text-center">Procedure<br>Bmk Low</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center">Procedure<br>Bmk High</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center">Procedure Cost<br>Bmk Low</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center">Procedure Cost<br>Bmk High</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center">Procedure Cost<br>Provider Avg</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th>
+                                    <th> <p class="text-center">Procedure Cost<br>Total</p><i class="fa fa-sort btn-icon ln-darkGreyText pull-right fa-lg"></i> </th> 
+                                </tr>
+                                <tr class="ln-highliteblue hidden"> 
+                                    <td> <br> </td> 
+                                    <td class="text-left">"Table Entry Name"&nbsp;</td> 
+                                    <td class="text-left">Family Practice</td> 
+                                    <td class="text-left">Family Practice</td> 
+                                    <td class="text-center">500</td> 
+                                    <td class="">05/13/2015</td> 
+                                    <td class="">Last Name, First Name</td> 
+                                    <td class="">12345678901234</td> 
+                                </tr>                                 
+                            </thead>                             
+                            <tbody> 
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>
+                                <tr> 
+                                    <td class="text-center">2,000</td> 
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td>
+                                    <td class="text-center">3500</td> 
+                                    <td class="text-center">6700</td> 
+                                    <td class="text-center">45600</td> 
+                                    <td class="text-center">23000</td> 
+                                    <td class="text-center">123000</td>
+                                    <td class="text-center">$123,000,000</td>
+                                    <td class="text-center">$123,000,000</td> 
+                                </tr>                                 
+                            </tbody>                             
+                        </table>
+                    </div>
+                </div>                 
+            </div>             
+            <div class="row ln-margin-top"> 
+                <div class="col-md-12 ln-padding-bottom4px"> 
+                    <div class="container-fluid pull-right ln-RemovePadding"> 
+                        <ul class="pagination pagination-sm"> 
+                            <li> 
+                                <a href="">&laquo;</a> 
+                            </li>                             
+                            <li class="active"> 
+                                <a href="">1 <span class="sr-only">(current)</span></a> 
+                            </li>                             
+                            <li> 
+                                <a href="">2</a> 
+                            </li>                             
+                            <li> 
+                                <a href="">3</a> 
+                            </li>                             
+                            <li> 
+                                <a href="">&raquo;</a> 
+                            </li>                             
+                        </ul>                         
+                    </div>                     
+                    <div class="container-fluid pull-right col-md-3 col-lg-2 col-sm-3"> 
+                        <div class="input-group input-group-sm"> 
+                            <span class="input-group-addon ln-highliteblue">Go to Page</span> 
+                            <input type="search" class="form-control text-center" placeholder="1"> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
+        <div class="modal-footer"> 
+            <div class="text-center pull-right">
+                <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-primary btn-sm" data-dismiss="modal">Cancel
+</button>
+                <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-primary btn-sm" data-dismiss="modal">Export</button>                 
+            </div>             
+        </div>         
+        <!-- Bootstrap core JavaScript
+    ================================================== -->         
+    </body>     
+</html>

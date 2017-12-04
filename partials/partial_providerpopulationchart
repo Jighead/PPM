@@ -1,0 +1,14 @@
+<div>
+    <div class="col-lg-3 col-md-6" data-pg-collapsed>
+        <div id="patient_population_svg" align="center" data-pg-collapsed></div>
+    </div>
+    <div class="col-md-6 col-lg-3" data-pg-collapsed>
+        <div id="overall_population_svg" align="center"></div>
+    </div>
+    <div class="col-lg-3 col-md-6" data-pg-collapsed>
+        <div id="chronic_population_svg" align="center"></div>
+    </div>
+    <div class="col-md-6 col-lg-3" data-pg-collapsed>
+        <div id="acute_population_svg" align="center"></div>
+    </div>
+</div>

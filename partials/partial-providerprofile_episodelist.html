@@ -1,0 +1,209 @@
+﻿<div class="col-xs-12 ln-removeRightPadding" id="datainject_episodelist">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span>
+                <h5>Summary (Totals)</h5>
+            </div>
+            <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered">
+                <thead class="ln-tableHeader" "" ="">
+                    <tr style="display: table-row;">
+                        <th class="text-center" style="display: table-cell;">Patient Risk</th>
+                        <th class="text-center" style="display: table-cell;">Efficiency index</th>
+                        <th class="text-center" style="display: table-cell;">Case Mix</th>
+                        <th class="text-center">Episodes</th>
+                        <th class="text-center">Total Cost</th>
+                        <th class="text-center">Pntl Cost Avoidance</th>
+                        <th class="text-center" style="display: table-cell;">Avg Duration</th>
+                        <th class="text-center"># Admits</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td style="display: table-cell;">
+                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                <span class="fa fa-check ln-faRight"></span>
+                                <span>1.1</span>
+                            </div>
+                        </td>
+                        <td style="display: table-cell;">
+                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                <span class="fa fa-level-up ln-faRight"></span>1.2
+                            </div>
+                        </td>
+                        <td style="display: table-cell;">
+                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                <span class="fa fa-level-down  ln-faRight"></span>0.4
+                            </div>
+                        </td>
+                        <td>2000</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12">
+                <div class="row text-center ln-borderRadiusTop ln-chartheader">
+                    <div class="col-xs-12 ln-RemovePadding ">
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                        <h5>Episode List </h5>
+                    </div>
+                </div>
+                <div class="row ln-borderstandard">
+                    <div class="row action ln-padding-bottom4px"></div>
+                    <div class="col-xs-12 ln-actionTopOffset">
+                        <div class="row">
+                            <div class="container-fluid pull-left">
+                                <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown">Exclude Selection</button>
+                            </div>
+                            <div class="container-fluid pull-left ln-removeLeftPadding ln-removeRightPadding">
+                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="modal" data-target="#ComparisonPGModal">Clear Selection</button>
+                            </div>
+                            <div class="container-fluid pull-left ln-RemovePadding hidden">
+                                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary" ui-sref="etglist" "">View by ETG</button>
+                            </div>
+                            <div class="container-fluid pull-left ln-RemovePadding ln-GroupViewByOffset">
+                                <div class="col-xs-12 ln-padding-bottom4px">
+                                    <div class="dropdown">
+                                        <div class="pull-left">
+                                            <b>View by</b>:&nbsp;
+                                        </div>
+                                        <div class="pull-left ln-pos-relative">
+                                            <a data-toggle="dropdown" href="">Summary</a>
+                                            <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                                <li>
+                                                    <a onclick="setOverallScoresProviderListSummary()">Summary View</a>
+                                                </li>
+                                                <li>
+                                                    <a onclick="setOverallScoresProviderListDetails()">Detail View</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a onclick="setOverallScoresProviderListDetails()">Cancel</a>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="ln-RemovePadding">
+                                        <div class="pull-left">
+                                            <b>View all episodes that are:&nbsp;</b>
+                                        </div>
+                                        <div class="pull-left ln-pos-relative">
+                                            <a data-toggle="dropdown" href="">Any Utilization</a>
+                                            <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                                <li>
+                                                    <a>Any Utilization</a>
+                                                </li>
+                                                <li>
+                                                    <a>Under Utilization</a>
+                                                </li>
+                                                <li>
+                                                    <a>Expected Utilization</a>
+                                                </li>
+                                                <li>
+                                                    <a>Over Utilized</a>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink">
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table ln-tabletextsize table-striped table-hover table-condensed ln-nowrap table-bordered" id="episodelisttable">
+                                    <thead class="shadow">
+                                        <tr>
+                                            <th class="no-sort">
+                                                <input class="control-label" type="checkbox" value="">
+                                            </th>
+                                            <th class="PatientName">
+                                                Patient Name
+                                            </th>
+                                            <th class="EpisodeDescription">
+                                                Ep. Description
+                                            </th>
+                                            <th class="ResponsibleProvider">
+                                                Responsible Provider
+                                            </th>
+                                            <th class="Severity">
+                                                Severity
+                                            </th>
+                                            <th class="EpisBeginDate">
+                                                Epis. Begin Date
+                                            </th>
+                                            <th class="EpisEndDate">
+                                                Epis. End Date
+                                            </th>
+                                            <th class="EpisodeDuration">
+                                                Epis. Duration
+                                            </th>
+                                            <th class="Providers">
+                                                Providers
+                                            </th>
+                                            <th class="BenchmarkEpiDuration">
+                                                BM Epi Duration
+                                            </th>
+                                            <th class="NumberofAdmits">
+                                                # Admits
+                                            </th>
+                                            <th class="PatientRisk">
+                                                Patient Risk
+                                            </th>
+                                            <th class="Efficiency">
+                                                Efficiency
+                                            </th>
+                                            <th class="CaseWeight">
+                                                Case Weight
+                                            </th>
+                                            <th class="TotalCost">
+                                                Total Cost
+                                            </th>
+                                            <th class="AvgCostsEpis">
+                                                Avg. Costs / Epis
+                                            </th>
+                                            <th class="BenchmarkCostEpisode">
+                                                BM $$ / Episode
+                                            </th>
+                                            <th class="CostVariance">
+                                                Cost Variance
+                                            </th>
+                                            <th class="PotentialCostAvoid">
+                                                Pot. $$ Avoid
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <!--Entry that has been selected !Highlighted blue selected -->
+                                </table>
+                            </div>
+                            <div class="col-xs-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-xs-12 col-lg-12">
+                        <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary">
+                            Save column order
+                        </button>
+                        <div class="container-fluid pull-left ln-removeLeftPadding">
+                            <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary">
+                                Reset column order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

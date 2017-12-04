@@ -1,0 +1,128 @@
+
+
+.ln-toptext-by-5
+{
+    font-size: 24px;
+}
+
+.outofnetworktextcolor
+{
+    color: #9e94ff;
+}
+
+.innetworktextcolor
+{
+    color: #3c469d;
+}
+
+.topbartextsize
+{
+    font-size: 12px;
+}
+
+.treeviewicon
+{
+    position: absolute;
+    right: -15px;
+    top: -10px;
+}
+
+@media (max-width:1199px)
+{
+    .nl-datechart
+    {
+        max-width: 1024px;
+        margin-top: 10px;
+    }
+}
+
+.referredspecialtydropdown
+{
+    margin-right: 13px;
+    margin-top: 10px;
+}
+
+@media (min-width:1200px)
+{
+    .nl-bubblechart
+    {
+        margin-bottom: 14px;
+        max-width: 800px;
+    }
+    .nl-datechart
+    {
+        margin-top: 10px;
+        max-width: 840px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px)
+{
+    .nl-bubblechart
+    {
+        min-height: 240px;
+    }
+}
+
+.nl-bubblecharttop5
+{
+    padding-right: 0px;
+    max-width: 50%;
+}
+
+.legendcolor1
+{
+    color: #ff0000;
+}
+
+.legendcolor2
+{
+    color: #3400ff;
+}
+
+.legendcolor3
+{
+    color: #00c6cb;
+}
+
+.legendcolor4
+{
+    color: #119d00;
+}
+
+.top_bottom_margin_10px
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.right_margin_10px
+{
+    margin-right: 10px;
+}
+
+.mapviewtable
+{
+    height: 395px;
+    overflow: auto;
+    padding-right: 0px;
+    max-width: \;
+}
+
+.margin_bottom_0px
+{
+    margin-bottom: 0px;
+}
+
+.textshadow
+{
+    text-shadow: .008em .008em #9395a8;
+}
+
+.bubblechartdetailstext
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+

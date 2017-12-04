@@ -1,0 +1,675 @@
+﻿<div class="col-xs-12 ln-removeRightPadding" id="cost_utilization">
+    <div class="row ln-margin-top-4px">
+        <div class="container-fluid pull-left ln-RemovePadding ln-GroupViewByOffset hidden">
+            <div class="col-xs-12 ln-margin-bottom-10px">
+                <div class="ln-RemovePadding">
+                    <div class="pull-left">
+                        <b>View By:</b>
+                    </div>
+                    <div class="pull-left ln-pos-relative">
+                        <a data-toggle="modal" data-target="#compare_to">&nbsp;All Conditions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 ln-padding-bottom4px hidden">
+                <div class="dropdown">
+                    <div class="pull-left">
+                        <b>View by</b>:&nbsp;
+                    </div>
+                    <div class="pull-left ln-pos-relative">
+                        <a data-toggle="dropdown" href="">Episode Responsible</a>
+                        <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                            <li>
+                                <a onclick="setOverallScoresProviderListSummary()">Summary View</a>
+                            </li>
+                            <li>
+                                <a onclick="setOverallScoresProviderListDetails()">Detail View</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a>My Named Custom View</a>
+                            </li>
+                            <li>
+                                <a>Save Custom View</a>
+                            </li>
+                            <li>
+                                <a>Remove Custom View</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="col-xs-12">
+                <p class="pull-right">This page displays results from the last ## months.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-xs-12 col-lg-12">
+            <div class="">
+                <div class="panel panel-default text-center ln-margin-bottom-10px hidden" id="providersummarytotal">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right glyph_graph_RightButtons hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#" data-target="#">
+                        <h5>
+                            Summary (Totals)
+                        </h5>
+                    </div>
+                    <div>
+                        <div class="panel-body ln-RemoveTopPadding ln-RemoveBottomPadding">
+                            <div class="row">
+                                <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered">
+                                    <thead class="ln-tableHeader" "" ="">
+                                        <tr style="display: table-row;">
+                                            <th class="text-center" style="display: table-cell;">Patient Risk</th>
+                                            <th class="text-center" style="display: table-cell;">Efficiency</th>
+                                            <th class="text-center" style="display: table-cell;">Case Mix<br></th>
+                                            <th class="text-center" style="display: table-cell;"># Episodes</th>
+                                            <th class="text-center"># Patients</th>
+                                            <th class="text-center">Avg. Duration</th>
+                                            <th class="text-center">Bmk # Admits</th>
+                                            <th class="text-center">Bmk Avg Duration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center" style="display: table-row-group;">
+                                        <tr style="display: table-row;">
+                                            <td style="display: table-cell;">
+                                                <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                    <span class="fa fa-check ln-faRight"></span>
+                                                    <span>1.1</span>
+                                                </div>
+                                            </td>
+                                            <td style="display: table-cell;">
+                                                <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                    <span class="fa fa-check ln-faRight"></span>
+                                                    <span>1.1</span>
+                                                </div>
+                                            </td>
+                                            <td style="display: table-cell;" class="text-center">
+                                                <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                    <span class="fa fa-check ln-faRight"></span>
+                                                    <span>1.1</span>
+                                                </div>
+                                            </td>
+                                            <td style="display: table-cell;">
+                                                <a href="#/episodelist" ui-sref="episodelist">###</a>
+                                            </td>
+                                            <td>
+                                                <a href="#/patientlist" ui-sref="patientlist">####</a>
+                                            </td>
+                                            <td style="display: table-cell;">
+                                                <div>
+                                                    <span>31 Days</span>
+                                                </div>
+                                            </td>
+                                            <td style="display: table-cell;">
+                                                <div>
+                                                    <span>33 Days</span>
+                                                </div>
+                                            </td>
+                                            <td style="display: table-cell;">
+                                                <div>301</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ln-pp_chart-height_query col-xs-12">
+                        <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="benchmark_comparison">
+                            <span class="fa btn-glyphs fa-lg pull-left glyph_graphLeftButtons fa-plus hidden"></span>
+                            <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg invisible"></span>
+                            <div class="ln-borderRadiusTop panel-heading ln-underline_red">
+                                <h5>
+                                    Benchmark Comparison for Costs Per Member Per Month
+                                </h5>
+                            </div>
+                            <div class="panel-collapse collapse in ln-borderstandard" id="collapse2">
+                                <div>
+                                    <div class="panel-body ln-RemoveTopPadding ln-RemoveBottomPadding">
+                                        <div class="row">
+                                            <div class="col-xs-12 ln-margin-bottom-10px" data-pg-name="Column_TotalCost">
+                                                <div class="row hidden">
+                                                    <div class="col-xs-12">
+                                                        <ul class="list-unstyled list-inline ln-margin-top" style="display: block;">
+                                                            <li class="ln-commonlineright">
+                                                                <b class="pull-left">Benchmark Cost:&nbsp;</b>#########
+                                                            </li>
+                                                            <li>
+                                                                <b class="pull-left">Cost Variance:&nbsp;</b>########
+                                                            </li>
+                                                            <li>
+                                                                <b class="pull-left">Potential Cost Avoidance:&nbsp;</b>#######
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row ln-costbreakdown ln-margin-top">
+                                                    <div class="">
+                                                        <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="ln-totalcostbreakdownline">
+                                                                    <div class="pull-left ln-totalcostbreakdown_label1">85%</div>
+                                                                    <div class="pull-right ln-text-align-bottom ln-totalcostbreakdown_label2">135%</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ln-RemovePadding Asthma_Bar measurebars chronicmeasures container-fluid">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                                <p style="display: block;"><span>Total </span>-</p>
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="progress ln-RemoveBottomMargin">
+                                                                    <div href="" class="progress-bar progress-bar-success" role="progressbar" style="width:40%" data-html="false">$90,602</div>
+                                                                    <div href="" class="progress-bar progress-bar-info" role="progressbar" style="width:60%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                                <p style="display: block;"><span>Inpatient Hospital </span>-</p>
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="progress ln-RemoveBottomMargin">
+                                                                    <div href="" class="progress-bar progress-bar-success" role="progressbar" style="width:55%" data-html="false">$6,353</div>
+                                                                    <div href="" class="progress-bar progress-bar-info" role="progressbar" style="width:60%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                                <p style="display: block;"><span>Emergency Room -</span></p>
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="progress ln-RemoveBottomMargin">
+                                                                    <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:20%"></a>
+                                                                    <div class="progress-bar progress-bar-info" role="progressbar" title="Benchmark = ">$33,474</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                                <p style="display: block;"><span>Oupatient Hospital -</span></p>
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="progress ln-RemoveBottomMargin">
+                                                                    <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:30%"></a>
+                                                                    <div class="progress-bar progress-bar-info" role="progressbar">$36,783</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                                <p style="display: block;"><span>Professional / Other Services -</span></p>
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="progress ln-RemoveBottomMargin">
+                                                                    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:100%">$13,862</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-fluid ln-RemovePadding Asthma_Bar measurebars chronicmeasures">
+                                                            <div class="text-right ln-RemovePadding ln-commonlineright col-xs-3 col-lg-2">
+                                                                <p style="display: block;"><span>Pharmacy -</span></p>
+                                                            </div>
+                                                            <div class="col-xs-9 ln-removeLeftPadding">
+                                                                <div class="progress ln-RemoveBottomMargin">
+                                                                    <a href="" class="progress-bar progress-bar-warning" role="progressbar" style="width:10%"></a>
+                                                                    <div class="progress-bar progress-bar-info" role="progressbar">$130</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="totals_panel">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            Totals
+                        </h5>
+                    </div>
+                    <div class="panel-collapse collapse in" id="collapse2">
+                        <div>
+                            <table class="table shadow table-condensed ln-margin-bottom-4px table-bordered">
+                                <thead class="ln-tableHeader" style="display: table-header-group;">
+                                    <tr>
+                                        <th> <i class="fa fa-sort pull-right fa-fw fa-border"></i>Total Specifics</th>
+                                        <th class="text-center" style="display: table-cell;">Total</th>
+                                        <th class="text-center" style="display: table-cell;">Benchmark</th>
+                                        <th class="text-center">Efficiency</th>
+                                        <th class="text-center">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="display: table-row-group;" class="ln-nowrap">
+                                    <tr>
+                                        <td>Total Cost PMP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Management Cost PMPM<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other Cost PMPM<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="inpatient_panel">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            Inpatient Hospital
+                        </h5>
+                    </div>
+                    <div class="panel-collapse collapse in" id="collapse2">
+                        <div>
+                            <table class="table shadow table-bordered table-condensed ln-margin-bottom-4px">
+                                <thead class="ln-tableHeader" style="display: table-header-group;">
+                                    <tr>
+                                        <th> <i class="fa fa-sort pull-right fa-fw fa-border"></i>Inpatient Specifics</th>
+                                        <th class="text-center" style="display: table-cell;">Total</th>
+                                        <th class="text-center" style="display: table-cell;">Benchmark</th>
+                                        <th class="text-center">Efficiency<br></th>
+                                        <th class="text-center">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="display: table-row-group;" class="ln-nowrap">
+                                    <tr "">
+                                        <td>Cost per Admlt<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr "">
+                                        <td>Inpatient Cost PMPM<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center" style="display: table-cell;">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr "">
+                                        <td>Cost per Day<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr "">
+                                        <td>Admits/1,000 Members &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br></td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                    <tr "">
+                                        <td>Days/1,000 Members<br></td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                    <tr "">
+                                        <td>Average Length of Stay<br></td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Readmission 30 Days<br></td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center disabled_table_entry">-------</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Readmission within 14 Days<br></td>
+                                        <td class="text-center" style="display: table-cell;">###</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center disabled_table_entry">-------</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="emergency_panel">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            Emergency Room
+                        </h5>
+                    </div>
+                    <div class="panel-collapse collapse in" id="collapse2">
+                        <div>
+                            <table class="table shadow table-condensed ln-margin-bottom-4px table-bordered">
+                                <thead class="ln-tableHeader" style="display: table-header-group;">
+                                    <tr>
+                                        <th> <i class="fa fa-sort pull-right fa-fw fa-border"></i>Emergency Room Specifics</th>
+                                        <th class="text-center" style="display: table-cell;">Total</th>
+                                        <th class="text-center" style="display: table-cell;">Benchmark</th>
+                                        <th class="text-center">Efficiency<br></th>
+                                        <th class="text-center">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="display: table-row-group;" class="ln-nowrap">
+                                    <tr>
+                                        <td>Emergency Room Cost PMPM</td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emergency Room Cost/Visit</td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emergency Room Visits/1,000 Members</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="outpatient_hospital_panel">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            Outpatient Hospital
+                        </h5>
+                    </div>
+                    <div class="panel-collapse collapse in" id="collapse2">
+                        <div>
+                            <table class="table shadow table-condensed ln-margin-bottom-4px table-bordered">
+                                <thead class="ln-tableHeader" style="display: table-header-group;">
+                                    <tr>
+                                        <th> <i class="fa fa-sort pull-right fa-fw fa-border"></i>Emergency Room Specifics</th>
+                                        <th class="text-center" style="display: table-cell;">Total</th>
+                                        <th class="text-center" style="display: table-cell;">Benchmark</th>
+                                        <th class="text-center">Efficiency<br></th>
+                                        <th class="text-center">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="display: table-row-group;" class="ln-nowrap">
+                                    <tr>
+                                        <td>Outpatient Hospital Cost PMPM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Outpatient Hospital Cost/Visit</td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Outpatient Hospital Visits/1,000</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="professional_otherservices_panel">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            Professional / Other Services
+                        </h5>
+                    </div>
+                    <div class="panel-collapse collapse in" id="collapse2">
+                        <div>
+                            <table class="table shadow table-condensed ln-margin-bottom-4px table-bordered">
+                                <thead class="ln-tableHeader" style="display: table-header-group;">
+                                    <tr>
+                                        <th> <i class="fa fa-sort pull-right fa-fw fa-border"></i>Specifics</th>
+                                        <th class="text-center" style="display: table-cell;">Total</th>
+                                        <th class="text-center" style="display: table-cell;">Benchmark</th>
+                                        <th class="text-center">Efficiency<br></th>
+                                        <th class="text-center">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="display: table-row-group;" class="ln-nowrap">
+                                    <tr>
+                                        <td>Professional Cost PMPM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Professional Cost/Visit<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Professional Visits/1,000<br></td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ln-margin-bottom-10px" data-pg-name="Panel2" id="pharmacy_panel">
+                    <span class="fa btn-glyphs fa-lg pull-left fa-caret-down glyph_graphLeftButtons hidden"></span>
+                    <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden"></span>
+                    <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                        <h5>
+                            Pharmacy
+                        </h5>
+                    </div>
+                    <div class="panel-collapse collapse in" id="collapse2">
+                        <div>
+                            <table class="table shadow table-condensed ln-margin-bottom-4px table-bordered">
+                                <thead class="ln-tableHeader" style="display: table-header-group;">
+                                    <tr>
+                                        <th> <i class="fa fa-sort pull-right fa-fw fa-border"></i>Pharmacy Specifics</th>
+                                        <th class="text-center" style="display: table-cell;">Total</th>
+                                        <th class="text-center" style="display: table-cell;">Benchmark</th>
+                                        <th class="text-center">Efficiency<br></th>
+                                        <th class="text-center">Variance</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="display: table-row-group;" class="ln-nowrap">
+                                    <tr>
+                                        <td>Pharmacy Cost PMPM<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pharmacy Cost/Prescription (30 day)<br></td>
+                                        <td class="text-center" style="display: table-cell;">$##</td>
+                                        <td class="text-center" style="display: table-cell;">$###</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">$#,###</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prescriptions/1,000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br></td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center" style="display: table-cell;">####</td>
+                                        <td class="text-center">
+                                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency" style="display: block;">
+                                                <span class="fa fa-check ln-faRight"></span>
+                                                <span>##%</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">####</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- IF YOU WANT TO EXPERIMENT WITH HOW CONTENT WILL LOOK, COMMENT OUT THE UI VIEW AND PLACE CONTENT  -->
+</div>

@@ -1,0 +1,184 @@
+﻿ 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content=""> 
+        <meta name="author" content=""> 
+        <title>PPM Prototype</title>         
+        <!--DataTables-->         
+        <!-- Bootstrap core CSS -->         
+        <!-- Custom styles for this template -->         
+        <!-- Using Font awesome-->         
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->         
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+         <![endif]-->         
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css"> 
+        <link href="bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css"> 
+        <link href="datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css"> 
+        <link href="ln-styles.css" rel="stylesheet" type="text/css"> 
+        <link href="tablestandards.css" rel="stylesheet" type="text/css"> 
+        <link href="interactiveElements.css" rel="stylesheet" type="text/css"> 
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+    </head>     
+    <body> 
+        <div> 
+            <div class="modal-header"> 
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>                 
+                <h5 class="modal-title text-center">Benchmark:</h5> 
+            </div>
+            <div class="col-md-12 col-xs-12 " style="color:red; margin-bottom: 10px; margin-top: 10px;">
+                Note: Changing to a Client Benchmark may reduce your filtered population.
+</div>
+            <div class="modal-body">
+                <div class="form-group"> 
+                    <label class="control-label" for="formInput9">Selection Set</label>                     
+                    <select id="formInput9" class="form-control"> 
+                        <option>IMS National</option>                         
+                        <option value="IMS National">IMS National</option>
+                        <option value="IMS East">IMS East</option>
+                        <option value="IMS Midwest">IMS Midwest</option>
+                        <option value="IMS West">IMS West</option>
+                        <option value="IMS South">IMS South</option>
+                        <option value="Client Total Population">Client Total Population</option>
+                        <option value="Client East">Client East</option>
+                        <option value="Client Midwest">Client Midwest</option>
+                        <option value="Client West">Client West</option>
+                        <option value="Client South">Client South</option>                         
+                    </select>
+                </div>
+                <div class="form-group"> 
+                    <label class="control-label" for="formInput9">Client Product</label>                     
+                    <select id="formInput9" class="form-control"> 
+                        <option value="0">All Products</option>
+                        <option value="2">Commercial Non HMO</option>
+                        <option value="4">Medicaid</option>                         
+                    </select>
+                </div>
+                <div class="form-group"> 
+                    <label class="control-label" for="formInput9">Client Specialty</label>                     
+                    <select id="formInput9" class="form-control"> 
+                        <option value="0">All Specialties</option>
+                        <option value="ACC">ACUPUNCTURE</option>
+                        <option value="ADOM">ADOLESCENT &amp; YOUNG ADULT MEDICINE</option>
+                        <option value="ALL">ALLERGY IMMUNOLOGY</option>
+                        <option value="AMBS">AMBULANCE SERVICE </option>
+                        <option value="10">AMBULATORY SURGERY CENTER</option>
+                        <option value="ANS">ANESTHESIA</option>
+                        <option value="AUDI">AUDIOLOGY/HEARING SERVICES</option>
+                        <option value="29">BEHAVIORAL HEALTH CENTER</option>
+                        <option value="CETP">CARDIAC ELECTROPHYSIOLOGY</option>
+                        <option value="THO">CARDIO-THORACIC SURGERY</option>
+                        <option value="CAR">CARDIOLOGY</option>
+                        <option value="CHI">CHIROPRACTIC</option>
+                        <option value="13">CLINIC</option>
+                        <option value="CRS">COLORECTAL SURGERY</option>
+                        <option value="CRCM">CRITICAL CARE MED/SURG</option>
+                        <option value="DER">DERMATOLOGY</option>
+                        <option value="DPDM">DERMATOPATHOLOGY</option>
+                        <option value="RAD">DIAGNOSTIC RADIOLOGY</option>
+                        <option value="17">DIALYSIS CENTER</option>
+                        <option value="ENT">EAR/NOSE/THROAT/OTOLARYNGOLOGY</option>
+                        <option value="EMS">EMERGENCY MEDICINE</option>
+                        <option value="ENDD">ENDOCRINOLOGY/DIABETES</option>
+                        <option value="UNFAC">FACILITY - SPECIALTY UNKNOWN</option>
+                        <option value="42">FAMILY PLANNING CLINIC</option>
+                        <option value="FP">FAMILY PRACTICE</option>
+                        <option value="GI">GASTROENTEROLOGY</option>
+                        <option value="DEN">GENERAL DENTISTRY</option>
+                        <option value="GPRA">GENERAL PRACTICE</option>
+                        <option value="SUR">GENERAL SURGERY</option>
+                        <option value="GER">GERIATRICS</option>
+                        <option value="GO">GYNECOLOGICAL ONCOLOGY</option>
+                        <option value="HAND">HAND SURGERY</option>
+                        <option value="HEM">HEMATOLOGY</option>
+                        <option value="21">HOME HEALTH AGENCY</option>
+                        <option value="HITS">HOME INFUSION SERVICES</option>
+                        <option value="22">HOSPICE</option>
+                        <option value="23">HOSPITAL</option>
+                        <option value="24">INDEPENDENT LABORATORY</option>
+                        <option value="ID">INFECTIOUS DISEASES</option>
+                        <option value="33">INPATIENT REHABILITATION</option>
+                        <option value="MED">INTERNAL MEDICINE</option>
+                        <option value="LBMD">LABORATORY MEDICINE</option>
+                        <option value="MATE">MATERNAL FETAL MEDICINE</option>
+                        <option value="53">MED SUPPLY CO. W/CERT. PROSTHETIST ORTHOTIST</option>
+                        <option value="18">MEDICAL SUPPLY COMPANY</option>
+                        <option value="26">MENTAL HEALTH FACILITY</option>
+                        <option value="MID">MIDWIFE</option>
+                        <option value="MSGR">MULTI SPECIALTY GROUP</option>
+                        <option value="NEP">NEPHROLOGY</option>
+                        <option value="NRU">NEUROLOGY</option>
+                        <option value="NEUP">NEUROPATHOLOGY</option>
+                        <option value="NSU">NEUROSURGERY</option>
+                        <option value="NU">NUCLEAR MEDICINE</option>
+                        <option value="NPRA">NURSE PRACTITIONER</option>
+                        <option value="NPN">NURSE PRACTITIONER, NEONATAL</option>
+                        <option value="MISC">NUTRITION</option>
+                        <option value="OBG">OBSTETRICS/GYNECOLOGY</option>
+                        <option value="OCC">OCCUPATIONAL MEDICINE</option>
+                        <option value="OCCT">OCCUPATIONAL THERAPY</option>
+                        <option value="ONC">ONCOLOGY/NEOPLASTICS</option>
+                        <option value="EYE">OPHTHALMOLOGY/OCCULOPLASTICS</option>
+                        <option value="OPT">OPTOMETRY</option>
+                        <option value="OMFS">ORAL MAXILLOFACIAL SURGERY</option>
+                        <option value="ORT">ORTHOPEDICS</option>
+                        <option value="ALT">OTHER ALTERNATIVE MEDICINE PRACTITIONER</option>
+                        <option value="UNOTH">OTHER PROVIDER - SPECIALTY UNKNOWN</option>
+                        <option value="OPP">OUTPATIENT PROGRAMS</option>
+                        <option value="APMG">PAIN MANAGEMENT</option>
+                        <option value="PAT">PATHOLOGY</option>
+                        <option value="PCAR">PEDIATRIC CARDIOLOGY</option>
+                        <option value="PDDM">PEDIATRIC DERMATOLOGY</option>
+                        <option value="PEND">PEDIATRIC ENDOCRINOLOGY</option>
+                        <option value="PONC">PEDIATRIC HEMATOLOGY/ONCOLOGY</option>
+                        <option value="PED">PEDIATRIC MEDICAL &amp; NEWBORN</option>
+                        <option value="PNEP">PEDIATRIC NEPHROLOGY</option>
+                        <option value="PNEU">PEDIATRIC NEUROLOGY</option>
+                        <option value="PRAD">PEDIATRIC RADIOLOGY</option>
+                        <option value="PRHU">PEDIATRIC RHEUMATOLOGY</option>
+                        <option value="PDS">PEDIATRIC SURGERY</option>
+                        <option value="REH">PHYSICAL MEDICINE &amp; REHAB</option>
+                        <option value="PHYS">PHYSICAL THERAPY</option>
+                        <option value="31">PHYSICIAN OFFICE</option>
+                        <option value="PSU">PLASTIC SURGERY</option>
+                        <option value="POD">PODIATRY</option>
+                        <option value="PMED">PREVENTIVE MEDICINE</option>
+                        <option value="PW">PSYCHIATRY</option>
+                        <option value="PSYL">PSYCHOLOGY </option>
+                        <option value="32">PUBLIC HEALTH AGENCY OR SIMILAR</option>
+                        <option value="PUL">PULMONARY</option>
+                        <option value="THRA">RADIATION ONCOLOGY/THERAPEUTIC</option>
+                        <option value="REPE">REPRODUCTIVE ENDOCRINOLOGY</option>
+                        <option value="RHU">RHEUMATOLOGY</option>
+                        <option value="RHCL">RURAL HEALTH CENTER</option>
+                        <option value="35">SKILLED NURSING FACILITY</option>
+                        <option value="SLP">SLEEP STUDIES</option>
+                        <option value="SOC">SOCIAL WORKER</option>                         
+                    </select>
+                </div>                 
+            </div>                          
+            <div class="modal-footer"> 
+                <div class="text-center">
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-primary pull-right" data-dismiss="modal">
+                        <i class="glyphs fa fa-heartbeat hidden"></i>Apply
+                    </button>
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-primary pull-right" data-dismiss="modal" style="margin-right: 10px; data-pg-id=" 954"">
+                        <i class="glyphs fa fa-heartbeat hidden"></i>Cancel 
+                    </button>                     
+                </div>                 
+            </div>             
+        </div>         
+        <!-- Bootstrap core JavaScript
+    ================================================== -->         
+        <!-- Placed at the end of the document so the pages load faster -->         
+        <!-- Data tables Java Start-->         
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->         
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>         
+    </body>     
+</html>

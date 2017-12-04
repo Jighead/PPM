@@ -1,0 +1,897 @@
+﻿<div class="col-xs-12  ln-removeRightPadding" id="datainject_ComparisonList">
+    <div class="col-xs-12">
+        <div class="row text-center ln-borderRadiusTop ln-chartheader">
+            <div class="col-xs-12">
+            </div>
+            <div class="col-xs-12">
+                <div class="row ln-underlineCommonDark">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <h5>Selected Provider</h5>
+                    </div>
+                    <div class="col-xs-4 ln-RemovePadding">
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg hidden" title="Info"></span>
+                    </div>
+                </div>
+                <div class="row ln-bg_white ln-padding-bottom4px">
+                    <div class="col-xs-4 pull-left ln-margin-top-4px hidden">
+                        <div class="col-xs-12" data-pg-collapsed>
+                            <div class="row">
+                                <div class="pull-left">
+                                    <b class="pull-left">View by:&nbsp;</b>
+                                </div>
+                                <div class="row pull-left ln-pos-relative">
+                                    <div class="col-xs-12">
+                                        <a data-toggle="dropdown">Episode Responsible</a>
+                                        <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                            <li>
+                                                <a onclick="setProviderListSummary()">Summary View</a>
+                                            </li>
+                                            <li>
+                                                <a onclick="setProviderListDetails()">Detail View</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a>My Named Custom View</a>
+                                            </li>
+                                            <li>
+                                                <a>Save Custom View</a>
+                                            </li>
+                                            <li>
+                                                <a>Remove Custom View</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="dropdown">
+                                    <div class="pull-left">
+                                        <b>Group By</b>:&nbsp;
+                                    </div>
+                                    <div class="pull-left">
+                                        <span>Providers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 ln-RemovePadding pull-right ln-margin-top-4px hidden">
+                        <div class="row ln-searchRightPadding">
+                            <input type="text" class="form-control" placeholder="Search" title="Search List">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 ln-categoryadder">
+                        <div class="text-left checkbox pull-left" id="overallEfficiencyColumns">
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Selectall">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Select All
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Specialty">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Specialty
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="ID">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ID
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Patients">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Patients
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Episodes">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Episodes
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Risk">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Risk
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="CaseMix">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Case Mix
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Efficiency">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Efficiency
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="TotalCost">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Total Cost
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvoidableCost">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Avoidable Cost
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvgCostVariance">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Avg. $$ Variance
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="CostPerEpisode">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            $$ Per Episode
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="BenchmarkCost">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Benchmark $$
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvgAge">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Average Age
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvgPaid">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Average Paid
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="NumberChronicEpis">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # Chronic Epis.
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="NumberAdmissions">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # Admissions
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="NumberReadmissions">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # Readmissions
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Management">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Management
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Surgical">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Surgical
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Facility">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Facility
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Ancillary">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ancillary
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Pharmacy">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Pharmacy
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="EpisodeDescription">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ep. Description
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="Severity">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Severity
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="ResponsibleProvider">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Responsible Prov.
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="EpisodeBeginDate">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ep. Begin Date
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="EpisodeDuration">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ep. Duration
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="BenchmarkEpisodeDuration">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            BM Ep. Duration
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="AvgCostPerEpisode">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Avg $$ Per Ep.
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="CostVariance">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            $$ Variance
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="PatientAge">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Patient Age
+                            </label>
+                            <!--basic-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-responsive" style="overflow-x: auto;">
+                        <table class="table table-striped table-condensed ln-tabletextsize table-bordered ln-RemoveBottomMargin">
+                            <!--Entry that has been selected !Highlighted blue selected -->
+                            <thead class="shadow ln-nowrap">
+                                <tr data-pg-collapsed>
+                                    <th data-pg-collapsed>
+                                        <input class="control-label" type="checkbox" value="">
+                                    </th>
+                                    <th class="Provide">
+                                        Name
+                                    </th>
+                                    <th class="Specialty">
+                                        Specialty
+                                    </th>
+                                    <th class="EpisodeDescription">
+                                        Ep.Description
+                                    </th>
+                                    <th class="ID">
+                                        ID
+                                    </th>
+                                    <th class="Patients">
+                                        Patients
+                                    </th>
+                                    <th class="Episodes">
+                                        Episodes
+                                    </th>
+                                    <th class="Risk">
+                                        PatientRisk
+                                    </th>
+                                    <th class="Efficiency">
+                                        Efficiency
+                                    </th>
+                                    <th class="CaseMix">
+                                        CaseMix
+                                    </th>
+                                    <th class="TotalCost">
+                                        TotalCost
+                                    </th>
+                                    <th class="AvoidableCost">
+                                        Avoidable Cost
+                                    </th>
+                                    <th class="AvgCostVariance">
+                                        Avg. $$ Variance
+                                    </th>
+                                    <th class="CostPerEpisode">$$ Per Episode</th>
+                                    <th class="BenchmarkCost">Benchmark Cost</th>
+                                    <th class="AvgAge">Average Age </th>
+                                    <th class="AvgPaid">Average Paid    </th>
+                                    <th class="NumberChronicEpis"># Chronic Episodes   </th>
+                                    <th class="NumberAdmissions"># of Admissions</th>
+                                    <th class="NumberReadmissions"># of Readmissions </th>
+                                    <th class="Management">Management</th>
+                                    <th class="Surgical">Surgical</th>
+                                    <th class="Facility">Facility</th>
+                                    <th class="Ancillary">Ancillary</th>
+                                    <th class="Pharmacy">Pharmacy</th>
+                                    <th class="Severity">Severity</th>
+                                    <th class="ResponsibleProvider ln-tableheadertextextended">Resp. Provider</th>
+                                    <th class="EpisodeBeginDate">Epis. Begin Date</th>
+                                    <th class="EpisodeDuration">Epis. Duration    </th>
+                                    <th class="BenchmarkEpisodeDuration">BMark Epis. Duration    </th>
+                                    <th class="AvgCostPerEpisode">Avg $$ PerEpisode    </th>
+                                    <th class="CostVariance">$$ Variance    </th>
+                                    <th class="PatientAge">Patient Age    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="ln-borderstandard ln-nowrap">
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input class="control-label" type="checkbox" value="">
+                                        </label>
+                                        <br>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="" ui-sref="compareproviders" data-html="false">"Defined Name"</a>
+                                    </td>
+                                    <td class="text-left Specialty">Defined Specialty</td>
+                                    <td class="text-left EpisodeDescription">Defined Specialty</td>
+                                    <td class="ID">20015</td>
+                                    <td class="Patients">524</td>
+                                    <td class="Episodes">100</td>
+                                    <td class="Risk">
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>
+                                    </td>
+                                    <td class="CaseMix">
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>
+                                    </td>
+                                    <td class="Efficiency">
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                            <span class="fa fa-check ln-faRight"></span>1.1
+                                        </div>
+                                    </td>
+                                    <td class="TotalCost">$50000</td>
+                                    <td class="AvoidableCost">$10000</td>
+                                    <td class="AvgCostPerEp">$10000</td>
+                                    <td class="AvgCostVariance">$10000</td>
+                                    <td class="BenchmarkCost">$4767</td>
+                                    <td class="AvgAge">32</td>
+                                    <td class="AvgPaid">$5000</td>
+                                    <td class="NumberChronicEpis">456</td>
+                                    <td class="NumberAdmissions">5425</td>
+                                    <td class="NumberReadmissions">2350</td>
+                                    <td class="Management">$10000</td>
+                                    <td class="Surgical">$10000</td>
+                                    <td class="Facility">$10000</td>
+                                    <td class="Ancillary">$10000</td>
+                                    <td class="Pharmacy">$10000</td>
+                                    <td class="Severity">3</td>
+                                    <td class="ResponsibleProvider">Provider Name</td>
+                                    <td class="EpisodeBeginDate">11/22/2014</td>
+                                    <td class="EpisodeDuration">31</td>
+                                    <td class="BenchmarkEpisodeDuration">30</td>
+                                    <td class="AvgCostPerEpisode">$13000</td>
+                                    <td class="CostVariance">$10000</td>
+                                    <td class="PatientAge">59</td>
+                                    <td>
+                                        <br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row ln-margin-top">
+            <div class="col-xs-12">
+                <div class="container-fluid pull-left">
+                    <button type="button" class="btn ln-shadowEfficiency btn-sm pull-left ln-btnaction">
+                        Save column order
+                    </button>
+                    <div class="container-fluid pull-left">
+                        <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm">
+                            Reset column order
+                        </button>
+                    </div>
+                </div>
+                <div class="container-fluid pull-left ln-RemovePadding hidden" data-pg-name="breadcrumb">
+                    <ol class="breadcrumb text-left">
+                        Display Amount:
+                        <li>
+                            <a href="">10</a>
+                        </li>
+                        <li>
+                            <a href="">30</a>
+                        </li>
+                        <li>
+                            <a href="">50</a>
+                        </li>
+                        <li>
+                            <a href="">100</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="container-fluid pull-right ln-RemovePadding">
+                    <ul class="pagination pull-right pagination-sm">
+                        <li>
+                            <a href="">&laquo;</a>
+                        </li>
+                        <li class="active">
+                            <a href="">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="">2</a>
+                        </li>
+                        <li>
+                            <a href="">3</a>
+                        </li>
+                        <li>
+                            <a href="">###</a>
+                        </li>
+                        <li>
+                            <a href="">&raquo;</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container-fluid pull-right col-md-3 col-lg-2">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon ln-highliteblue">Go to Page</span>
+                        <input type="search" class="form-control text-center" placeholder="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center ln-borderRadiusTop ln-chartheader">
+            <div class="col-xs-12">
+            </div>
+            <div class="col-xs-12">
+                <div class="row ln-underlineCommonDark">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <h5 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);">Peer Group Providers</h5>
+                    </div>
+                    <div class="col-xs-4 ln-RemovePadding">
+                        <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg" title="Info"></span>
+                    </div>
+                </div>
+                <div class="row ln-bg_white ln-padding-bottom4px">
+                    <div class="col-xs-4 pull-left">
+                        <div class="col-xs-12">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 ln-RemovePadding pull-right ln-margin-top-4px">
+                        <div class="row ln-searchRightPadding">
+                            <input type="text" class="form-control" placeholder="Search" title="Search List">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 ln-categoryadder">
+                        <div class="text-left checkbox pull-left" id="overallEfficiencyColumns">
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Selectall">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Select All
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Specialty">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Specialty
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="ID">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ID
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Patients">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Patients
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Episodes">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Episodes
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Risk">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Risk
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="CaseMix">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Case Mix
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Efficiency">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Efficiency
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="TotalCost">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Total Cost
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvoidableCost">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Avoidable Cost
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvgCostVariance">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Avg. $$ Variance
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="CostPerEpisode">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            $$ Per Episode
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="BenchmarkCost">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Benchmark $$
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvgAge">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Average Age
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="AvgPaid">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Average Paid
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="NumberChronicEpis">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # Chronic Epis.
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="NumberAdmissions">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # Admissions
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="NumberReadmissions">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # Readmissions
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Management">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Management
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Surgical">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Surgical
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Facility">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Facility
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Ancillary">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ancillary
+                            </label>
+                            <label class="control-label pull-left">
+                                <input type="checkbox" name="Pharmacy">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Pharmacy
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="EpisodeDescription">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ep. Description
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="Severity">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Severity
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="ResponsibleProvider">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Responsible Prov.
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="EpisodeBeginDate">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ep. Begin Date
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="EpisodeDuration">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ep. Duration
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="BenchmarkEpisodeDuration">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            BM Ep. Duration
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="AvgCostPerEpisode">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Avg $$ Per Ep.
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="CostVariance">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            $$ Variance
+                            </label>
+                            <label class="control-label pull-left hidden">
+                                <input type="checkbox" name="PatientAge">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Patient Age
+                            </label>
+                            <!--basic-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-responsive" style="overflow-x: auto;">
+                        <table class="table table-striped table-condensed ln-tabletextsize table-bordered">
+                            <!--Entry that has been selected !Highlighted blue selected -->
+                            <thead class="shadow ln-nowrap">
+                                <tr>
+                                    <th>
+                                        <input class="control-label" type="checkbox" value="">
+                                    </th>
+                                    <th class="Provide">
+                                        Name
+                                    </th>
+                                    <th class="Specialty">
+                                        Specialty
+                                    </th>
+                                    <th class="EpisodeDescription">
+                                        Ep.Description
+                                    </th>
+                                    <th class="ID">
+                                        ID
+                                    </th>
+                                    <th class="Patients">
+                                        Patients
+                                    </th>
+                                    <th class="Episodes">
+                                        Episodes
+                                    </th>
+                                    <th class="Risk">
+                                        PatientRisk
+                                    </th>
+                                    <th class="Efficiency">
+                                        Efficiency
+                                    </th>
+                                    <th class="CaseMix">
+                                        CaseMix
+                                    </th>
+                                    <th class="TotalCost">
+                                        TotalCost
+                                    </th>
+                                    <th class="AvoidableCost">
+                                        Avoidable Cost
+                                    </th>
+                                    <th class="AvgCostVariance">
+                                        Avg. $$ Variance
+                                    </th>
+                                    <th class="CostPerEpisode">$$ Per Episode</th>
+                                    <th class="BenchmarkCost">Benchmark Cost</th>
+                                    <th class="AvgAge">Average Age </th>
+                                    <th class="AvgPaid">Average Paid    </th>
+                                    <th class="NumberChronicEpis"># Chronic Episodes   </th>
+                                    <th class="NumberAdmissions"># of Admissions</th>
+                                    <th class="NumberReadmissions"># of Readmissions </th>
+                                    <th class="Management">Management</th>
+                                    <th class="Surgical">Surgical</th>
+                                    <th class="Facility">Facility</th>
+                                    <th class="Ancillary">Ancillary</th>
+                                    <th class="Pharmacy">Pharmacy</th>
+                                    <th class="Severity">Severity</th>
+                                    <th class="ResponsibleProvider ln-tableheadertextextended">Resp. Provider</th>
+                                    <th class="EpisodeBeginDate">Epis. Begin Date</th>
+                                    <th class="EpisodeDuration">Epis. Duration    </th>
+                                    <th class="BenchmarkEpisodeDuration">BMark Epis. Duration    </th>
+                                    <th class="AvgCostPerEpisode">Avg $$ PerEpisode    </th>
+                                    <th class="CostVariance">$$ Variance    </th>
+                                    <th class="PatientAge">Patient Age    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="ln-borderstandard text-nowrap">
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input class="control-label" type="checkbox" value="">
+                                        </label>
+                                        <br>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="" ui-sref="compareproviders" data-html="false">"Defined Name"</a>
+                                    </td>
+                                    <td class="text-left Specialty">Defined Specialty</td>
+                                    <td class="text-left EpisodeDescription">Defined Specialty</td>
+                                    <td class="ID">20015</td>
+                                    <td class="Patients">524</td>
+                                    <td class="Episodes">100</td>
+                                    <td class="Risk">
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>
+                                    </td>
+                                    <td class="CaseMix">
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>
+                                    </td>
+                                    <td class="Efficiency">
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                            <span class="fa fa-check ln-faRight"></span>1.1
+                                        </div>
+                                    </td>
+                                    <td class="TotalCost">$50000</td>
+                                    <td class="AvoidableCost">$10000</td>
+                                    <td class="AvgCostPerEp">$10000</td>
+                                    <td class="AvgCostVariance">$10000</td>
+                                    <td class="BenchmarkCost">$4767</td>
+                                    <td class="AvgAge">32</td>
+                                    <td class="AvgPaid">$5000</td>
+                                    <td class="NumberChronicEpis">456</td>
+                                    <td class="NumberAdmissions">5425</td>
+                                    <td class="NumberReadmissions">2350</td>
+                                    <td class="Management">$10000</td>
+                                    <td class="Surgical">$10000</td>
+                                    <td class="Facility">$10000</td>
+                                    <td class="Ancillary">$10000</td>
+                                    <td class="Pharmacy">$10000</td>
+                                    <td class="Severity">3</td>
+                                    <td class="ResponsibleProvider">Provider Name</td>
+                                    <td class="EpisodeBeginDate">11/22/2014</td>
+                                    <td class="EpisodeDuration">31</td>
+                                    <td class="BenchmarkEpisodeDuration">30</td>
+                                    <td class="AvgCostPerEpisode">$13000</td>
+                                    <td class="CostVariance">$10000</td>
+                                    <td class="PatientAge">59</td>
+                                    <td>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input class="control-label" type="checkbox" value="">
+                                        </label>
+                                        <br>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="" ui-sref="compareproviders" data-html="false">"Defined Name"</a>
+                                    </td>
+                                    <td class="text-left Specialty">Defined Specialty</td>
+                                    <td class="text-left EpisodeDescription">Defined Specialty</td>
+                                    <td class="ID">20015</td>
+                                    <td class="Patients">524</td>
+                                    <td class="Episodes">100</td>
+                                    <td class="Risk">
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>
+                                    </td>
+                                    <td class="CaseMix">
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>
+                                    </td>
+                                    <td class="Efficiency">
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                            <span class="fa fa-check ln-faRight"></span>1.1
+                                        </div>
+                                    </td>
+                                    <td class="TotalCost">$50000</td>
+                                    <td class="AvoidableCost">$10000</td>
+                                    <td class="AvgCostPerEp">$10000</td>
+                                    <td class="AvgCostVariance">$10000</td>
+                                    <td class="BenchmarkCost">$4767</td>
+                                    <td class="AvgAge">32</td>
+                                    <td class="AvgPaid">$5000</td>
+                                    <td class="NumberChronicEpis">456</td>
+                                    <td class="NumberAdmissions">5425</td>
+                                    <td class="NumberReadmissions">2350</td>
+                                    <td class="Management">$10000</td>
+                                    <td class="Surgical">$10000</td>
+                                    <td class="Facility">$10000</td>
+                                    <td class="Ancillary">$10000</td>
+                                    <td class="Pharmacy">$10000</td>
+                                    <td class="Severity">3</td>
+                                    <td class="ResponsibleProvider">Provider Name</td>
+                                    <td class="EpisodeBeginDate">11/22/2014</td>
+                                    <td class="EpisodeDuration">31</td>
+                                    <td class="BenchmarkEpisodeDuration">30</td>
+                                    <td class="AvgCostPerEpisode">$13000</td>
+                                    <td class="CostVariance">$10000</td>
+                                    <td class="PatientAge">59</td>
+                                    <td>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input class="control-label" type="checkbox" value="">
+                                        </label>
+                                        <br>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="" ui-sref="compareproviders" data-html="false">"Defined Name"</a>
+                                    </td>
+                                    <td class="text-left Specialty">Defined Specialty</td>
+                                    <td class="text-left EpisodeDescription">Defined Specialty</td>
+                                    <td class="ID">20015</td>
+                                    <td class="Patients">524</td>
+                                    <td class="Episodes">100</td>
+                                    <td class="Risk">
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>
+                                    </td>
+                                    <td class="CaseMix">
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>
+                                    </td>
+                                    <td class="Efficiency">
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                            <span class="fa fa-check ln-faRight"></span>1.1
+                                        </div>
+                                    </td>
+                                    <td class="TotalCost">$50000</td>
+                                    <td class="AvoidableCost">$10000</td>
+                                    <td class="AvgCostPerEp">$10000</td>
+                                    <td class="AvgCostVariance">$10000</td>
+                                    <td class="BenchmarkCost">$4767</td>
+                                    <td class="AvgAge">32</td>
+                                    <td class="AvgPaid">$5000</td>
+                                    <td class="NumberChronicEpis">456</td>
+                                    <td class="NumberAdmissions">5425</td>
+                                    <td class="NumberReadmissions">2350</td>
+                                    <td class="Management">$10000</td>
+                                    <td class="Surgical">$10000</td>
+                                    <td class="Facility">$10000</td>
+                                    <td class="Ancillary">$10000</td>
+                                    <td class="Pharmacy">$10000</td>
+                                    <td class="Severity">3</td>
+                                    <td class="ResponsibleProvider">Provider Name</td>
+                                    <td class="EpisodeBeginDate">11/22/2014</td>
+                                    <td class="EpisodeDuration">31</td>
+                                    <td class="BenchmarkEpisodeDuration">30</td>
+                                    <td class="AvgCostPerEpisode">$13000</td>
+                                    <td class="CostVariance">$10000</td>
+                                    <td class="PatientAge">59</td>
+                                    <td>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input class="control-label" type="checkbox" value="">
+                                        </label>
+                                        <br>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="" ui-sref="compareproviders" data-html="false">"Defined Name"</a>
+                                    </td>
+                                    <td class="text-left Specialty">Defined Specialty</td>
+                                    <td class="text-left EpisodeDescription">Defined Specialty</td>
+                                    <td class="ID">20015</td>
+                                    <td class="Patients">524</td>
+                                    <td class="Episodes">100</td>
+                                    <td class="Risk">
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>
+                                    </td>
+                                    <td class="CaseMix">
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>
+                                    </td>
+                                    <td class="Efficiency">
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                            <span class="fa fa-check ln-faRight"></span>1.1
+                                        </div>
+                                    </td>
+                                    <td class="TotalCost">$50000</td>
+                                    <td class="AvoidableCost">$10000</td>
+                                    <td class="AvgCostPerEp">$10000</td>
+                                    <td class="AvgCostVariance">$10000</td>
+                                    <td class="BenchmarkCost">$4767</td>
+                                    <td class="AvgAge">32</td>
+                                    <td class="AvgPaid">$5000</td>
+                                    <td class="NumberChronicEpis">456</td>
+                                    <td class="NumberAdmissions">5425</td>
+                                    <td class="NumberReadmissions">2350</td>
+                                    <td class="Management">$10000</td>
+                                    <td class="Surgical">$10000</td>
+                                    <td class="Facility">$10000</td>
+                                    <td class="Ancillary">$10000</td>
+                                    <td class="Pharmacy">$10000</td>
+                                    <td class="Severity">3</td>
+                                    <td class="ResponsibleProvider">Provider Name</td>
+                                    <td class="EpisodeBeginDate">11/22/2014</td>
+                                    <td class="EpisodeDuration">31</td>
+                                    <td class="BenchmarkEpisodeDuration">30</td>
+                                    <td class="AvgCostPerEpisode">$13000</td>
+                                    <td class="CostVariance">$10000</td>
+                                    <td class="PatientAge">59</td>
+                                    <td>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            <input class="control-label" type="checkbox" value="">
+                                        </label>
+                                        <br>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="" ui-sref="compareproviders" data-html="false">"Defined Name"</a>
+                                    </td>
+                                    <td class="text-left Specialty">Defined Specialty</td>
+                                    <td class="text-left EpisodeDescription">Defined Specialty</td>
+                                    <td class="ID">20015</td>
+                                    <td class="Patients">524</td>
+                                    <td class="Episodes">100</td>
+                                    <td class="Risk">
+                                        <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                            <span class="fa fa-level-up ln-faRight"></span>1.2
+                                        </div>
+                                    </td>
+                                    <td class="CaseMix">
+                                        <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                            <span class="fa fa-level-down  ln-faRight"></span>0.4
+                                        </div>
+                                    </td>
+                                    <td class="Efficiency">
+                                        <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                            <span class="fa fa-check ln-faRight"></span>1.1
+                                        </div>
+                                    </td>
+                                    <td class="TotalCost">$50000</td>
+                                    <td class="AvoidableCost">$10000</td>
+                                    <td class="AvgCostPerEp">$10000</td>
+                                    <td class="AvgCostVariance">$10000</td>
+                                    <td class="BenchmarkCost">$4767</td>
+                                    <td class="AvgAge">32</td>
+                                    <td class="AvgPaid">$5000</td>
+                                    <td class="NumberChronicEpis">456</td>
+                                    <td class="NumberAdmissions">5425</td>
+                                    <td class="NumberReadmissions">2350</td>
+                                    <td class="Management">$10000</td>
+                                    <td class="Surgical">$10000</td>
+                                    <td class="Facility">$10000</td>
+                                    <td class="Ancillary">$10000</td>
+                                    <td class="Pharmacy">$10000</td>
+                                    <td class="Severity">3</td>
+                                    <td class="ResponsibleProvider">Provider Name</td>
+                                    <td class="EpisodeBeginDate">11/22/2014</td>
+                                    <td class="EpisodeDuration">31</td>
+                                    <td class="BenchmarkEpisodeDuration">30</td>
+                                    <td class="AvgCostPerEpisode">$13000</td>
+                                    <td class="CostVariance">$10000</td>
+                                    <td class="PatientAge">59</td>
+                                    <td>
+                                        <br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ln-margin-top">
+            <div class="col-xs-12">
+                <div class="container-fluid pull-left ln-RemovePadding hidden" data-pg-name="breadcrumb">
+                    <ol class="breadcrumb text-left">
+                        Display Amount:
+                        <li>
+                            <a href="">10</a>
+                        </li>
+                        <li>
+                            <a href="">30</a>
+                        </li>
+                        <li>
+                            <a href="">50</a>
+                        </li>
+                        <li>
+                            <a href="">100</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="container-fluid pull-right ln-RemovePadding">
+                    <ul class="pagination pull-right pagination-sm">
+                        <li>
+                            <a href="">&laquo;</a>
+                        </li>
+                        <li class="active">
+                            <a href="">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="">2</a>
+                        </li>
+                        <li>
+                            <a href="">3</a>
+                        </li>
+                        <li>
+                            <a href="">###</a>
+                        </li>
+                        <li>
+                            <a href="">&raquo;</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container-fluid pull-right col-md-3 col-lg-2">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon ln-highliteblue">Go to Page</span>
+                        <input type="search" class="form-control text-center" placeholder="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

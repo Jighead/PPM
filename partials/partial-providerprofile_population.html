@@ -1,0 +1,688 @@
+<div class="col-xs-12" id="container_provider_costbreakdown">
+    <div class="row"> 
+        <div class="ln-margin-top col-xs-12"> 
+            <div class="panel panel-default ln-RemoveBottomMargin">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse">
+                    <h5 class="panel-title text-center">Patient Population Breakdown </h5>
+                </div>
+                <div class="col-xs-12 ln-borderstandard">
+                    <div class="row ln-paddingtop_10px ln-paddingbottom_10px">
+                        <div class="col-xs-3 col-lg-2 col-xs-offset-1 col-lg-offset-1" style="padding-top:10px">
+                            <div class="row">
+                                <div class="row ln-underlinecommon" style="padding-bottom:6px">
+                                    <div class="ln-RemovePadding col-xs-5" style="padding-top:6px">
+                                        <div style="">
+                                            <div class="text-center pull-left">
+                                                <span class=" fontsize12"><b>Gender</b>:</span>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="pull-left ln-width100" style="padding-bottom:4px">
+                                            <div class="text-center pull-left">
+                                                <i class="fa female_color fa-lg fa-circle"><span class="ln-darkGreyText fontsize12"> Female</span></i>
+                                            </div>                                             
+                                        </div>
+                                        <div class="pull-left ln-width100" data-pg-collapsed>
+                                            <div class="text-center pull-left">
+                                                <i class="fa male_color fa-lg fa-circle"><span class="ln-darkGreyText fontsize12"> Male</span></i>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top:6px ">
+                                    <div class="ln-RemovePadding col-xs-5">
+                                        <div style="">
+                                            <div class="text-center pull-left">
+                                                <span class="fontsize12"><b class="pull-left text-left" style="padding-top:30px">Age Ranges:</b></span>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div style="padding-bottom:2px">
+                                            <div>
+                                                <i class="fa ln-age0-1_color fa-lg fa-circle"><span class="ln-darkGreyText fontsize12"> 0-1</span></i>
+                                            </div>                                             
+                                        </div>
+                                        <div style="padding-bottom:2px">
+                                            <div>
+                                                <i class="fa ln-age2-18_color fa-lg fa-circle"> <span class="ln-darkGreyText fontsize12"> 2-18</span></i>
+                                            </div>                                             
+                                        </div>
+                                        <div style="padding-bottom:2px">
+                                            <div>
+                                                <i class="fa ln-age19-49_color fa-lg fa-circle"><span class="ln-darkGreyText fontsize12"> 19-49</span></i>
+                                            </div>                                             
+                                        </div>
+                                        <div style="padding-bottom:2px">
+                                            <div>
+                                                <i class="fa ln-age50-64 fa-lg fa-circle"><span class="ln-darkGreyText fontsize12"> 50-64</span></i>
+                                            </div>                                             
+                                        </div>
+                                        <div>
+                                            <div style="margin-bottom:6px  ">
+                                                <i class="fa ln-age65pplus fa-lg fa-circle"><span class="ln-darkGreyText fontsize12"> 65+</span></i>
+                                            </div>                                             
+                                        </div>                                         
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>
+                        <div class="col-lg-offset-0 col-xs-3 col-lg-2">
+                            <div id="overall_population_svg" align="center" class="populationcharts center-block"></div>
+                            <div>
+                                <div class="container-fluid text-center" style="padding-top:3px">
+                                    <b>
+    Total Patients:</b>
+                                    <br>137,264
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-1 col-lg-offset-0 col-lg-2">
+                            <div id="patient_population_svg" align="center" class="populationcharts center-block"></div>
+                            <div>
+                                <div class="container-fluid text-center" style="padding-top:3px">
+                                    <b>
+    Total Patients:</b>
+                                    <br>137,264
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-2 col-lg-offset-0 col-lg-2">
+                            <div id="chronic_population_svg" align="center" class="populationcharts center-block"></div>
+                            <div>
+                                <div class="container-fluid text-center" style="padding-top:3px">
+                                    <b>
+    Total Patients:</b>
+                                    <br>137,264
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-1 col-lg-offset-0 col-lg-2">
+                            <div id="acute_population_svg" align="center" class="populationcharts center-block"></div>
+                            <div>
+                                <div class="container-fluid text-center" style="padding-top:3px">
+                                    <b>
+    Total Patients:</b>
+                                    <br>137,264
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ln-margintop40 hidden-sm hidden-md col-xs-12 hidden-lg">
+                            <div class="col-xs-2">
+                                <div class="text-center">
+                                    <i class="fa fa-square female_color fa-lg"><span class="ln-darkGreyText"> Female</span></i>
+                                </div>                                 
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="col-xs-3 text-center">
+                                    <i class="fa fa-square male_color fa-lg"><span class="ln-darkGreyText"> Male</span></i>
+                                </div>                                 
+                            </div>
+                            <div class="text-center col-xs-2">
+                                <div>
+                                    <i class="fa fa-square ln-age0-1_color fa-lg"><span class="ln-darkGreyText"> 0-1</span></i>
+                                </div>                                 
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="text-center">
+                                    <i class="fa fa-square ln-age2-18_color fa-lg"> <span class="ln-darkGreyText"> 2-18</span></i>
+                                </div>                                 
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="text-center">
+                                    <i class="fa fa-square ln-age19-49_color fa-lg"><span class="ln-darkGreyText"> 19-49</span></i>
+                                </div>                                 
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="text-center">
+                                    <i class="fa fa-square ln-age50-64 fa-lg"><span class="ln-darkGreyText"> 50-64</span></i>
+                                </div>                                 
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="text-center">
+                                    <i class="fa fa-square ln-age65pplus fa-lg"><span class="ln-darkGreyText"> 65+</span></i>
+                                </div>                                 
+                            </div>                             
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom:10px">
+                        <table class="table ln-borderstandard table-bordered ln-RemoveBottomMargin">
+                            <thead class="ln-tableHeader" "">
+                                <tr>
+                                    <th class="text-center"></th>
+                                    <th class="text-center">Male</th>
+                                    <th class="text-center">Female</th>
+                                    <th class="text-center">Age 0-1</th>
+                                    <th class="text-center">Age 2-18</th>
+                                    <th class="text-center">Age 19-49</th>
+                                    <th class="text-center">Age 50 - 64</th>
+                                    <th class="text-center">Age65 +</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="">
+                                    <td class="text-left"> <span>Overall Population</span> </td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"> </td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="text-left"> <span class="">Patient Population</span> </td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"> </td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="text-left"> <span>Chronic Episodes</span> </td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"> </td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="text-left"> <span>Acute Episodes</span> </td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                    <td>%%</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="text-left"> </td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
+        <div class="ln-margin-top col-xs-12 hidden"> 
+            <div class="panel panel-default ln-RemoveBottomMargin">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse">
+                    <h5 class="panel-title text-center">Provider and Overall &nbsp;Population Breakdown </h5>
+                </div>                 
+                <div class="ln-borderstandard">
+                    <div class="patient_age_range_chart center-block">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 607.8 220">
+                            <defs>
+                                <style>
+                                    .cls-1, .cls-15, .cls-16, .cls-17, .cls-2, .cls-20, .cls-21, .cls-23, .cls-25, .cls-26, .cls-29 {
+                                                                                    isolation: isolate;
+                                                                                    }
+                                                                                    .cls-1 {
+                                                                                    font-size: 12px;
+                                                                                    }
+                                                                                    .cls-1, .cls-17, .cls-2, .cls-8 {
+                                                                                    fill: #58595b;
+                                                                                    }
+                                                                                    .cls-1, .cls-15, .cls-16, .cls-17, .cls-2, .cls-21, .cls-26, .cls-29 {
+                                                                                    font-family: Arial;
+                                                                                    }
+                                                                                    .cls-2 {
+                                                                                    font-size: 15.26px;
+                                                                                    }
+                                                                                    .cls-3 {
+                                                                                    fill: #cf4d45;
+                                                                                    }
+                                                                                    .cls-4 {
+                                                                                    fill: #f19c65;
+                                                                                    }
+                                                                                    .cls-5 {
+                                                                                    fill: #ffd266;
+                                                                                    }
+                                                                                    .cls-6 {
+                                                                                    fill: #28a876;
+                                                                                    }
+                                                                                    .cls-7 {
+                                                                                    fill: #0d7b83;
+                                                                                    }
+                                                                                    .cls-9 {
+                                                                                    fill: #00aeef;
+                                                                                    }
+                                                                                    .cls-10 {
+                                                                                    fill: #ababab;
+                                                                                    }
+                                                                                    .cls-11, .cls-24, .cls-25, .cls-26 {
+                                                                                    fill: #2aade4;
+                                                                                    }
+                                                                                    .cls-12, .cls-22 {
+                                                                                    fill: #ed509d;
+                                                                                    }
+                                                                                    .cls-13, .cls-14, .cls-15, .cls-16 {
+                                                                                    fill: #f1f2f2;
+                                                                                    }
+                                                                                    .cls-14 {
+                                                                                    stroke: #f1f2f2;
+                                                                                    }
+                                                                                    .cls-14, .cls-19, .cls-22, .cls-24, .cls-28, .cls-30 {
+                                                                                    stroke-miterlimit: 10;
+                                                                                    }
+                                                                                    .cls-15 {
+                                                                                    font-size: 18.35px;
+                                                                                    }
+                                                                                    .cls-16 {
+                                                                                    font-size: 12.23px;
+                                                                                    }
+                                                                                    .cls-17 {
+                                                                                    font-size: 32.89px;
+                                                                                    }
+                                                                                    .cls-18, .cls-19, .cls-20, .cls-21 {
+                                                                                    fill: #6d6e71;
+                                                                                    }
+                                                                                    .cls-19 {
+                                                                                    stroke: #808285;
+                                                                                    }
+                                                                                    .cls-20, .cls-21, .cls-23, .cls-25, .cls-26 {
+                                                                                    font-size: 15.18px;
+                                                                                    }
+                                                                                    .cls-20, .cls-23, .cls-25 {
+                                                                                    font-family: Wingdings 2;
+                                                                                    }
+                                                                                    .cls-22 {
+                                                                                    stroke: #e76da9;
+                                                                                    }
+                                                                                    .cls-23 {
+                                                                                    fill: #ee3c8a;
+                                                                                    }
+                                                                                    .cls-24 {
+                                                                                    stroke: #87bfe2;
+                                                                                    }
+                                                                                    .cls-27 {
+                                                                                    fill: #a7a9ac;
+                                                                                    }
+                                                                                    .cls-28, .cls-30 {
+                                                                                    fill: none;
+                                                                                    }
+                                                                                    .cls-28 {
+                                                                                    stroke: #a7a9ac;
+                                                                                    }
+                                                                                    .cls-29 {
+                                                                                    font-size: 10.12px;
+                                                                                    fill: #e6e7e8;
+                                                                                    }
+                                                                                    .cls-30 {
+                                                                                    stroke: #e6e7e8;
+                                                                                    }
+
+</style>
+                            </defs>
+                            <title>Age_Group_Chart_Provider_Overall</title>
+                            <g id="Numbers">
+                                <g>
+                                    <text class="cls-1" transform="translate(392 192.52)">65+</text>
+                                    <text class="cls-2" transform="translate(390.33 181.69)">6%</text>
+                                    <rect class="cls-3" x="307.7" y="170.8" width="3.3" height="21.2" />
+                                </g>
+                                <g>
+                                    <text class="cls-1" transform="translate(391.04 155.65)">50-64</text>
+                                    <text class="cls-2" transform="translate(389.35 144.81)">15%</text>
+                                    <polygon class="cls-4" points="320.9 155.1 308.2 155 308.2 133.8 320.9 133.9 320.9 155.1" />
+                                </g>
+                                <g>
+                                    <text class="cls-1" transform="translate(390.92 118.79)">19-49</text>
+                                    <text class="cls-2" transform="translate(389.75 107.97)">10%</text>
+                                    <rect class="cls-5" x="307.8" y="97.3" width="8.5" height="21.2" />
+                                </g>
+                                <g>
+                                    <text class="cls-1" transform="translate(391.79 82.26)">2-18</text>
+                                    <text class="cls-2" transform="translate(390.81 71.42)">50%</text>
+                                    <polygon class="cls-6" points="350.1 81.6 307.8 81.5 307.8 60.3 350.1 60.4 350.1 81.6" />
+                                </g>
+                                <g>
+                                    <text class="cls-1" transform="translate(392.17 44.86)">0-1</text>
+                                    <text class="cls-2" transform="translate(389.75 34.02)">19%</text>
+                                    <rect class="cls-7" x="307.8" y="23.6" width="14.8" height="21.2" />
+                                </g>
+                            </g>
+                            <rect class="cls-8" x="440.6" width="167.2" height="220" />
+                            <circle class="cls-9" cx="503.5" cy="78.4" r="2.5" />
+                            <g>
+                                <circle id="BGCircle" class="cls-10" cx="98.6" cy="107.3" r="90.4" />
+                                <path class="cls-8" d="M98.7,107.4l-12.2-87a98.68,98.68,0,0,1,12.2-.9v87.9Z" />
+                                <path class="cls-11" d="M98.7,107.4L31.4,163.9A87.85,87.85,0,0,1,42.2,40.1C55.6,28.9,69.1,22.8,86.4,20.4Z" />
+                                <path class="cls-12" d="M98.7,107.4V19.5a87.9,87.9,0,1,1,0,175.8c-27.2,0-49.8-10.6-67.3-31.4Z" />
+                                <circle id="BGCircle-2" data-name="BGCircle" class="cls-13" cx="98.9" cy="107" r="68" />
+                                <circle id="Text_BG" class="cls-14" cx="98.9" cy="107" r="56.1" />
+                                <text class="cls-15" transform="translate(99.1 101.13)"> </text>
+                                <text class="cls-16" transform="translate(63.9 115.83)">Under-Utilized</text>
+                                <text class="cls-15" transform="translate(82.42 101.13)">40% </text>
+                            </g>
+                            <g id="Male_Female_Unknown">
+                                <g id="Unknown_Group">
+                                    <text class="cls-17" transform="translate(207.39 185.12)">02%</text>
+                                    <path class="cls-12" d="M183.7,166.6s-5.2-1.5-11.1,8.2c-5.2,8.5-16.3,12.6-16.3,12.6l25.4-9.3,15.8-3.2Z" />
+                                </g>
+                                <g id="Female_Group">
+                                    <text class="cls-17" transform="translate(222.13 114.98)">64%</text>
+                                    <path class="cls-18" d="M200.2,115.5h-3.9s1.7-8.7,1.7-11.6-1.7-11.6-1.7-11.6h3.9l13.6,11.6Z" />
+                                </g>
+                                <g id="Male_Group">
+                                    <text class="cls-17" transform="translate(205.73 51.55)">34%</text>
+                                    <path class="cls-11" d="M183.7,47.2s-5.2,1.5-11.1-8c-5.2-8.4-16.3-12.4-16.3-12.4l25.4,9.1L197.5,39Z" />
+                                </g>
+                            </g>
+                            <g id="Inside_Circle_Checkmarks">
+                                <g id="Unknown_Group-2" data-name="Unknown_Group">
+                                    <path id="Silhouette_Unknown" class="cls-19" d="M63.3,86.9a5.69,5.69,0,0,0-3.3.9,3.36,3.36,0,0,0-1.5,1.8c-0.6,1.4.4,3.1,0.6,5.2,0.3,3.2,4.4,7.5-3.4,8.7a6,6,0,0,0-2.2.9,3,3,0,0,0-1.5,1.8,6.28,6.28,0,0,0-.3,1.9c0,1.2,0,2.3-.1,3.5v0.3H76.9v-0.3c0-1.2,0-2.3-.1-3.5a6.28,6.28,0,0,0-.3-1.9,3,3,0,0,0-1.5-1.8,8.49,8.49,0,0,0-2.2-.9c-8-1.3-3.7-6-3.4-9.3,0.2-2.1-.8-3.2-1.4-4.6a3.36,3.36,0,0,0-1.5-1.8,6.84,6.84,0,0,0-3.3-.9" />
+                                    <g id="Checkmark_Unknown">
+                                        <text class="cls-20" transform="translate(77.73 142.28)"> </text>
+                                        <text class="cls-21" transform="translate(92.93 142.28)">Female</text>
+                                    </g>
+                                    <path class="cls-18" d="M90,131.7v10.6H79v-11H89.6c0.4-.3.7-0.5,1-0.7l0.2,0.4C90.6,131.2,90.3,131.4,90,131.7Zm-5.9,7.8-0.3.2c-0.3.2-.5,0.4-0.7,0.5a2.3,2.3,0,0,0-.3-0.9l-0.2-.4a18.4,18.4,0,0,0-.9-1.9,1.16,1.16,0,0,0-.8-0.6,1.53,1.53,0,0,1,1.1-.5c0.4,0,.9.6,1.3,1.7l0.3,0.6a23.14,23.14,0,0,1,5.1-6.2H79.8v9.5h9.5v-9.3a21,21,0,0,0-3.1,3.5A18.4,18.4,0,0,0,84.1,139.5Z" />
+                                </g>
+                                <g id="Female_Group-2" data-name="Female_Group">
+                                    <path id="Silhouette_Female" class="cls-22" d="M57.9,129.1l0.9,0.9a0.1,0.1,0,0,0,.1.1,1.09,1.09,0,0,1-.4,1.2,1.8,1.8,0,0,1-.9.4,0.65,0.65,0,0,0-.6.9,3.55,3.55,0,0,0,.2,1,0.37,0.37,0,0,1-.1.3c-0.3.2-.7,0.5-1,0.7-0.6.3-1.2,0.5-1.7,0.7s-1,.5-1.5.7a1.6,1.6,0,0,0-.7.9c-0.1.4-.3,0.9-0.4,1.3-0.2,1-.3,2-0.4,2.9a2.77,2.77,0,0,1-.1.9H76.6a4.87,4.87,0,0,0-.1-1.2c-0.1-1.1-.2-2.1-0.4-3.2a4,4,0,0,0-2.6-3.1c-0.3-.1-0.6-0.2-1-0.3a16.27,16.27,0,0,1-3.7-1.3l-0.6-.3c0.5,0.1,1.1.3,1.6,0.4h0l-0.9-.3h0c0.4,0.1.8,0.1,1.2,0.2h0c-0.1,0-.3-0.1-0.4-0.1h0c0.3,0,.6.1,0.9,0.1a0.9,0.9,0,0,0-.5-0.1,2.24,2.24,0,0,1-1.5-.8,0.37,0.37,0,0,1-.1-0.3,16,16,0,0,1,1-2.3,3.81,3.81,0,0,0,.5-1.5,3.75,3.75,0,0,1,.1-1c0.1,0.1.3,0.1,0.4,0.2h0l-0.2-.2h0a1.69,1.69,0,0,0,.5.2h0c-0.1,0-.1-0.1-0.2-0.1h0.2a3,3,0,0,1-1.2-1.3c-0.3-.8-0.6-1.5-0.9-2.3s-0.6-1.9-.9-2.9a6.63,6.63,0,0,0-.9-1.9,5.49,5.49,0,0,0-3.7-1.4,0.37,0.37,0,0,1-.3-0.1,1.47,1.47,0,0,0-1.3-.1h0.3a0.37,0.37,0,0,1,.3.1H61.9a4,4,0,0,0-2.8,1c-0.4.4,0.2,0.9-.2,1.4-0.2.3-.3,0.6-0.5,0.9a10.46,10.46,0,0,0-1.9,5.6,4.2,4.2,0,0,0,.6,2.1,1.47,1.47,0,0,1,.2.4c0.2,0.4.4,0.7,0.6,1.1h0c0.2-.1.1-0.3,0-0.5h0Z" />
+                                    <text class="cls-23" transform="translate(80.97 111.77)"> </text>
+                                    <text class="cls-21" transform="translate(96.17 111.77)">Unknown</text>
+                                    <g id="CheckBox">
+                                        <path id="Checked" class="cls-18" d="M93.2,101.2v10.6h-11v-11H92.8c0.4-.3.7-0.5,1-0.7l0.2,0.4C93.8,100.7,93.5,100.9,93.2,101.2ZM87.4,109l-0.3.2c-0.3.2-.5,0.4-0.7,0.5a2.3,2.3,0,0,0-.3-0.9l-0.2-.4a18.4,18.4,0,0,0-.9-1.9,1.16,1.16,0,0,0-.8-0.6,1.53,1.53,0,0,1,1.1-.5c0.4,0,.9.6,1.3,1.7l0.3,0.6a23.14,23.14,0,0,1,5.1-6.2H83V111h9.5v-9.3a21,21,0,0,0-3.1,3.5A17.57,17.57,0,0,0,87.4,109Z" />
+                                    </g>
+                                </g>
+                                <g id="Male_Group-2" data-name="Male_Group">
+                                    <path id="Silhouette_Male" class="cls-24" d="M77.7,79.8h0c0-1.3,0-2.5.1-3.7a4.87,4.87,0,0,0-.1-1.2,5,5,0,0,0-.9-2.1,1.46,1.46,0,0,0-.9-0.6,3.55,3.55,0,0,1-.9-0.4c-1.5-.6-3-1.2-4.6-1.8a2.84,2.84,0,0,1-1.1-.8,2.7,2.7,0,0,0-.8-0.7l-0.1-.1a1.9,1.9,0,0,1,.1-1.3,6.36,6.36,0,0,0,.6-1.8V65.2c0.2,0.2.3,0.2,0.5-.1a1.47,1.47,0,0,0,.2-0.4,3.08,3.08,0,0,0,.3-1.3c0.1-.3.2-0.7,0.3-1a0.44,0.44,0,0,0-.5-0.6h0V61.7c0.4-1.3-.6-2.6-1.2-3.8a4.37,4.37,0,0,0-2.8-2.5,12.59,12.59,0,0,0-2.7-.4H63.1V54.9c0.4,0,.8-0.1,1.2-0.1a4.59,4.59,0,0,0-2.6.3l0.2-.2h0a4.35,4.35,0,0,1-.7.4,0.92,0.92,0,0,0-.4.6l-0.1.1a2.28,2.28,0,0,0-1.2.6l-0.1.1h0c0.1,0,.2-0.1.3-0.1a1.38,1.38,0,0,0-.5,1.2l0.1-.1c-0.4,1.5.7,2.8,1.2,4.2a0.4,0.4,0,0,0-.5.4,1.64,1.64,0,0,0,.1,1,3.58,3.58,0,0,1,.4,1.1c0.1,0.2.1,0.4,0.2,0.6a0.53,0.53,0,0,0,.2.3,0.3,0.3,0,0,0,.4.1v0.1a6.36,6.36,0,0,0,.6,1.8c0,0.1.1,0.2,0.1,0.3v1.2a0.35,0.35,0,0,1-.1.2,2.18,2.18,0,0,0-.9.7,2.09,2.09,0,0,1-.6.4c-1.2.5-2.5,1-3.8,1.5a10.2,10.2,0,0,0-2.2.9,3,3,0,0,0-1.5,1.8,5.82,5.82,0,0,0-.3,1.9c0,1.1,0,2.3-.1,3.4v0.3C60.9,79.8,69.3,79.8,77.7,79.8Z" />
+                                    <text class="cls-25" transform="translate(82.07 80.05)"> </text>
+                                    <text class="cls-26" transform="translate(97.27 80.05)">Male</text>
+                                    <g id="CheckBox-2" data-name="CheckBox">
+                                        <path id="Checked-2" data-name="Checked" class="cls-11" d="M94.3,69.7V80.3h-11v-11H93.9c0.4-.3.7-0.5,1-0.7L95.1,69A2.7,2.7,0,0,1,94.3,69.7Zm-5.8,7.9-0.3.2c-0.3.2-.5,0.4-0.7,0.5a2.3,2.3,0,0,0-.3-0.9L87,77.1a18.4,18.4,0,0,0-.9-1.9,1.16,1.16,0,0,0-.8-0.6,1.53,1.53,0,0,1,1.1-.5c0.4,0,.9.6,1.3,1.7L88,76.4a23.14,23.14,0,0,1,5.1-6.2H84.2v9.5h9.5V70.4a21,21,0,0,0-3.1,3.5A12.8,12.8,0,0,0,88.5,77.6Z" />
+                                    </g>
+                                </g>
+                            </g>
+                            <path class="cls-27" d="M307.8,16.9s0.1,11.3.3,28.2c0,8.5.1,18.4,0.2,29s0,21.9.1,33.2,0,22.6-.1,33.2-0.1,20.5-.2,29c-0.2,16.9-.3,28.2-0.3,28.2s-0.1-11.3-.3-28.2c0-8.5-.1-18.4-0.2-29s0-21.9-.1-33.2,0-22.6.1-33.2,0.1-20.5.2-29C307.7,28.2,307.8,16.9,307.8,16.9Z" />
+                            <g id="BarCharts">
+                                <rect class="cls-3" x="568.6" y="160.7" width="27.6" height="18.1" />
+                                <polygon class="cls-4" points="566.3 153.7 566.2 178.8 538.7 178.8 538.8 153.7 566.3 153.7" />
+                                <rect class="cls-5" x="508.8" y="167" width="27.6" height="11.7" />
+                                <polygon class="cls-6" points="506.5 151.8 506.4 178.8 478.9 178.8 479 151.8 506.5 151.8" />
+                                <rect class="cls-7" x="449" y="131.7" width="27.6" height="47.1" />
+                                <line class="cls-28" x1="443" y1="179.2" x2="605.5" y2="179.2" />
+                            </g>
+                            <g id="BarCharts-2" data-name="BarCharts">
+                                <rect class="cls-3" x="568.6" y="77.3" width="27.6" height="8" />
+                                <polygon class="cls-4" points="566.3 68.6 566.2 85.3 538.7 85.3 538.8 68.6 566.3 68.6" />
+                                <rect class="cls-5" x="508.8" y="75.7" width="27.6" height="9.6" />
+                                <polygon class="cls-6" points="506.5 40.8 506.4 85.3 478.9 85.3 479 40.8 506.5 40.8" />
+                                <rect class="cls-7" x="449" y="64.5" width="27.6" height="20.8" />
+                                <line class="cls-28" x1="443" y1="85.8" x2="605.5" y2="85.8" />
+                            </g>
+                            <g id="Overall_Population" data-name="Overall Population">
+                                <text class="cls-29" transform="translate(482.6 190.34)">Overall Population</text>
+                                <circle class="cls-30" cx="475.7" cy="186.3" r="4.4" />
+                            </g>
+                            <g id="Provider_Patients" data-name="Provider Patients">
+                                <text class="cls-29" transform="translate(483.65 97.47)">Provider Patients</text>
+                                <circle class="cls-30" cx="475.7" cy="93.5" r="4.4" />
+                            </g>
+                        </svg>
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
+        <div class="ln-margin-top col-xs-12 hidden"> 
+            <div class="panel panel-default ln-RemoveBottomMargin">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span> 
+                <div class="ln-borderRadiusTop panel-heading" data-toggle="collapse">
+                    <h5 class="panel-title text-center">Episode Breakdown </h5>
+                </div>                 
+                <div class="ln-borderstandard">
+                    <div class="patient_age_range_chart center-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 607.8 220">
+                            <defs>
+                                <style>
+                                    .a, .ab, .b, .n, .o, .p, .s, .t, .v, .x, .y {
+                                                                                    isolation: isolate;
+                                                                                    }
+                                                                                    .a {
+                                                                                    font-size: 11.44px;
+                                                                                    }
+                                                                                    .a, .b, .h, .p {
+                                                                                    fill: #58595b;
+                                                                                    }
+                                                                                    .a, .ab, .b, .n, .o, .p, .t, .y {
+                                                                                    font-family: Arial;
+                                                                                    }
+                                                                                    .b {
+                                                                                    font-size: 15.26px;
+                                                                                    }
+                                                                                    .c {
+                                                                                    fill: #cf4d45;
+                                                                                    }
+                                                                                    .d {
+                                                                                    fill: #f19c65;
+                                                                                    }
+                                                                                    .e {
+                                                                                    fill: #ffd266;
+                                                                                    }
+                                                                                    .f {
+                                                                                    fill: #28a876;
+                                                                                    }
+                                                                                    .g {
+                                                                                    fill: #0d7b83;
+                                                                                    }
+                                                                                    .i {
+                                                                                    fill: #ababab;
+                                                                                    }
+                                                                                    .j, .w, .x, .y {
+                                                                                    fill: #2aade4;
+                                                                                    }
+                                                                                    .k, .u {
+                                                                                    fill: #ed509d;
+                                                                                    }
+                                                                                    .l, .m, .n, .o {
+                                                                                    fill: #f1f2f2;
+                                                                                    }
+                                                                                    .m {
+                                                                                    stroke: #f1f2f2;
+                                                                                    }
+                                                                                    .aa, .ac, .m, .r, .u, .w {
+                                                                                    stroke-miterlimit: 10;
+                                                                                    }
+                                                                                    .n {
+                                                                                    font-size: 18.35px;
+                                                                                    }
+                                                                                    .o {
+                                                                                    font-size: 12.23px;
+                                                                                    }
+                                                                                    .p {
+                                                                                    font-size: 32.89px;
+                                                                                    }
+                                                                                    .q, .r, .s, .t {
+                                                                                    fill: #6d6e71;
+                                                                                    }
+                                                                                    .r {
+                                                                                    stroke: #808285;
+                                                                                    }
+                                                                                    .s, .t, .v, .x, .y {
+                                                                                    font-size: 15.18px;
+                                                                                    }
+                                                                                    .s, .v, .x {
+                                                                                    font-family: Wingdings 2;
+                                                                                    }
+                                                                                    .u {
+                                                                                    stroke: #e76da9;
+                                                                                    }
+                                                                                    .v {
+                                                                                    fill: #ee3c8a;
+                                                                                    }
+                                                                                    .w {
+                                                                                    stroke: #87bfe2;
+                                                                                    }
+                                                                                    .z {
+                                                                                    fill: #a7a9ac;
+                                                                                    }
+                                                                                    .aa, .ac {
+                                                                                    fill: none;
+                                                                                    }
+                                                                                    .aa {
+                                                                                    stroke: #a7a9ac;
+                                                                                    }
+                                                                                    .ab {
+                                                                                    font-size: 10.12px;
+                                                                                    fill: #e6e7e8;
+                                                                                    }
+                                                                                    .ac {
+                                                                                    stroke: #e6e7e8;
+                                                                                    }
+
+</style>
+                            </defs>
+                            <title>Age_Group_Chart_Episodes</title>
+                            <g>
+                                <g>
+                                    <text class="a" transform="translate(392 192.52)">65+</text>
+                                    <text class="b" transform="translate(390.33 181.69)">05%</text>
+                                    <rect class="c" x="307.7" y="170.8" width="3.3" height="21.2" />
+                                </g>
+                                <g>
+                                    <text class="a" transform="translate(391.04 155.65)">50-64</text>
+                                    <text class="b" transform="translate(389.35 144.81)">03%</text>
+                                    <polygon class="d" points="320.9 155.1 308.2 155 308.2 133.8 320.9 133.9 320.9 155.1" />
+                                </g>
+                                <g>
+                                    <text class="a" transform="translate(390.92 118.79)">19-49</text>
+                                    <text class="b" transform="translate(389.75 107.97)">85%</text>
+                                    <rect class="e" x="307.8" y="97.3" width="65.2" height="21.2" />
+                                </g>
+                                <g>
+                                    <text class="a" transform="translate(391.79 82.26)">2-18</text>
+                                    <text class="b" transform="translate(390.81 71.42)">03%</text>
+                                    <polygon class="f" points="350.1 81.6 307.8 81.5 307.8 60.3 350.1 60.4 350.1 81.6" />
+                                </g>
+                                <g>
+                                    <text class="a" transform="translate(392.17 44.86)">0-1</text>
+                                    <text class="b" transform="translate(389.75 34.02)">09%</text>
+                                    <rect class="g" x="307.8" y="23.6" width="14.8" height="21.2" />
+                                </g>
+                            </g>
+                            <rect class="h" x="440.6" width="167.2" height="220" />
+                            <g>
+                                <circle class="i" cx="98.6" cy="107.3" r="90.4" />
+                                <path class="h" d="M98.7,107.4l-12.2-87a98.68,98.68,0,0,1,12.2-.9v87.9Z" />
+                                <path class="j" d="M98.7,107.4L31.4,163.9A87.85,87.85,0,0,1,42.2,40.1C55.6,28.9,69.1,22.8,86.4,20.4Z" />
+                                <path class="k" d="M98.7,107.4V19.5a87.9,87.9,0,1,1,0,175.8c-27.2,0-49.8-10.6-67.3-31.4Z" />
+                                <circle class="l" cx="98.9" cy="107" r="68" />
+                                <circle class="m" cx="98.9" cy="107" r="56.1" />
+                                <text class="n" transform="translate(99.1 101.13)"> </text>
+                                <text class="o" transform="translate(63.9 115.83)">Under-Utilized</text>
+                                <text class="n" transform="translate(82.42 101.13)">40% </text>
+                            </g>
+                            <g>
+                                <g>
+                                    <text class="p" transform="translate(207.39 185.12)">02%</text>
+                                    <path class="k" d="M183.7,166.6s-5.2-1.5-11.1,8.2c-5.2,8.5-16.3,12.6-16.3,12.6l25.4-9.3,15.8-3.2Z" />
+                                </g>
+                                <g>
+                                    <text class="p" transform="translate(222.13 114.98)">64%</text>
+                                    <path class="q" d="M200.2,115.5h-3.9s1.7-8.7,1.7-11.6-1.7-11.6-1.7-11.6h3.9l13.6,11.6Z" />
+                                </g>
+                                <g>
+                                    <text class="p" transform="translate(205.73 51.55)">34%</text>
+                                    <path class="j" d="M183.7,47.2s-5.2,1.5-11.1-8c-5.2-8.4-16.3-12.4-16.3-12.4l25.4,9.1L197.5,39Z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path class="r" d="M63.3,86.9a5.69,5.69,0,0,0-3.3.9,3.36,3.36,0,0,0-1.5,1.8c-0.6,1.4.4,3.1,0.6,5.2,0.3,3.2,4.4,7.5-3.4,8.7a6,6,0,0,0-2.2.9,3,3,0,0,0-1.5,1.8,6.28,6.28,0,0,0-.3,1.9c0,1.2,0,2.3-.1,3.5v0.3H76.9v-0.3c0-1.2,0-2.3-.1-3.5a6.28,6.28,0,0,0-.3-1.9,3,3,0,0,0-1.5-1.8,8.49,8.49,0,0,0-2.2-.9c-8-1.3-3.7-6-3.4-9.3,0.2-2.1-.8-3.2-1.4-4.6a3.36,3.36,0,0,0-1.5-1.8,6.84,6.84,0,0,0-3.3-.9" />
+                                    <g>
+                                        <text class="s" transform="translate(77.73 142.28)"> </text>
+                                        <text class="t" transform="translate(92.93 142.28)">Female</text>
+                                    </g>
+                                    <path class="q" d="M90,131.7v10.6H79v-11H89.6c0.4-.3.7-0.5,1-0.7l0.2,0.4C90.6,131.2,90.3,131.4,90,131.7Zm-5.9,7.8-0.3.2c-0.3.2-.5,0.4-0.7,0.5a2.3,2.3,0,0,0-.3-0.9l-0.2-.4a18.4,18.4,0,0,0-.9-1.9,1.16,1.16,0,0,0-.8-0.6,1.53,1.53,0,0,1,1.1-.5c0.4,0,.9.6,1.3,1.7l0.3,0.6a23.14,23.14,0,0,1,5.1-6.2H79.8v9.5h9.5v-9.3a21,21,0,0,0-3.1,3.5A18.4,18.4,0,0,0,84.1,139.5Z" />
+                                </g>
+                                <g>
+                                    <path class="u" d="M57.9,129.1l0.9,0.9a0.1,0.1,0,0,0,.1.1,1.09,1.09,0,0,1-.4,1.2,1.8,1.8,0,0,1-.9.4,0.65,0.65,0,0,0-.6.9,3.55,3.55,0,0,0,.2,1,0.37,0.37,0,0,1-.1.3c-0.3.2-.7,0.5-1,0.7-0.6.3-1.2,0.5-1.7,0.7s-1,.5-1.5.7a1.6,1.6,0,0,0-.7.9c-0.1.4-.3,0.9-0.4,1.3-0.2,1-.3,2-0.4,2.9a2.77,2.77,0,0,1-.1.9H76.6a4.87,4.87,0,0,0-.1-1.2c-0.1-1.1-.2-2.1-0.4-3.2a4,4,0,0,0-2.6-3.1c-0.3-.1-0.6-0.2-1-0.3a16.27,16.27,0,0,1-3.7-1.3l-0.6-.3c0.5,0.1,1.1.3,1.6,0.4h0l-0.9-.3h0c0.4,0.1.8,0.1,1.2,0.2h0c-0.1,0-.3-0.1-0.4-0.1h0c0.3,0,.6.1,0.9,0.1a0.9,0.9,0,0,0-.5-0.1,2.24,2.24,0,0,1-1.5-.8,0.37,0.37,0,0,1-.1-0.3,16,16,0,0,1,1-2.3,3.81,3.81,0,0,0,.5-1.5,3.75,3.75,0,0,1,.1-1c0.1,0.1.3,0.1,0.4,0.2h0l-0.2-.2h0a1.69,1.69,0,0,0,.5.2h0c-0.1,0-.1-0.1-0.2-0.1h0.2a3,3,0,0,1-1.2-1.3c-0.3-.8-0.6-1.5-0.9-2.3s-0.6-1.9-.9-2.9a6.63,6.63,0,0,0-.9-1.9,5.49,5.49,0,0,0-3.7-1.4,0.37,0.37,0,0,1-.3-0.1,1.47,1.47,0,0,0-1.3-.1h0.3a0.37,0.37,0,0,1,.3.1H61.9a4,4,0,0,0-2.8,1c-0.4.4,0.2,0.9-.2,1.4-0.2.3-.3,0.6-0.5,0.9a10.46,10.46,0,0,0-1.9,5.6,4.2,4.2,0,0,0,.6,2.1,1.47,1.47,0,0,1,.2.4c0.2,0.4.4,0.7,0.6,1.1h0c0.2-.1.1-0.3,0-0.5h0Z" />
+                                    <text class="v" transform="translate(80.97 111.77)"> </text>
+                                    <text class="t" transform="translate(96.17 111.77)">Unknown</text>
+                                    <path class="q" d="M93.2,101.2v10.6h-11v-11H92.8c0.4-.3.7-0.5,1-0.7l0.2,0.4C93.8,100.7,93.5,100.9,93.2,101.2ZM87.4,109l-0.3.2c-0.3.2-.5,0.4-0.7,0.5a2.3,2.3,0,0,0-.3-0.9l-0.2-.4a18.4,18.4,0,0,0-.9-1.9,1.16,1.16,0,0,0-.8-0.6,1.53,1.53,0,0,1,1.1-.5c0.4,0,.9.6,1.3,1.7l0.3,0.6a23.14,23.14,0,0,1,5.1-6.2H83V111h9.5v-9.3a21,21,0,0,0-3.1,3.5A17.57,17.57,0,0,0,87.4,109Z" />
+                                </g>
+                                <g>
+                                    <path class="w" d="M77.7,79.8h0c0-1.3,0-2.5.1-3.7a4.87,4.87,0,0,0-.1-1.2,5,5,0,0,0-.9-2.1,1.46,1.46,0,0,0-.9-0.6,3.55,3.55,0,0,1-.9-0.4c-1.5-.6-3-1.2-4.6-1.8a2.84,2.84,0,0,1-1.1-.8,2.7,2.7,0,0,0-.8-0.7l-0.1-.1a1.9,1.9,0,0,1,.1-1.3,6.36,6.36,0,0,0,.6-1.8V65.2c0.2,0.2.3,0.2,0.5-.1a1.47,1.47,0,0,0,.2-0.4,3.08,3.08,0,0,0,.3-1.3c0.1-.3.2-0.7,0.3-1a0.44,0.44,0,0,0-.5-0.6h0V61.7c0.4-1.3-.6-2.6-1.2-3.8a4.37,4.37,0,0,0-2.8-2.5,12.59,12.59,0,0,0-2.7-.4H63.1V54.9c0.4,0,.8-0.1,1.2-0.1a4.59,4.59,0,0,0-2.6.3l0.2-.2h0a4.35,4.35,0,0,1-.7.4,0.92,0.92,0,0,0-.4.6l-0.1.1a2.28,2.28,0,0,0-1.2.6l-0.1.1h0c0.1,0,.2-0.1.3-0.1a1.38,1.38,0,0,0-.5,1.2l0.1-.1c-0.4,1.5.7,2.8,1.2,4.2a0.4,0.4,0,0,0-.5.4,1.64,1.64,0,0,0,.1,1,3.58,3.58,0,0,1,.4,1.1c0.1,0.2.1,0.4,0.2,0.6a0.53,0.53,0,0,0,.2.3,0.3,0.3,0,0,0,.4.1v0.1a6.36,6.36,0,0,0,.6,1.8c0,0.1.1,0.2,0.1,0.3v1.2a0.35,0.35,0,0,1-.1.2,2.18,2.18,0,0,0-.9.7,2.09,2.09,0,0,1-.6.4c-1.2.5-2.5,1-3.8,1.5a10.2,10.2,0,0,0-2.2.9,3,3,0,0,0-1.5,1.8,5.82,5.82,0,0,0-.3,1.9c0,1.1,0,2.3-.1,3.4v0.3C60.9,79.8,69.3,79.8,77.7,79.8Z" />
+                                    <text class="x" transform="translate(82.07 80.05)"> </text>
+                                    <text class="y" transform="translate(97.27 80.05)">Male</text>
+                                    <path class="j" d="M94.3,69.7V80.3h-11v-11H93.9c0.4-.3.7-0.5,1-0.7L95.1,69A2.7,2.7,0,0,1,94.3,69.7Zm-5.8,7.9-0.3.2c-0.3.2-.5,0.4-0.7,0.5a2.3,2.3,0,0,0-.3-0.9L87,77.1a18.4,18.4,0,0,0-.9-1.9,1.16,1.16,0,0,0-.8-0.6,1.53,1.53,0,0,1,1.1-.5c0.4,0,.9.6,1.3,1.7L88,76.4a23.14,23.14,0,0,1,5.1-6.2H84.2v9.5h9.5V70.4a21,21,0,0,0-3.1,3.5A12.8,12.8,0,0,0,88.5,77.6Z" />
+                                </g>
+                            </g>
+                            <path class="z" d="M307.8,16.9s0.1,11.3.3,28.2c0,8.5.1,18.4,0.2,29s0,21.9.1,33.2,0,22.6-.1,33.2-0.1,20.5-.2,29c-0.2,16.9-.3,28.2-0.3,28.2s-0.1-11.3-.3-28.2c0-8.5-.1-18.4-0.2-29s0-21.9-.1-33.2,0-22.6.1-33.2,0.1-20.5.2-29C307.7,28.2,307.8,16.9,307.8,16.9Z" />
+                            <g>
+                                <rect class="c" x="568.6" y="160.7" width="27.6" height="18.1" />
+                                <polygon class="d" points="566.3 153.7 566.2 178.8 538.7 178.8 538.8 153.7 566.3 153.7" />
+                                <rect class="e" x="508.8" y="167" width="27.6" height="11.7" />
+                                <polygon class="f" points="506.5 151.8 506.4 178.8 478.9 178.8 479 151.8 506.5 151.8" />
+                                <rect class="g" x="449" y="131.7" width="27.6" height="47.1" />
+                                <line class="aa" x1="443" y1="179.2" x2="605.5" y2="179.2" />
+                            </g>
+                            <g>
+                                <rect class="c" x="568.6" y="80.3" width="27.6" height="5" />
+                                <polygon class="d" points="566.3 82.6 566.2 85.3 538.7 85.3 538.8 82.6 566.3 82.6" />
+                                <rect class="e" x="508.8" y="20.4" width="27.6" height="64.9" />
+                                <polygon class="f" points="506.5 82.3 506.4 85.3 478.9 85.3 479 82.3 506.5 82.3" />
+                                <rect class="g" x="449" y="77.5" width="27.6" height="7.8" />
+                                <line class="aa" x1="443" y1="85.8" x2="605.5" y2="85.8" />
+                            </g>
+                            <g>
+                                <text class="ab" transform="translate(482.6 190.34)">Acute Episodes</text>
+                                <circle class="ac" cx="475.7" cy="186.3" r="4.4" />
+                            </g>
+                            <g>
+                                <text class="ab" transform="translate(483.65 97.47)">Chronic Episodes</text>
+                                <circle class="ac" cx="475.7" cy="93.5" r="4.4" />
+                            </g>
+                        </svg>
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </div>     
+</div>

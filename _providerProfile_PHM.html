@@ -1,0 +1,508 @@
+ 
+<!DOCTYPE html> 
+<html lang="en" class="minheight"> 
+    <head> 
+        <meta charset="utf-8">         
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+        <meta name="description" content="">         
+        <meta name="author" content="">         
+        <title>PPM Prototype</title>         
+        <!--DataTables-->         
+        <link href="bootstrap/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">         
+        <link href="datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css">         
+        <!-- amCharts javascript sources -->         
+        <script src="assets/js/amcharts/amcharts.js"></script>         
+        <script src="assets/js/amcharts/serial.js"></script>         
+        <script src="assets/js/amcharts/themes/light.js"></script>         
+        <!-- Bootstrap core CSS -->         
+        <!-- Custom styles for this template -->         
+        <!-- Using Font awesome-->         
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->         
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->         
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">         
+        <link href="navbars.css" rel="stylesheet" type="text/css">         
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">         
+        <link href="tablestandards.css" rel="stylesheet" type="text/css">         
+        <link href="interactiveElements.css" rel="stylesheet" type="text/css">   
+		<link href="menustyle.css" rel="stylesheet" type="text/css">   
+      
+    </head>     
+    <body> 
+        <!--Header-->         
+        <!-- Main Body-->         
+        <div class="container-fluid ln-overallPadding" id="bodyMain"> 
+            <div class="row ln-minheight"> 
+                <!-- Side Bar Navigation -->                 
+                <div class="shadow ln-SideBarBG ln-minheight" id="SidebarBG"> 
+</div>                 
+                <!--All Right side MainContent-->                 
+                <div class="ln-rightsidecontentcontainer"> 
+                    <!-- Right Side content header content-->                     
+                    <div class="" title="ContentHeader" id="contentHeaderContainer"> 
+</div>                     
+                    <!--MainContent-->                     
+                    <div class="" id="ppmContent"> 
+                        <!-- #datainject is where all the data is being placed based on current navigation state through navigation_methods.js-->                         
+                        <div class="row col-md-12"> 
+						  
+						<!-- Start of Overlay Menu-->
+						<nav id="pInfo">
+							  <a href="" id="menuToggle" title="show menu" style="text-decoration: none; color: transparent !important;">
+							    <i class="fa fa-lg fa-male" style="color:#fff; font-size:32px; position: relative; top:8px; left:12px;"></i>
+								<!--<span class="navClosed"><i>show menu</i></span>-->
+							  </a>
+							  <div style="font-size:18px;color:#000;position:relative; top:-40px; background-color:#e9e9e9; padding:5px; margin:5px;">
+							   Personal Information
+							   <div class="pull-right" style="position:relative; top:-5px;">
+									<i class="fa fa-thumb-tack" style="font-size:12px; color:#6d6e71;" onclick="showProfileInfo()"></i>
+									<i class="fa fa-clipboard"style="font-size:12px; color:#6d6e71;"></i>
+							   </div>
+							  </div>
+							  <div style="font-size:12px;color:#000;background-color:#fff; position:relative; top:-50px; margin: 5px; padding:10px;">
+							   <b>Location:</b><br />
+							   Metropolis Care Clinic<br />
+							   795 Folsom Ave., Suite 600<br />
+							   San Fransisco, CA 94107
+							   <hr style="color:#e9e9e9; height:1px; margin-top:10px;margin-bottom:10px;" />
+							   <b>Provider ID:</b> P779455324102<br />
+							   <b>Phone:</b> 407-539-4670<br />
+							   <hr style="color:#e9e9e9;  height:1px; margin-top:10px;margin-bottom:10px;" />
+							   <b>Specialty:</b> Family Practice / P<br />
+							   <b>Alt ID:</b> 0987654321<br />
+							   <hr style="color:#e9e9e9;  height:1px; margin-top:10px;margin-bottom:10px;" />
+							   <b>UPIN:</b> 60186<br />
+							   <b>NPI:</b> 47045678<br />
+							  </div>
+							 <!-- <a href="#" title="Item 1">Item 1</a>
+							  <a href="#" title="Item 2">Item 2</a>
+							  <a href="#" title="Item 3">Item 3</a>
+							  <a href="#" title="Item 3">Item 4</a> -->
+						</nav>
+																					
+						<!--End of overlay menu -->
+						
+					
+                            <div class="col-md-12 ln-removeRightPadding"> 
+                                <div class="col-md-12">  
+									<!-- Personal Information -->
+									<div id="personalInfo" class="row"> 
+                                        <div class="col-md-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark"> 
+											<span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-thumb-tack fa-lg" onclick="hideProfileInfo()"></span> 
+                                            <h5>Personal Information</h5> 
+                                        </div>                                         
+                                        <div class="ln-borderstandard col-md-12" style="padding-top:10px; padding-bottom: 10px;">
+											
+											<div class="col-lg-3 col-md-4 col-sm-4" style="max-width:200px;">
+													 <b>Provider ID:</b> P779455324102<br />
+													 <b>Alt ID:</b> 0987654321<br />
+											</div>
+											<div class="col-lg-2 col-md-4 col-sm-4">
+													<b>NPI:</b> 47045678<br />
+													<b>UPIN:</b> 60186<br />
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-4" style="max-width:200px;">
+													 <b>Specialty:</b> Family Practice / P<br />
+													 <b>Phone:</b> 407-539-4670<br />
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-4">
+													<b>Address:</b>
+													<div class="pull-right">
+													Metropolis Care Clinic<br />
+													795 Folsom Ave., Suite 600<br />
+													San Fransisco, CA 94107
+													</div>
+											</div>
+											<div class="col-lg-2 col-md-4 col-sm-4">
+													<b>Networks:</b>Networks 1, Networks 2, Networks 3, Networks 4, Networks 5, <b><a href="#">...</a></b>	
+											</div>
+										</div>                                       
+                                    </div>
+									<!-- Patient Demographics  -->
+									<div id="patientDemo" class="row" style="margin-right:-33px !important;">
+									    <div class="col-md-4" style="padding-left:0px !important;"  >
+                                        <div class="col-md-12 ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark" style="background-color:#428bca !important; color:#fff;padding-left: 15px; border:1px solid #428bca; border-bottom-color: #fff !important;"> 
+											<!--<span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-thumb-tack fa-lg" onclick="hideProfileInfo()"></span> -->
+                                            <h5><b>+</b> Patient Demographics</h5> 
+                                        </div>                                         
+                                        <div class="ln-borderstandard col-md-12" style="padding-top:10px; padding-bottom: 10px; background-color:#428bca; border: 1px solid #428bca; color: #fff;">
+											<div class="col-md-12" style="padding-left:0px !important; padding-right: 0px !important;">
+													<div style="float:left;"># Patients: 470</div>
+													<div style="float:right;">Average Age: 30Y</div>
+													<div style="padding:10px;position:relative;top:20px;left:12px;">
+                                                                                            <div class="container-fluid" >
+                                                                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewbox="133 83 134 134" enable-background="new 133 83 134 134" xml:space="preserve">
+                                                                                                    <g id="chart">
+                                                                                                        <circle id="BGCircle" opacity="0.4" fill="#414042" stroke="#428bca" stroke-miterlimit="10" enable-background="new    " cx="200" cy="150" r="66" />
+                                                                                                        <path fill="#FFFFFF" d="M200.298,149.926l0.149-64.438c35.566,0.074,64.363,29.019,64.287,64.586
+		c-0.074,21.356-9.374,39.585-26.711,52.085L200.298,149.926z" />
+                                                                                                        <circle id="BGCircle_1_" fill="#428bca" cx="200.224" cy="149.777" r="49.63" />
+                                                                                                        <circle id="Text_x5F_BG" fill="#428bca" stroke="#F1F2F2" stroke-miterlimit="10" cx="200.224" cy="149.777" r="40.924" />
+                                                                                                    </g>
+																					
+                                                                                                    <text transform="matrix(1 0 0 1 173.2109 154)" fill="#F1F2F2" font-size="28">40% </text>
+                                                                                                    <text transform="matrix(1 0 0 1 176 167)" fill="#F1F2F2" font-size="12">Female</text>
+																								
+                                                                                                </svg>
+                                
+                                                                                            </div>                                                                                                                                                                                          
+                                                                                        </div>
+											</div>
+										</div> 
+										<div class="ln-borderstandard col-md-12" style="padding-top:10px; padding-bottom: 10px; border: 1px solid #2b5f8e; background-color: #2b5f8e; color:#fff;">
+											<div class="col-md-12">
+													<div class="pull-left">
+													Average Forecasted Cost: $3,054 <br /> <br />
+													Average Total Cost: $2,619 <br /> <br />								
+													Average Months Enrolled: 16 <br /> <br />
+													Average Forecasted Risk Index: 1.02 <br /> <br />
+                                                    # In Care Management: 217													
+													</div>
+													
+											</div>
+										</div>										
+                                       </div> <!--to make everything a 4 column --> 
+									   <!--Start of Measure Compliance Section -->
+									   <div id="personalInfo" class="row col-md-8" style="padding-right:0px !important;"> 
+                                        <div class="col-md-12 ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark" style="padding-left:15px;"> 
+											<!--<span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-thumb-tack fa-lg" onclick="hideProfileInfo()"></span> -->
+                                            <h5>Top 10 Measure Compliance Categories by Measure Volume</h5> 
+                                        </div>                                         
+                                        <div class="ln-borderstandard col-md-12" style="padding-top:10px; padding-bottom: 10px;padding-left: 0px !important;">
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">COPD-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">2,475</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%">
+																5,313
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Diabetes-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:47%">6,984</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:53%">
+																4,010
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Heart Failure-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:32%">3,543</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:68%">
+																7,117
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Renal Failure-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:15%">1,003</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:85%">
+																4,967
+																</div>
+															</div>                                             
+														</div>
+													</div>
+														<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Schizophrenia-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">2,503</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:75%">
+																7,500
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">COPD-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">2,475</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%">
+																5,313
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Diabetes-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:47%">6,984</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:53%">
+																4,010
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Heart Failure-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:32%">3,543</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:68%">
+																7,117
+																</div>
+															</div>                                             
+														</div>
+													</div>
+													<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Renal Failure-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:15%">1,003</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:85%">
+																4,967
+																</div>
+															</div>                                             
+														</div>
+													</div>
+														<br />
+													<div class="container-fluid ln-RemovePadding">
+														<div class="col-md-2 text-right ln-RemovePadding ln-commonlineright">
+																<p style="display: block;">Schizophrenia-</p>
+														</div>
+														<div class="col-md-10 ln-removeLeftPadding">
+															<div class="progress ln-RemoveBottomMargin">
+																<div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">2,503</div>
+																<div class="progress-bar progress-bar-danger" role="progressbar" style="width:75%">
+																7,500
+																</div>
+															</div>                                             
+														</div>
+													</div>
+												</div>                                       
+											</div>
+                                    </div>
+									<!-- End of Measure Compliance Section -->
+									
+					
+									<!-- Start of Conditions Section -->
+								<div id="topconditions" class="row col-md-6" style="padding-right:0px !important;"> 	
+										<div class="row ln-borderRadiusTop ln-chartheader">
+												<div class="col-md-12 ln-RemovePadding ln-underlineCommonDark" style="padding-left:15px;"> 
+													<span class="fa fa-plus-circle btn-glyphs pull-right fa-lg hidden" title="Column Options"></span> 
+													<h5><b>+</b> Top 10 Primary Conditions</h5> 
+												</div>                                         
+											</div>
+										<div class="row ln-borderstandard">
+                                        <div class="row">                                             
+                                            <div class="col-md-12">
+                                                <div class="table-responsive"> 
+                                                    <table class="table ln-tabletextsize table-striped table-hover table-condensed" id="conditionslisttable">
+                                                        <thead class="shadow ln-nowrap ln-tableHeader"> 
+                                                            <tr>                                                         
+                                                                <th class="text-center phmTables" >Primary Condition</th>
+                                                                <th class="text-center phmTables">Forecasted Risk Index</th>        
+                                                                <th class="text-center phmTables">Forecasted Cost</th>
+																<th class="text-center phmTables">Actual Cost</th>
+																<th class="text-center phmTables"># Patients</th>
+                                                            </tr>
+														</thead>
+														<tbody class="text-center">
+															<tr>
+																<td>Preventive factors</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>Heart Failure</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>Renal Failure</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>HIV</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>Hypertension</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>Osteoporosis</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>Well Child Care</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>CAD</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+															<tr>
+																<td>Low Back</td>
+																<td>1.23</td>
+																<td>$33,456</td>
+																<td>$3,542</td>
+																<td>56,261</td>
+															</tr>
+																	
+                                                        </tbody>                                                         
+                                                        <!--Entry that has been selected !Highlighted blue selected -->                                                         
+                                                    </table>                                                     
+                                                </div>                                                 
+                                                <div class="col-md-12"> 
+</div>                                                 
+                                            </div>                                             
+                                        </div>
+                                    </div>                                     
+                                </div>
+								    <!-- End of Conditions Section -->
+								
+									<!-- Start of Conditions Section -->
+								<div id="topconditions" class="row col-md-6 pull-right" > 	
+										<div class="row ln-borderRadiusTop ln-chartheader">
+												<div class="col-md-12 ln-RemovePadding ln-underlineCommonDark" style="padding-left:15px;">
+													<span class="fa fa-plus-circle btn-glyphs pull-right fa-lg hidden" title="Column Options"></span> 
+													<h5><b>+</b> Pharmacy</h5> 
+												</div>                                         
+											</div>
+										<div class="row ln-borderstandard">
+                                        <div class="row">                                             
+                                            <div class="col-md-12">
+                                                <div class="table-responsive"> 
+                                                    <table class="table ln-tabletextsize table-striped table-hover table-condensed" id="conditionslisttable">
+                                                        <thead class="shadow ln-nowrap ln-tableHeader"> 
+                                                            <tr>                                                         
+                                                                <th class="phmTables" >Provider Population</th>
+                                                                <th class="phmTables">Population</th>        
+                                                            </tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td># Scripts: 1000</td>
+																<td># Scripts: 1000</td>
+															</tr>
+															<tr>
+																<td>Patients w/Scripts: 436</td>
+																<td>Patients w/Scripts: 436</td>
+															</tr>
+															<tr>
+																<td>Total Cost: $2,345,668</td>
+																<td>Total Cost: $2,345,668</td>
+															</tr>
+															<tr>
+																<td>Average Cost Per Patient: $3,345</td>
+																<td>Average Cost Per Patient: $3,345</td>
+															</tr>
+															<tr>
+																<td>Average Cost Per Script: $700.34</td>
+																<td>Average Cost Per Script: $700.34</td>
+															</tr>
+															<tr>
+															<!-- PopOvers  -->
+																<td><a href="">Click to see Graph View of Drug Compliance</a></td>
+																<td><a href="">Click to see Graph View of Drug Compliance</a></td>
+															</tr>	
+                                                        </tbody>                                                         
+                                                    </table>                                                     
+                                                </div>                                                 
+                                                <div class="col-md-12"> 
+</div>                                                 
+                                            </div>                                             
+                                        </div>
+                                    </div>                                     
+                                </div>
+								    <!-- End of Conditions Section -->
+									 
+							     </div>
+								
+								</div>                                 
+                                                         
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <!--Footer-->         
+        <!-- /container -->         
+        <!-- Bootstrap core JavaScript
+    ================================================== -->         
+        <!-- Placed at the end of the document so the pages load faster -->         
+        <script src="assets/js/jquery.min.js"></script>         
+        <script src="bootstrap/js/bootstrap.min.js"></script>         
+        <script src="assets/js/navigation_methods.js"></script>
+        <script src="assets/js/sample_dataset.js"></script>
+		<script src="assets/js/menuindex.js"></script>  
+        <!-- Data tables Java Start-->         
+        <script type="text/javascript" language="javascript" src="datatables/media/js/jquery.dataTables.js"></script>         
+        <script type="text/javascript" language="javascript" src="datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>         
+        <script type="text/javascript" language="javascript" src="datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js"></script>         
+        <script src="bootstrap/js/dataTables.bootstrap.js"></script>         
+        <script type="text/javascript" language="javascript" class="init">
+        $(document).ready(function() {
+            Initconditionstable();
+        });
+        </script>         
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->         
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>      
+
+    </body>     
+</html>

@@ -1,0 +1,288 @@
+#providerlisttable_wrapper table.DTFC_Cloned thead,
+#overallscorelisttable_wrapper table.DTFC_Cloned thead,
+#patientlisttable_wrapper table.DTFC_Cloned thead,
+#episodelisttable_wrapper table.DTFC_Cloned thead,
+#etglisttable_wrapper table.DTFC_Cloned thead,
+#providertable_measurecompliance_wrapper table.DTFC_Cloned thead {
+  background-color: #e9e9e9;
+}
+th {
+  font-weight: normal;
+}
+.table th p {
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+.input-group-addon {
+  color: #e9e9e9;
+}
+.ln-tableHeader {
+  background-color: #e9e9e9;
+}
+.ln-highliteblue {
+  background-color: #247195;
+  color: #e9e9e9;
+}
+.ln-tabletextsize {
+  font-weight: normal;
+}
+.ln-chartcontainer {
+  width: 100%;
+  height: 306px;
+  overflow: hidden;
+}
+.ln-margin-top {
+  margin-top: 10px;
+}
+.ln-tablecenter {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  display: box;
+  box-align: center;
+}
+.ln-swaptables {
+  overflow: auto;
+  margin-bottom: 10px;
+  height: 267px;
+}
+.ln-tablecenterchild {
+  width: 100%;
+}
+.ln-tablecenterright {
+  width: 35%;
+}
+.ln-tablecenterleft {
+  width: 35%;
+}
+.ln-chartcontainer_gauge {
+  height: 69px;
+  margin-top: 7px;
+}
+.ln-bar rect {
+  stroke-miterlimit: 10;
+  stroke: #808080;
+  filter: url(#shadow);
+  stroke-width: 0.0;
+}
+.ln-bar3 {
+  fill: #ffdd54;
+}
+.ln-bar2 {
+  fill: #5cb85c;
+}
+.ln-bar1 {
+  fill: #ff5a5a;
+}
+.ln-tableheadertextextended {
+  font-weight: normal;
+  width: 132px;
+}
+.ln-ETGHeaderMargin {
+  margin-top: 132px;
+  margin-bottom: 0;
+}
+.ln-margin-top-4px {
+  margin-top: 4px;
+}
+.ln-centertableheader {
+  -ms-transform: translate(1em, 1em);
+  -webkit-transform: translate(1em, 1em);
+  transform: translate(1em, 1em);
+}
+.ln-underutilization_color {
+  background-color: #ffdd54;
+  font-weight: bold;
+  border-radius: 1em;
+  width: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ln-expected_color {
+  background-color: #5cb85c;
+  font-weight: bold;
+  border-radius: 1em;
+  width: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ln-overutilized_color {
+  background-color: #ff5a5a;
+  font-weight: bold;
+  border-radius: 1em;
+  width: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ln-insetshadow {
+  -webkit-box-shadow: inset 0 0 20px 1px rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.03);
+}
+.ln-tablepaddingright {
+  padding-right: 1%;
+  padding-left: 1%;
+}
+.ln-ETGcolumn {
+  width: 170px;
+}
+.ln-ETGTableBody {
+  max-height: 600px;
+  overflow: scroll;
+  display: block;
+}
+.ln-categoryadder .control-label {
+  width: 16.666666666666668%;
+  text-align: left;
+}
+.ln-categoryadder {
+  border-bottom: rgba(201, 201, 201, 0.46) solid thin;
+  border-top: rgba(201, 201, 201, 0.46) solid thin;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: none;
+  z-index: 502;
+  background-color: #e9e9e9;
+}
+.ln-searchRightPadding {
+  margin-right: 13px;
+}
+.ln-insetShadowRed {
+  -webkit-box-shadow: inset 0 0 0px 0px rgba(220, 0, 0, 0);
+  box-shadow: inset 0 0 0px 0px rgba(220, 0, 0, 0);
+}
+.ln-insetShadowGreen {
+  -webkit-box-shadow: inset 0 0 5px 1px rgba(0, 244, 18, 0);
+  box-shadow: inset 0 0 5px 1px rgba(0, 214, 20, 0);
+}
+.ln-shadowEfficiency {
+  -webkit-box-shadow: 0.1em 0.1em 0.3em 0.1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1em 0.1em 0.3em 0.1em rgba(0, 0, 0, 0.2);
+}
+.ln-iconGreen {
+  background-color: #74e37c;
+  border-radius: 1em;
+  padding: 2px;
+}
+.ln-iconRed {
+  background-color: #ff7a7a;
+  border-radius: 1em;
+  padding: 1px 2px 3px;
+}
+.ln-iconYellow {
+  background-color: #ffe476;
+  border-radius: 1em;
+  padding: 2px;
+}
+.ln-faRight {
+  margin-right: 0.4em;
+}
+.ln-btnaction {
+  border-radius: 14px;
+  margin-top: 4px;
+  margin-left: 0;
+}
+.ln-width_10percent {
+  width: 15%;
+  min-height: 2.5em;
+}
+.ln-swaptableslarge {
+  overflow: scroll;
+  margin-bottom: 10px;
+  height: 369px;
+}
+.ln-tablecenterlarge {
+  min-height: 417px;
+}
+.ln-tablebutton-action {
+  position: relative;
+  float: left;
+}
+.ln-pos-relative {
+  position: relative;
+  display: block;
+}
+.ln-nowrap {
+  white-space: nowrap;
+}
+.ln-textblack {
+  color: #040404;
+}
+.ln-table5columnheight {
+  height: 157px;
+  overflow: scroll;
+}
+.ln-tablecentersmall {
+  height: 268px;
+}
+.ln-actionTopOffset {
+  position: relative;
+  top: 0x;
+  left: 0;
+  float: left;
+  z-index: 500;
+}
+.ln-applyToSelections {
+  position: relative;
+  top: 30px;
+  float: left;
+  z-index: 500;
+}
+.ln-GroupViewByOffset {
+  padding-top: 2px;
+}
+.expected_textcolor {
+  color: #5cb85c;
+}
+.under_textcolor {
+  color: #ffdd54;
+}
+.over_textcolor {
+  color: #ff5a5a;
+}
+#providerlisttable_wrapper th,
+#overallscorelisttable_wrapper th,
+#patientlisttable_wrapper th,
+#episodelisttable_wrapper th,
+#etglisttable_wrapper th {
+  background-color: #e9e9e9;
+}
+.ln-tabletop {
+  float: right;
+  z-index: 1000;
+  right: 2em;
+  top: -2.9em;
+  position: absolute;
+}
+.ln-margin-bottom-4px {
+  margin-bottom: 4px;
+}
+.ln-margin-bottom-10px {
+  margin-bottom: 10px;
+}
+#mytemplatetable_filter {
+  float: left;
+  padding-top: 0.3em;
+  margin-bottom: -0.2em;
+}
+.mytemplate_icons {
+  color: #6d6e71;
+  vertical-align: middle;
+  text-align: center;
+  width: 5%;
+}
+.ln-mytemplate_lastrun {
+  width: 148px;
+}
+.ln-margin-right10px {
+  margin-right: 10px;
+}
+td.details-control {
+  background: url('../resources/details_open.png') no-repeat center center;
+  cursor: pointer;
+}
+tr.shown td.details-control {
+  background: url('../resources/details_close.png') no-repeat center center;
+}

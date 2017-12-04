@@ -1,0 +1,255 @@
+﻿<div class="col-xs-12 ln-removeRightPadding" id="datainject_etglistbasic">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 text-center ln-borderRadiusTop ln-chartheader ln-RemovePadding ln-underlineCommonDark">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                <span class="glyphicon btn-glyphs glyph_graphLeftButtons glyphicon-export pull-right"></span>
+                <h5>Summary (Totals)</h5>
+            </div>
+            <table class="table ln-borderstandard ln-RemoveBottomMargin table-bordered">
+                <thead class="ln-tableHeader" "" ="">
+                    <tr style="display: table-row;">
+                        <th class="text-center" style="display: table-cell;">Patient Risk</th>
+                        <th class="text-center" style="display: table-cell;">Efficiency index</th>
+                        <th class="text-center" style="display: table-cell;">Case Mix</th>
+                        <th class="text-center">Patients</th>
+                        <th class="text-center">Episodes</th>
+                        <th class="text-center">Total Costs</th>
+                        <th class="text-center">Pntl Cost Avoidance</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr style="display: table-row;">
+                        <td style="display: table-cell;">
+                            <div class="ln-expected_color ln-insetShadowGreen ln-shadowEfficiency">
+                                <span class="fa fa-check ln-faRight"></span>
+                                <span>1.1</span>
+                            </div>
+                        </td>
+                        <td style="display: table-cell;">
+                            <div class="ln-overutilized_color ln-insetShadowRed ln-shadowEfficiency">
+                                <span class="fa fa-level-up ln-faRight"></span>1.2
+                            </div>
+                        </td>
+                        <td style="display: table-cell;">
+                            <div class="ln-underutilization_color ln-insetShadowYellow ln-shadowEfficiency">
+                                <span class="fa fa-level-down  ln-faRight"></span>0.4
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#/patientlist" ui-sref="providerprofile_patientlist">320</a>
+                        </td>
+                        <td>
+                            <a href="#/episodelist" ui-sref="providerprofile_episodelist">1500</a>
+                        </td>
+                        <td>$3456</td>
+                        <td>$3456</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row text-center ln-borderRadiusTop ln-chartheader">
+            <div class="col-xs-12 ln-RemovePadding ln-underlineCommonDark">
+                <span class="fa pull-right glyph_graph_RightButtons btn-glyphs fa-question fa-lg"></span>
+                <span class="fa fa-plus-circle btn-glyphs pull-right fa-lg hidden" title="Column Options"></span>
+                <h5>ETG List </h5>
+            </div>
+        </div>
+        <div class="row ln-borderstandard">
+            <div class="row action ln-padding-bottom4px"></div>
+            <div class="col-xs-12 ln-actionTopOffset">
+                <div class="row">
+                    <div class="container-fluid pull-left" id="actions">
+                        <div class="btn-group pull-left">
+                            <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown">
+                                Actions
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="">Apply Selections to current page</a>
+                                </li>
+                                <li>
+                                    <a href="">Exclude</a>
+                                </li>
+                                <li>
+                                    <a href="">Add to Peer Group</a>
+                                </li>
+                                <li>
+                                    <a href="">Create new Peer Group</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="">Clear Selection</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group pull-left hidden">
+                        <button type="button" class="btn dropdown-toggle ln-shadowEfficiency ln-btnaction btn-sm btn-primary" data-toggle="dropdown">
+                            Select and Navigate to:
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="">Overall Efficiency</a>
+                            </li>
+                            <li>
+                                <a href="">Overall Performance</a>
+                            </li>
+                            <li>
+                                <a href="">Overall Scores</a>
+                            </li>
+                            <li>
+                                <a href="">Measure Compliance</a>
+                            </li>
+                            <li>
+                                <a href="">Referral Patterns</a>
+                            </li>
+                            <li>
+                                <a href="">Performance by Episode</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pull-left ln-RemovePadding ln-GroupViewByOffset container-fluid">
+                        <div class="col-xs-12">
+                            <div class="pull-left">
+                                <b>View by</b>:&nbsp;
+                            </div>
+                            <div class="pull-left ln-pos-relative">
+                                <a data-toggle="dropdown" href="">Base ETG</a>
+                                <ol class="dropdown-menu pull-left list-unstyled" role="menu">
+                                    <li>
+                                        <a>Base ETG</a>
+                                    </li>
+                                    <li>
+                                        <a>ETG+Treatment</a>
+                                    </li>
+                                    <li>
+                                        <a>ETG+Severity</a>
+                                    </li>
+                                    <li>
+                                        <a>ETG+Treatment+Severity</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a>Summary View</a>
+                                    </li>
+                                    <li>
+                                        <a>Detail View</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a>My Named Custom View</a>
+                                    </li>
+                                    <li>
+                                        <a>Save Custom View</a>
+                                    </li>
+                                    <li>
+                                        <a>Remove Custom View</a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="dropdown container-fluid pull-left">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 ln-padding-bottom4px">
+                            <div class="pull-left">
+                                <b>Indication:</b>
+                            </div>
+                            <div class="pull-left ln-pos-relative">
+                                <a data-toggle="dropdown" href="">Any Utilization</a>
+                                <ol class="dropdown-menu list-unstyled pull-left" role="menu">
+                                    <li>
+                                        <a>Any Utilization</a>
+                                    </li>
+                                    <li>
+                                        <a>Underutilization</a>
+                                    </li>
+                                    <li>
+                                        <a>Overutilization</a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="container-fluid pull-left ln-RemovePadding">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid ln-tablebutton-action pull-right hidden" id="ComparisonPGModaLink">
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction">Comparison Peer Group</button>
+                </div>
+                <div class="col-xs-12">
+                    <div class="table-responsive">
+                        <table class="table ln-tabletextsize table-striped table-hover table-condensed table-bordered" id="etglisttable">
+                            <thead class="shadow ln-nowrap">
+                                <tr>
+                                    <th class="no-sort">
+                                        <input class="control-label" type="checkbox" value="">
+                                    </th>
+                                    <th class="Provide">
+                                        Name
+                                    </th>
+                                    <th class="Specialty">
+                                        Specialty
+                                    </th>
+                                    <th class="ID">
+                                        ID
+                                    </th>
+                                    <th class="Patients">
+                                        Patients
+                                    </th>
+                                    <th class="Episodes">
+                                        Episodes
+                                    </th>
+                                    <th class="Risk">
+                                        Patient Risk
+                                    </th>
+                                    <th class="Efficiency">
+                                        Efficiency
+                                    </th>
+                                    <th class="CaseMix">
+                                        CaseMix
+                                    </th>
+                                    <th class="Efficiency Ranking">
+                                        Efficiency Ranking
+                                    </th>
+                                    <th class="TotalCost">
+                                        Total Cost
+                                    </th>
+                                    <th class="AvgCostPerEpisode">
+                                        Avg $$ Per Epis
+                                    </th>
+                                    <th class="BMAvgCostPerEpisode">
+                                        BM Avg $$ Per Epis
+                                    </th>
+                                    <th class="CostVariance">
+                                        $$ Cost Variance
+                                    </th>
+                                    <th class="PotCostAvoidance">
+                                        Pot. Cost Avoidance
+                                    </th>
+                                </tr>
+                            </thead>
+                            <!--Entry that has been selected !Highlighted blue selected -->
+                        </table>
+                    </div>
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-xs-12 col-lg-12">
+                <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary">
+                    Save column order
+                </button>
+                <div class="container-fluid pull-left ln-removeLeftPadding">
+                    <button type="button" class="btn ln-shadowEfficiency ln-btnaction btn-sm btn-primary">
+                        Reset column order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
